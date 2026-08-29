@@ -1,0 +1,138 @@
+{
+  "config_sha256": "974f21651291ed549318e8ab42d5bfe9b553a37b4c6e65c929b29f1e825e9cf7",
+  "config": {
+    "schema_version": 1,
+    "experiment_id": "C5_optimal_subgraph_checkpoint_seed42",
+    "stage": "explanation",
+    "status": "ready",
+    "dataset": "GCJ",
+    "graph_type": "CFG",
+    "split": "paper_clean",
+    "seed": 42,
+    "device": "cuda:0",
+    "loss": {
+      "name": "task_conditioned_symmetric_discrete_keep_drop",
+      "alpha": 1.0,
+      "gamma": 2.0
+    },
+    "output_dir": "artifacts/pilots/C5_optimal_subgraph_checkpoint_seed42",
+    "resume": true,
+    "model": {
+      "encoder": "codegraph_pniat_gat_edgepool",
+      "hidden": 16,
+      "gat_heads": 16,
+      "dropout": 0.1,
+      "bilstm_hidden": 128,
+      "bilstm_layers": 2
+    },
+    "training": {
+      "epochs": 10,
+      "batch_size": 64,
+      "graph_batch_size": 128,
+      "optimizer": "adam",
+      "learning_rate": 0.001,
+      "weight_decay": 0.0005,
+      "selection_metric": "macro_f1",
+      "evaluate_every": 1,
+      "amp": false,
+      "tf32": true
+    },
+    "sampling": {
+      "method": "full_dataset",
+      "train_fraction": 1.0,
+      "manifest": null,
+      "preserve_labels": true
+    },
+    "evaluation": {
+      "validation_policy": "every_epoch",
+      "test_policy": "after_selection_only",
+      "save_predictions": true,
+      "metrics": [
+        "macro_f1",
+        "mcc",
+        "pr_auc",
+        "roc_auc",
+        "macro_precision",
+        "macro_recall",
+        "map_at_r",
+        "mrr",
+        "recall_at_k",
+        "precision_at_k",
+        "swap_probability_error",
+        "encoder_graphs_per_second",
+        "cached_pairs_per_second",
+        "peak_gpu_memory_mb"
+      ]
+    },
+    "provenance": {
+      "baseline_commit": "23a20b7e5f27a217a966401c6c969150bfa023dc",
+      "preprocessor_commit": "684b9b8128174b704d323e13341385e75f29da7d"
+    },
+    "paths": {
+      "source_dir": "../CodeGraph4CCDetector/googlejam4_src",
+      "vector_dir": "../CodeGraph4CCDetector/artifacts/gcj_cfg16_repaired",
+      "train_split": "../CodeGraph4CCDetector/artifacts/paper_protocol/train_balanced_seed1337.txt",
+      "validation_split": "../CodeGraph4CCDetector/DataSetJsonVec/GCJ/javadata/valid.txt",
+      "test_split": "../CodeGraph4CCDetector/DataSetJsonVec/GCJ/javadata/test.txt"
+    },
+    "data_contract": {
+      "allow_fragment_overlap": false,
+      "group_field": null,
+      "group_field_status": "missing_verified_metadata",
+      "test_is_sealed": true
+    },
+    "predictor": {
+      "checkpoint": "artifacts/pilots/A0_focal_seed42/epoch_010.pt",
+      "checkpoint_role": "paper_clean_10pct_validation_selected_seed42",
+      "frozen": true,
+      "ordered_baselines": true,
+      "symmetric_candidate": "minimum_clone_probability_over_both_orders"
+    },
+    "explanation": {
+      "output": [
+        "left_core",
+        "right_core",
+        "undirected_core_mapping",
+        "left_diff",
+        "right_diff"
+      ],
+      "optimize": [
+        "keep",
+        "remove",
+        "swap_consistency"
+      ],
+      "alignment_ground_truth": "transformation_provenance_only",
+      "attention_is_explanation": false,
+      "sample_pairs": 100,
+      "selection": "lowest_sha256_per_normalized_label",
+      "top_node_fraction": 0.2,
+      "integrated_gradients_steps": 8,
+      "mask_optimization_steps": 20,
+      "mask_learning_rate": 0.1,
+      "mask_sparsity_lambda": 0.01,
+      "bootstrap_resamples": 2000,
+      "mask_semantics": "zero_node_features_keep_graph_topology_fixed",
+      "optimal_sufficiency_weight": 1.0,
+      "optimal_semantic_coefficient": 0.0,
+      "optimal_structure_coefficient": 0.0,
+      "candidate_sources": [
+        "symmetric_grad_x_input",
+        "target_conditioned_statement_similarity",
+        "paired_relation_marginal",
+        "cfg_neighbour_diffusion",
+        "encoder_internal_node_token_attention_prior"
+      ],
+      "candidate_selection": "maximize exact symmetric necessity minus absolute sufficiency gap at fixed node budget",
+      "positive_task_semantics": "common semantic statement pair",
+      "negative_task_semantics": "contrastive unmatched statement pair",
+      "attention_prior_negative_controls": [
+        "deterministically_shuffled",
+        "uniform"
+      ]
+    },
+    "baselines": [
+      "symmetric_grad_x_input",
+      "symmetric_semantic_optimal_pair"
+    ]
+  }
+}

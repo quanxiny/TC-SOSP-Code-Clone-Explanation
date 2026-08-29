@@ -1,0 +1,22 @@
+{
+  "extends": "../base.json",
+  "experiment_id": "protocol_paper_clean",
+  "stage": "baseline",
+  "status": "active",
+  "split": "paper_clean",
+  "paths": {
+    "source_dir": "../CodeGraph4CCDetector/googlejam4_src",
+    "vector_dir": "../CodeGraph4CCDetector/artifacts/gcj_cfg16_repaired",
+    "train_split": "../CodeGraph4CCDetector/artifacts/paper_protocol/train_balanced_seed1337.txt",
+    "validation_split": "../CodeGraph4CCDetector/DataSetJsonVec/GCJ/javadata/valid.txt",
+    "test_split": "../CodeGraph4CCDetector/DataSetJsonVec/GCJ/javadata/test.txt"
+  },
+  "data_contract": {
+    "allow_fragment_overlap": false,
+    "group_field": null,
+    "group_field_status": "missing_verified_metadata",
+    "test_is_sealed": true
+  },
+  "output_dir": "artifacts/protocols/paper_clean"
+}
+

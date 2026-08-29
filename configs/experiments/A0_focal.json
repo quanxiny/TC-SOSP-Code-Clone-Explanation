@@ -1,0 +1,15 @@
+{
+  "extends": "A_pilot_base.json",
+  "experiment_id": "A0_focal",
+  "stage": "contrastive",
+  "status": "ready_after_baseline",
+  "loss": {
+    "name": "focal",
+    "alpha": 1.0,
+    "gamma": 2.0,
+    "components": {
+      "focal": 1.0
+    }
+  },
+  "output_dir": "artifacts/pilots/A0_focal_seed42"
+}

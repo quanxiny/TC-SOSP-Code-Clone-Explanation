@@ -1,0 +1,373 @@
+diff --git a/.gitignore b/.gitignore
+index c0ebc76..60f3ab9 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -47,6 +47,7 @@ buildNumber.properties
+ 
+ .gradle
+ /build/
++/artifacts/
+ 
+ # Ignore Gradle GUI config
+ gradle-app.setting
+@@ -322,4 +323,3 @@ local.properties
+ 
+ 
+ # End of https://www.gitignore.io/api/eclipse
+-
+diff --git a/README.md b/README.md
+index 47ddc66..cc90d57 100644
+--- a/README.md
++++ b/README.md
+@@ -11,3 +11,35 @@ Run createPDGCodeJson.java to batch generate PDG files and save their vectorized
+ 
+ Note: LearnTest.java uses the corpus of CFG/PDG to train Word2Vec.
+ 
++Reproduction smoke test (JDK 8 is required by the Gradle 4.7 wrapper):
++
++    JAVA_HOME=../.conda/codegraph4cc \
++    PATH=../.conda/codegraph4cc/bin:$PATH \
++    ./gradlew preprocessingSmoke \
++      -Pinput=googlejam1.p006.A.java \
++      -Poutput=artifacts/preprocessing_smoke
++
++The task trains fresh 16-dimensional CFG and PDG Word2Vec models from the
++checked-in corpora, then generates CFG/PDG DOT files, token corpora, and both
++plain and vector JSON files below the selected output directory. The checked-in
++`cfg_model.bin` is 32-dimensional and therefore does not match the paper's
++16-dimensional setting; the smoke task intentionally does not use it.
++
++For a complete dataset, first train an explicitly dimensioned model and then
++run the auditable batch task. Batch failures are recorded in
++`preprocessing_report_cfg.json`; pass `-PfailurePolicy=strict` to fail the task
++after all files have been attempted.
++
++    JAVA_HOME=../.conda/codegraph4cc \
++    PATH=../.conda/codegraph4cc/bin:$PATH \
++    ./gradlew trainWord2Vec \
++      -PgraphType=cfg -Pdimension=16 \
++      -Pcorpus=outPut_cfg/corpus/cfg_corpus.txt \
++      -PoutputModel=artifacts/models/bcb_cfg_word2vec_16.bin
++
++    JAVA_HOME=../.conda/codegraph4cc \
++    PATH=../.conda/codegraph4cc/bin:$PATH \
++    ./gradlew preprocessDataset \
++      -PgraphType=cfg -Pinput=bigclonebenchdata \
++      -Pmodel=artifacts/models/bcb_cfg_word2vec_16.bin \
++      -Poutput=artifacts/bcb_cfg16_rebuilt -PfailurePolicy=record
+diff --git a/build.gradle b/build.gradle
+index b04f45a..23a8d5b 100644
+--- a/build.gradle
++++ b/build.gradle
+@@ -46,3 +46,68 @@ dependencies {
+     //compile group: 'com.alibaba', name: 'fastjson', version: '1.2.47'
+ }
+ 
++task preprocessingSmoke(type: JavaExec) {
++    description = 'Generate CFG/PDG DOT and vector JSON for one Java file.'
++    group = 'verification'
++    classpath = sourceSets.main.runtimeClasspath
++    main = 'yoshikihigo.tinypdg.graphviz.PreprocessingSmoke'
++
++    doFirst {
++        final String inputProperty = project.findProperty('input')
++        if (inputProperty == null) {
++            throw new GradleException('Pass the Java source with -Pinput=/path/to/File.java')
++        }
++
++        final File outputDirectory = file(
++                project.findProperty('output') ?: 'artifacts/preprocessing_smoke')
++        outputDirectory.mkdirs()
++        workingDir outputDirectory
++        args file(inputProperty).absolutePath,
++                file('outPut_cfg/corpus/cfg_corpus.txt').absolutePath,
++                file('outPut_pdg/corpus/pdg_corpus.txt').absolutePath
++    }
++}
++
++task preprocessDataset(type: JavaExec) {
++    description = 'Generate legacy CFG/PDG JSON for every Java file in a tree.'
++    group = 'data processing'
++    classpath = sourceSets.main.runtimeClasspath
++    main = 'yoshikihigo.tinypdg.graphviz.BatchPreprocess'
++
++    doFirst {
++        final String inputProperty = project.findProperty('input')
++        final String modelProperty = project.findProperty('model')
++        final String graphType = project.findProperty('graphType') ?: 'cfg'
++        if (inputProperty == null || modelProperty == null) {
++            throw new GradleException(
++                    'Pass -Pinput=/source/root and -Pmodel=/path/to/model.bin')
++        }
++
++        final File outputDirectory = file(
++                project.findProperty('output') ?: 'artifacts/dataset_preprocessing')
++        outputDirectory.mkdirs()
++        workingDir outputDirectory
++        args file(inputProperty).absolutePath, graphType, file(modelProperty).absolutePath
++        args project.findProperty('failurePolicy') ?: 'record'
++    }
++}
++
++task trainWord2Vec(type: JavaExec) {
++    description = 'Train a dimension-controlled Word2Vec model from a graph corpus.'
++    group = 'data processing'
++    classpath = sourceSets.main.runtimeClasspath
++    main = 'yoshikihigo.tinypdg.graphviz.LearnTest'
++
++    doFirst {
++        final String corpusProperty = project.findProperty('corpus')
++        final String outputProperty = project.findProperty('outputModel')
++        final String graphType = project.findProperty('graphType') ?: 'cfg'
++        final String dimension = project.findProperty('dimension') ?: '16'
++        if (corpusProperty == null || outputProperty == null) {
++            throw new GradleException(
++                    'Pass -Pcorpus=/path/to/corpus and -PoutputModel=/path/to/model.bin')
++        }
++        args graphType, dimension, file(corpusProperty).absolutePath,
++                file(outputProperty).absolutePath
++    }
++}
+diff --git a/src/main/java/yoshikihigo/tinypdg/ast/TinyPDGASTVisitor.java b/src/main/java/yoshikihigo/tinypdg/ast/TinyPDGASTVisitor.java
+index cf0fb8a..eea999b 100644
+--- a/src/main/java/yoshikihigo/tinypdg/ast/TinyPDGASTVisitor.java
++++ b/src/main/java/yoshikihigo/tinypdg/ast/TinyPDGASTVisitor.java
+@@ -6,11 +6,13 @@ import java.io.FileInputStream;
+ import java.io.FileNotFoundException;
+ import java.io.IOException;
+ import java.io.InputStreamReader;
+-import java.io.UnsupportedEncodingException;
+-import java.util.List;
+-import java.util.Stack;
+-
+-import org.eclipse.jdt.core.dom.AST;
++import java.io.UnsupportedEncodingException;
++import java.util.List;
++import java.util.Map;
++import java.util.Stack;
++
++import org.eclipse.jdt.core.JavaCore;
++import org.eclipse.jdt.core.dom.AST;
+ import org.eclipse.jdt.core.dom.ASTNode;
+ import org.eclipse.jdt.core.dom.ASTParser;
+ import org.eclipse.jdt.core.dom.AnnotationTypeDeclaration;
+@@ -108,9 +110,12 @@ public class TinyPDGASTVisitor extends NaiveASTFlattener {
+ 			e.printStackTrace();
+ 		}
+ 
+-		final ASTParser parser = ASTParser.newParser(AST.JLS4);
+-		parser.setSource(text.toString().toCharArray());
+-		return (CompilationUnit) parser.createAST(null);
++		final ASTParser parser = ASTParser.newParser(AST.JLS4);
++		parser.setSource(text.toString().toCharArray());
++		final Map<String, String> compilerOptions = JavaCore.getOptions();
++		JavaCore.setComplianceOptions(JavaCore.VERSION_1_7, compilerOptions);
++		parser.setCompilerOptions(compilerOptions);
++		return (CompilationUnit) parser.createAST(null);
+ 	}
+ 
+ 	final private String path;
+@@ -309,17 +314,21 @@ public class TinyPDGASTVisitor extends NaiveASTFlattener {
+ 			final ProgramElementInfo expression = (ProgramElementInfo) this.stack
+ 					.pop();
+ 
+-			node.getMessage().accept(this);
+-			final ProgramElementInfo message = (ProgramElementInfo) this.stack
+-					.pop();
++			ProgramElementInfo message = null;
++			if (node.getMessage() != null) {
++				node.getMessage().accept(this);
++				message = (ProgramElementInfo) this.stack.pop();
++			}
+ 
+ 			final int startLine = this.getStartLineNumber(node);
+ 			final int endLine = this.getEndLineNumber(node);
+ 			final ProgramElementInfo ownerBlock = this.stack.peek();
+ 			final StatementInfo statement = new StatementInfo(ownerBlock,
+ 					StatementInfo.CATEGORY.Assert, startLine, endLine);
+-			statement.addExpression(expression);
+-			statement.addExpression(message);
++			statement.addExpression(expression);
++			if (message != null) {
++				statement.addExpression(message);
++			}
+ 			this.stack.push(statement);
+ 		}
+ 
+diff --git a/src/main/java/yoshikihigo/tinypdg/graphviz/LearnTest.java b/src/main/java/yoshikihigo/tinypdg/graphviz/LearnTest.java
+index 60e4c75..2843f1f 100644
+--- a/src/main/java/yoshikihigo/tinypdg/graphviz/LearnTest.java
++++ b/src/main/java/yoshikihigo/tinypdg/graphviz/LearnTest.java
+@@ -8,18 +8,23 @@ import com.ansj.vec.Learn;
+ public class LearnTest {
+ 
+     public static void main(String[] args) throws IOException {
+-        Learn learn = new Learn();
+-
+-        int mode = 1;  //cfg
+-        //int mode = 2;  //pdg
+-
+-        if(mode == 1){
+-            learn.learnFile(new File("./outPut_cfg/corpus/cfg_corpus.txt"));
+-            learn.saveModel(new File("cfg_model.bin"));
+-        }else if(mode == 2){
+-            learn.learnFile(new File("./outPut_pdg/corpus/pdg_corpus.txt"));
+-            learn.saveModel(new File("pdg_model.bin"));
++        final String graphType = args.length > 0 ? args[0] : "cfg";
++        final int dimension = args.length > 1 ? Integer.parseInt(args[1]) : 16;
++        final File corpus = args.length > 2
++                ? new File(args[2])
++                : new File("./outPut_" + graphType + "/corpus/"
++                        + graphType + "_corpus.txt");
++        final File model = args.length > 3
++                ? new File(args[3])
++                : new File(graphType + "_model_" + dimension + ".bin");
++        final File parent = model.getAbsoluteFile().getParentFile();
++        if (parent != null && !parent.mkdirs() && !parent.isDirectory()) {
++            throw new IOException("cannot create model directory: " + parent);
+         }
+ 
++        final Learn learn = new Learn(false, dimension, null, null, null);
++        learn.learnFile(corpus);
++        learn.saveModel(model);
++
+     }
+ }
+diff --git a/src/main/java/yoshikihigo/tinypdg/graphviz/WriterCfgToJsonTest.java b/src/main/java/yoshikihigo/tinypdg/graphviz/WriterCfgToJsonTest.java
+index 431ad36..eb17e51 100644
+--- a/src/main/java/yoshikihigo/tinypdg/graphviz/WriterCfgToJsonTest.java
++++ b/src/main/java/yoshikihigo/tinypdg/graphviz/WriterCfgToJsonTest.java
+@@ -87,9 +87,8 @@ public class WriterCfgToJsonTest {
+             final File target = new File(cmd.getOptionValue("d"));
+             jsonPath = cmd.getOptionValue("d");
+             if (!target.exists()) {
+-                System.err
+-                        .println("specified directory or file does not exist.");
+-                System.exit(0);
++                throw new IllegalArgumentException(
++                        "specified directory or file does not exist: " + target);
+             }
+ 
+             final List<File> files = getFiles(target);
+@@ -130,8 +129,7 @@ public class WriterCfgToJsonTest {
+             //System.out.println("successfully finished.");
+ 
+         } catch (Exception e) {
+-            System.err.println("Exception"+e.getMessage());
+-            System.exit(0);
++            throw new IllegalStateException("failed to generate CFG for " + jsonPath, e);
+         }
+     }
+ 
+@@ -233,7 +231,10 @@ public class WriterCfgToJsonTest {
+             float[][] vectors = new float[code.length][createCFGCodeJson.vec.getWordVector("int").length];
+             for(int i=0;i< code.length;i++){
+                 try{
+-                    vectors[i] = createCFGCodeJson.vec.getWordVector(code[i]);
++                    final float[] wordVector = createCFGCodeJson.vec.getWordVector(code[i]);
++                    if (wordVector != null) {
++                        vectors[i] = wordVector;
++                    }
+                 } catch (Exception e){
+                     e.printStackTrace();
+                     System.out.println("vectvectors[i]vectors[i]vectors[i]vectors[i]vectors[i]ors[i]");
+@@ -299,13 +300,16 @@ public class WriterCfgToJsonTest {
+ 
+             String[] code = edge.getDependenceString().replace(";"," ;").replace("\n", "\\n").replace("\r", "\\r").split("\\s+");
+             float[][] vectors = new float[code.length][createCFGCodeJson.vec.getWordVector("int").length];
+-            if(code[0] == ""){
++            if(code[0].isEmpty()){
+                 for(int j=0;j<vectors[0].length;j++){
+                     vectors[0][j] = 1;
+                 }
+             }else{
+                 for(int i=0;i< code.length;i++){
+-                    vectors[i] = createCFGCodeJson.vec.getWordVector(code[i]);
++                    final float[] wordVector = createCFGCodeJson.vec.getWordVector(code[i]);
++                    if (wordVector != null) {
++                        vectors[i] = wordVector;
++                    }
+                 }
+             }
+ 
+@@ -325,8 +329,9 @@ public class WriterCfgToJsonTest {
+ 
+         try {
+             //System.out.println("jsonPath CFG "+jsonPath);
+-            FileUtils.write(new File("./outPut_cfg/codeJson/"+jsonPath.split("/")[3]+".json"), codeGraphJson.toString(), StandardCharsets.UTF_8, true);
+-            FileUtils.write(new File("./outPut_cfg/codeJsonVec/"+jsonPath.split("/")[3]+".json"), codeGraphJsonVec.toString(), StandardCharsets.UTF_8, true);
++            final String sourceFileName = new File(jsonPath).getName();
++            FileUtils.write(new File("./outPut_cfg/codeJson/"+sourceFileName+".json"), codeGraphJson.toString(), StandardCharsets.UTF_8, true);
++            FileUtils.write(new File("./outPut_cfg/codeJsonVec/"+sourceFileName+".json"), codeGraphJsonVec.toString(), StandardCharsets.UTF_8, true);
+         } catch (IOException e) {
+             //System.out.println("ssss");
+             e.printStackTrace();
+diff --git a/src/main/java/yoshikihigo/tinypdg/graphviz/WriterPdgToJsonTest.java b/src/main/java/yoshikihigo/tinypdg/graphviz/WriterPdgToJsonTest.java
+index 1473d0e..ca65d65 100644
+--- a/src/main/java/yoshikihigo/tinypdg/graphviz/WriterPdgToJsonTest.java
++++ b/src/main/java/yoshikihigo/tinypdg/graphviz/WriterPdgToJsonTest.java
+@@ -67,9 +67,8 @@ public class WriterPdgToJsonTest {
+             final File target = new File(cmd.getOptionValue("d"));
+             jsonPath = cmd.getOptionValue("d");
+             if (!target.exists()) {
+-                System.err
+-                        .println("specified directory or file does not exist.");
+-                System.exit(0);
++                throw new IllegalArgumentException(
++                        "specified directory or file does not exist: " + target);
+             }
+ 
+             final List<File> files = getFiles(target);
+@@ -108,8 +107,7 @@ public class WriterPdgToJsonTest {
+             //System.out.println("successfully finished.");
+ 
+         } catch (Exception e) {
+-            System.err.println("Exception"+e.getMessage());
+-            System.exit(0);
++            throw new IllegalStateException("failed to generate PDG for " + jsonPath, e);
+         }
+     }
+ 
+@@ -217,7 +215,10 @@ public class WriterPdgToJsonTest {
+             float[][] vectors = new float[code.length][createPDGCodeJson.vec.getWordVector("int").length];
+             for(int i=0;i< code.length;i++){
+                 try{
+-                    vectors[i] = createPDGCodeJson.vec.getWordVector(code[i]);
++                    final float[] wordVector = createPDGCodeJson.vec.getWordVector(code[i]);
++                    if (wordVector != null) {
++                        vectors[i] = wordVector;
++                    }
+                 } catch (Exception e){
+                     e.printStackTrace();
+                     System.out.println("vectvectors[i]vectors[i]vectors[i]vectors[i]vectors[i]ors[i]");
+@@ -270,13 +271,16 @@ public class WriterPdgToJsonTest {
+ 
+             String[] code = edge.getDependenceString().replace(";"," ;").replace("\n", "\\n").replace("\r", "\\r").split("\\s+");
+             float[][] vectors = new float[code.length][createPDGCodeJson.vec.getWordVector("int").length];
+-            if(code[0] == ""){
++            if(code[0].isEmpty()){
+                 for(int j=0;j<vectors[0].length;j++){
+                     vectors[0][j] = 1;
+                 }
+             }else{
+                 for(int i=0;i< code.length;i++){
+-                    vectors[i] = createPDGCodeJson.vec.getWordVector(code[i]);
++                    final float[] wordVector = createPDGCodeJson.vec.getWordVector(code[i]);
++                    if (wordVector != null) {
++                        vectors[i] = wordVector;
++                    }
+                 }
+             }
+ 
+@@ -307,8 +311,9 @@ public class WriterPdgToJsonTest {
+         codeGraphJsonVec.put("jsonEdgesVec",jsonEdgesVec);
+         try {
+             //System.out.println("jsonPath PDG"+jsonPath);
+-            FileUtils.write(new File("./outPut_pdg/codeJson/"+jsonPath.split("/")[3]+".json"), codeGraphJson.toString(), StandardCharsets.UTF_8, true);
+-            FileUtils.write(new File("./outPut_pdg/codeJsonVec/"+jsonPath.split("/")[3]+".json"), codeGraphJsonVec.toString(), StandardCharsets.UTF_8, true);
++            final String sourceFileName = new File(jsonPath).getName();
++            FileUtils.write(new File("./outPut_pdg/codeJson/"+sourceFileName+".json"), codeGraphJson.toString(), StandardCharsets.UTF_8, true);
++            FileUtils.write(new File("./outPut_pdg/codeJsonVec/"+sourceFileName+".json"), codeGraphJsonVec.toString(), StandardCharsets.UTF_8, true);
+         } catch (IOException e) {
+             e.printStackTrace();
+         }

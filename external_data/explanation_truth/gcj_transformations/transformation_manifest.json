@@ -1,0 +1,1873 @@
+{
+  "benchmark": "GCJ validation-only transformation explanation truth",
+  "samples": 30,
+  "variants_per_sample": [
+    "original",
+    "alpha",
+    "alpha_dead"
+  ],
+  "semantic_oracle": "consistent identifier alpha-renaming plus an unreachable-at-runtime zero-valued guarded empty print",
+  "verification": "all original and transformed programs compile in isolation",
+  "validation_manifest": "./artifacts/pilots/C1_semantic_optimal_subgraph_pair_seed42/validation_explanation_manifest.txt",
+  "validation_manifest_sha256": "344893dfec4ab327b58cb2cf986fcd67580ce74281f032afd4d55bfbe3518ee2",
+  "test_used": false,
+  "records": [
+    {
+      "sample_id": "g000_002d92ccb9",
+      "validation_source": "googlejam4_src/1/googlejam1.p296.A.java",
+      "validation_source_sha256": "5ed7732db49179ab83d3af60302ad84b551b191f56de26c8f5a3f7d2de4d0b6b",
+      "files": {
+        "original": "g000_002d92ccb9__original.java",
+        "alpha": "g000_002d92ccb9__alpha.java",
+        "alpha_dead": "g000_002d92ccb9__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "5ed7732db49179ab83d3af60302ad84b551b191f56de26c8f5a3f7d2de4d0b6b",
+        "alpha": "fd979d86e4bc98e06e72086dff396736237bbee6f229c071702d3a271690c5e2",
+        "alpha_dead": "50325d6f3ab12d4319a8d47df81a23c8b978ad6823674b1ffa9f20559bafeb6e"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "n": "xaiAlpha001",
+        "normal": "xaiAlpha002",
+        "max_diff": "xaiAlpha003",
+        "curr": "xaiAlpha004",
+        "special": "xaiAlpha005",
+        "k": "xaiAlpha006",
+        "list": "xaiAlpha007",
+        "pred": "xaiAlpha008",
+        "i": "xaiAlpha009",
+        "sc": "xaiAlpha010",
+        "t": "xaiAlpha011"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g001_0295be4b26",
+      "validation_source": "googlejam4_src/8/googlejam8.p580.A.java",
+      "validation_source_sha256": "9a22908a976ff318099fbe3bc1b4da6ef316419eba590f78cbb7ddc00504d1e0",
+      "files": {
+        "original": "g001_0295be4b26__original.java",
+        "alpha": "g001_0295be4b26__alpha.java",
+        "alpha_dead": "g001_0295be4b26__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "9a22908a976ff318099fbe3bc1b4da6ef316419eba590f78cbb7ddc00504d1e0",
+        "alpha": "f7e56f5ef51902de9c52b4ff70f9306f526012c34f220bf66fec0181e13da48b",
+        "alpha_dead": "d17c79a778b6e73b4009fff733ffd885f19d0e19261f4922f9594e793b363828"
+      },
+      "alpha_mapping": {
+        "bf": "xaiAlpha000",
+        "args": "xaiAlpha001",
+        "sum": "xaiAlpha002",
+        "p": "xaiAlpha003",
+        "n": "xaiAlpha004",
+        "x": "xaiAlpha005",
+        "c": "xaiAlpha006",
+        "st": "xaiAlpha007",
+        "out": "xaiAlpha008",
+        "max": "xaiAlpha009",
+        "maxi": "xaiAlpha010",
+        "max2i": "xaiAlpha011",
+        "i": "xaiAlpha012",
+        "t": "xaiAlpha013",
+        "max2": "xaiAlpha014"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g002_040f00164b",
+      "validation_source": "googlejam4_src/11/googlejam11.p101.B.java",
+      "validation_source_sha256": "35b8290bcef0c5b919da777825e70e4b98643e0efd87b16c9206f613dfe539be",
+      "files": {
+        "original": "g002_040f00164b__original.java",
+        "alpha": "g002_040f00164b__alpha.java",
+        "alpha_dead": "g002_040f00164b__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "35b8290bcef0c5b919da777825e70e4b98643e0efd87b16c9206f613dfe539be",
+        "alpha": "0643fe161d2c63aea9f54b5565bd3124f30d9513cf3f0e7637174eb0b149b4a8",
+        "alpha_dead": "6f126f7d890b09243ff2e54dc54748e18e1ff548a54bc71a2088aebb73594a26"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "total": "xaiAlpha001",
+        "p": "xaiAlpha002",
+        "mask": "xaiAlpha003",
+        "K": "xaiAlpha004",
+        "N": "xaiAlpha005",
+        "best": "xaiAlpha006",
+        "numCases": "xaiAlpha007",
+        "caseNum": "xaiAlpha008",
+        "yesMask": "xaiAlpha009",
+        "i": "xaiAlpha010",
+        "sc": "xaiAlpha011",
+        "prob": "xaiAlpha012"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g003_08c4059775",
+      "validation_source": "googlejam4_src/3/googlejam3.p212.Q1.java",
+      "validation_source_sha256": "e0d9a90448a2cf2ade349a29b9d470676480e525addfa27ce2a79efefbabc4c8",
+      "files": {
+        "original": "g003_08c4059775__original.java",
+        "alpha": "g003_08c4059775__alpha.java",
+        "alpha_dead": "g003_08c4059775__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "e0d9a90448a2cf2ade349a29b9d470676480e525addfa27ce2a79efefbabc4c8",
+        "alpha": "4ca46d4cda2dd14b73516ce9ccea5a2d50b36c0bfc9581ed38823bef55d704f9",
+        "alpha_dead": "69c4ed899cd7fe698dc36b8aae5c4ec06d9fb098381872e0bf6541471e5383e9"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "Rows": "xaiAlpha001",
+        "iterationsNum": "xaiAlpha002",
+        "Width": "xaiAlpha003",
+        "Columns": "xaiAlpha004",
+        "res": "xaiAlpha005",
+        "br": "xaiAlpha006",
+        "bw": "xaiAlpha007",
+        "i": "xaiAlpha008",
+        "parameters": "xaiAlpha009"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g004_0af2b544cb",
+      "validation_source": "googlejam4_src/3/googlejam3.p340.R20151C_A.java",
+      "validation_source_sha256": "8c46c371d830005e4bdb8f65262f4d97ca31f5326db29a4eb8e9af6d1dc61675",
+      "files": {
+        "original": "g004_0af2b544cb__original.java",
+        "alpha": "g004_0af2b544cb__alpha.java",
+        "alpha_dead": "g004_0af2b544cb__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "8c46c371d830005e4bdb8f65262f4d97ca31f5326db29a4eb8e9af6d1dc61675",
+        "alpha": "ab2fbe99ac77c3ef623f9400cd2bc2691019e7c1863bf4d056bc7cbf5a655daa",
+        "alpha_dead": "d33c06a09028720f5e6f86dac44de3c759272bff4097f15c67e1f6ac9371c264"
+      },
+      "alpha_mapping": {
+        "folder": "xaiAlpha000",
+        "s": "xaiAlpha001",
+        "args": "xaiAlpha002",
+        "outFolder": "xaiAlpha003",
+        "e": "xaiAlpha004",
+        "r": "xaiAlpha005",
+        "outFile": "xaiAlpha006",
+        "in": "xaiAlpha007",
+        "m": "xaiAlpha008",
+        "ps": "xaiAlpha009",
+        "C": "xaiAlpha010",
+        "R": "xaiAlpha011",
+        "inFolder": "xaiAlpha012",
+        "i": "xaiAlpha013",
+        "t": "xaiAlpha014",
+        "fileNameCore": "xaiAlpha015",
+        "outFileName": "xaiAlpha016",
+        "W": "xaiAlpha017",
+        "inFile": "xaiAlpha018"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g005_0fcb88c4ac",
+      "validation_source": "googlejam4_src/10/googlejam10.p195.TaskA.java",
+      "validation_source_sha256": "d335946399ae8b1d38ba1f1103e1a270596b5a28f4035f7ae31a5e3a53f7f566",
+      "files": {
+        "original": "g005_0fcb88c4ac__original.java",
+        "alpha": "g005_0fcb88c4ac__alpha.java",
+        "alpha_dead": "g005_0fcb88c4ac__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "d335946399ae8b1d38ba1f1103e1a270596b5a28f4035f7ae31a5e3a53f7f566",
+        "alpha": "c4aff1d3a5632230791227bf22b8925b0928bef68453889ea71f59e4dc4d050f",
+        "alpha_dead": "af26c7d148f0b63114d2fe8bda8ad1de69234c57d49a41984a3123a22cdb1f52"
+      },
+      "alpha_mapping": {
+        "s": "xaiAlpha000",
+        "args": "xaiAlpha001",
+        "p": "xaiAlpha002",
+        "fileName": "xaiAlpha003",
+        "n": "xaiAlpha004",
+        "c": "xaiAlpha005",
+        "e": "xaiAlpha006",
+        "r": "xaiAlpha007",
+        "prevLen": "xaiAlpha008",
+        "rr": "xaiAlpha009",
+        "tests": "xaiAlpha010",
+        "scanner": "xaiAlpha011",
+        "res": "xaiAlpha012",
+        "prev": "xaiAlpha013",
+        "br": "xaiAlpha014",
+        "test": "xaiAlpha015",
+        "ss": "xaiAlpha016",
+        "bw": "xaiAlpha017",
+        "cur": "xaiAlpha018",
+        "a": "xaiAlpha019",
+        "start": "xaiAlpha020",
+        "pp": "xaiAlpha021",
+        "i": "xaiAlpha022",
+        "result": "xaiAlpha023",
+        "nn": "xaiAlpha024",
+        "curLen": "xaiAlpha025"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g006_137f0bc8b9",
+      "validation_source": "googlejam4_src/8/googlejam8.p675.JamProblems.java",
+      "validation_source_sha256": "681997408906aa56f403265ae53c9bf17c8eed9e2595d31dc50b5c8e6d7bb153",
+      "files": {
+        "original": "g006_137f0bc8b9__original.java",
+        "alpha": "g006_137f0bc8b9__alpha.java",
+        "alpha_dead": "g006_137f0bc8b9__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "681997408906aa56f403265ae53c9bf17c8eed9e2595d31dc50b5c8e6d7bb153",
+        "alpha": "96559c735ac48a79329779bb2a9278c70e88c1d34562f1432545a23ae8e4a0c8",
+        "alpha_dead": "9134d62a2ae199a4413395aeab41970417741788ca935a05c90d6f8a284ebc74"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "j": "xaiAlpha001",
+        "n": "xaiAlpha002",
+        "pw": "xaiAlpha003",
+        "e": "xaiAlpha004",
+        "r": "xaiAlpha005",
+        "partEmp": "xaiAlpha006",
+        "z": "xaiAlpha007",
+        "tests": "xaiAlpha008",
+        "i": "xaiAlpha009",
+        "sc": "xaiAlpha010",
+        "lastEmpl": "xaiAlpha011",
+        "parties": "xaiAlpha012",
+        "partNames": "xaiAlpha013",
+        "fMaxInd": "xaiAlpha014"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g007_156ec16313",
+      "validation_source": "googlejam4_src/1/googlejam1.p403.Welcome.java",
+      "validation_source_sha256": "e339de04fb4e56ffbef03cad7b5d3fe7d700a1deca7f9f00ed443250518274c8",
+      "files": {
+        "original": "g007_156ec16313__original.java",
+        "alpha": "g007_156ec16313__alpha.java",
+        "alpha_dead": "g007_156ec16313__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "e339de04fb4e56ffbef03cad7b5d3fe7d700a1deca7f9f00ed443250518274c8",
+        "alpha": "43ac2d6dee3807fad1b5287cb2148a9da3d6321fbb858fda85a470a812e70888",
+        "alpha_dead": "9c8e6a640be86d842302edc589a8fabe3d47ca0596cd623153cb2bb6613a13e5"
+      },
+      "alpha_mapping": {
+        "s": "xaiAlpha000",
+        "args": "xaiAlpha001",
+        "j": "xaiAlpha002",
+        "n": "xaiAlpha003",
+        "ch": "xaiAlpha004",
+        "fis": "xaiAlpha005",
+        "reader": "xaiAlpha006",
+        "v": "xaiAlpha007",
+        "st": "xaiAlpha008",
+        "z": "xaiAlpha009",
+        "m": "xaiAlpha010",
+        "y": "xaiAlpha011",
+        "bw": "xaiAlpha012",
+        "i": "xaiAlpha013",
+        "nbLoop": "xaiAlpha014"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g008_17bc2c3879",
+      "validation_source": "googlejam4_src/3/googlejam3.p506.A.java",
+      "validation_source_sha256": "9ac676f3ac13e1746e5c427f5761433d8e61e6c81cdb6c3442c233c686fa87da",
+      "files": {
+        "original": "g008_17bc2c3879__original.java",
+        "alpha": "g008_17bc2c3879__alpha.java",
+        "alpha_dead": "g008_17bc2c3879__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "9ac676f3ac13e1746e5c427f5761433d8e61e6c81cdb6c3442c233c686fa87da",
+        "alpha": "1e5c878fff10a3ece67a37bf42921b1023473af94de6a5e6d39018baa6555de1",
+        "alpha_dead": "d23e555fd0a04dc97dbfda498a413102a77f2a7db7ee25a756a34ed6e1fc5b8e"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "line": "xaiAlpha001",
+        "C": "xaiAlpha002",
+        "br": "xaiAlpha003",
+        "R": "xaiAlpha004",
+        "tc": "xaiAlpha005",
+        "ans": "xaiAlpha006",
+        "TC": "xaiAlpha007",
+        "W": "xaiAlpha008"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g009_17c89b59ee",
+      "validation_source": "googlejam4_src/1/googlejam1.p380.MushroomMonster.java",
+      "validation_source_sha256": "de4d3c70060209fdb04c195677e6a4b2759cc3d5ae18b2b212fa3986eb938e77",
+      "files": {
+        "original": "g009_17c89b59ee__original.java",
+        "alpha": "g009_17c89b59ee__alpha.java",
+        "alpha_dead": "g009_17c89b59ee__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "de4d3c70060209fdb04c195677e6a4b2759cc3d5ae18b2b212fa3986eb938e77",
+        "alpha": "1e1fba89e5e994bfa43b0ec0b86f03d6e90729890ba0b300541819027515f4a8",
+        "alpha_dead": "688c6fad0bf41ede5fca43d71f229d17770be851c7975d42215543c868a0b3bf"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "n": "xaiAlpha001",
+        "maxDiff": "xaiAlpha002",
+        "m": "xaiAlpha003",
+        "N": "xaiAlpha004",
+        "bw": "xaiAlpha005",
+        "s2": "xaiAlpha006",
+        "PATH": "xaiAlpha007",
+        "sc": "xaiAlpha008",
+        "t": "xaiAlpha009",
+        "T": "xaiAlpha010",
+        "s1": "xaiAlpha011",
+        "filename": "xaiAlpha012"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g010_1ccb263967",
+      "validation_source": "googlejam4_src/8/googlejam8.p326.Solution.java",
+      "validation_source_sha256": "41f607ccb32b4af74e4e6cdb7722e9851ce677351045cbdf011591a3bb83ef83",
+      "files": {
+        "original": "g010_1ccb263967__original.java",
+        "alpha": "g010_1ccb263967__alpha.java",
+        "alpha_dead": "g010_1ccb263967__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "41f607ccb32b4af74e4e6cdb7722e9851ce677351045cbdf011591a3bb83ef83",
+        "alpha": "926efdac8fa0a5a3d1a207ef1aa6c293c75e5dd96e9ca29a406420d0ddc2b78a",
+        "alpha_dead": "89ef9caee194f736ab0eca89befbc38f992739754dc1c424c91bce449dcb81dc"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "j": "xaiAlpha001",
+        "n": "xaiAlpha002",
+        "c": "xaiAlpha003",
+        "scnr": "xaiAlpha004",
+        "pcount": "xaiAlpha005",
+        "evac": "xaiAlpha006",
+        "max": "xaiAlpha007",
+        "ans": "xaiAlpha008",
+        "i": "xaiAlpha009",
+        "t": "xaiAlpha010",
+        "parties": "xaiAlpha011"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g011_1d85ef82f9",
+      "validation_source": "googlejam4_src/3/googlejam3.p280.Q1.java",
+      "validation_source_sha256": "b97f0dad2a74718cb87c0280f8c8668aa4399e14d204e0069a0e5fd8e113fc57",
+      "files": {
+        "original": "g011_1d85ef82f9__original.java",
+        "alpha": "g011_1d85ef82f9__alpha.java",
+        "alpha_dead": "g011_1d85ef82f9__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "b97f0dad2a74718cb87c0280f8c8668aa4399e14d204e0069a0e5fd8e113fc57",
+        "alpha": "9c90c63b3507095c618410ba361419fe25a6454b16de7f0b9f2932cb37ecfe13",
+        "alpha_dead": "4405b463f1b56df469f7837f69fcd6761af5acea4727ee4aaf8d397821047b3a"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "answer": "xaiAlpha001",
+        "total": "xaiAlpha002",
+        "fileName": "xaiAlpha003",
+        "input1": "xaiAlpha004",
+        "bmove": "xaiAlpha005",
+        "directory": "xaiAlpha006",
+        "file": "xaiAlpha007",
+        "smove": "xaiAlpha008",
+        "outFile": "xaiAlpha009",
+        "C": "xaiAlpha010",
+        "br": "xaiAlpha011",
+        "R": "xaiAlpha012",
+        "arr1": "xaiAlpha013",
+        "response": "xaiAlpha014",
+        "bw": "xaiAlpha015",
+        "fmove": "xaiAlpha016",
+        "testCases": "xaiAlpha017",
+        "t": "xaiAlpha018",
+        "W": "xaiAlpha019"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g012_254977b5a2",
+      "validation_source": "googlejam4_src/1/googlejam1.p099.A.java",
+      "validation_source_sha256": "08fedd5b947d860d8ab425c0beb82ed147b4373c4a52f1299eb92fa25ea421f4",
+      "files": {
+        "original": "g012_254977b5a2__original.java",
+        "alpha": "g012_254977b5a2__alpha.java",
+        "alpha_dead": "g012_254977b5a2__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "08fedd5b947d860d8ab425c0beb82ed147b4373c4a52f1299eb92fa25ea421f4",
+        "alpha": "c2ae88bf8d4f79fe61b532fab6b60596c394f8c3b73a62e83ee6d3ace5e48b0c",
+        "alpha_dead": "baf363c5544090f7221d69291ce37c670ff83dc832028d0ef5f139fec6bd4fcb"
+      },
+      "alpha_mapping": {
+        "s": "xaiAlpha000",
+        "args": "xaiAlpha001",
+        "pw": "xaiAlpha002",
+        "e": "xaiAlpha003",
+        "r": "xaiAlpha004",
+        "filePrefix": "xaiAlpha005",
+        "m": "xaiAlpha006",
+        "N": "xaiAlpha007",
+        "maxrate": "xaiAlpha008",
+        "test": "xaiAlpha009",
+        "ans1": "xaiAlpha010",
+        "i": "xaiAlpha011",
+        "sc": "xaiAlpha012",
+        "ntest": "xaiAlpha013"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g013_2b25a58029",
+      "validation_source": "googlejam4_src/2/googlejam2.p234.A.java",
+      "validation_source_sha256": "9a031f5057320a056e55bded8640c0a45ed79f420cc7948611acb4d98ab3a3eb",
+      "files": {
+        "original": "g013_2b25a58029__original.java",
+        "alpha": "g013_2b25a58029__alpha.java",
+        "alpha_dead": "g013_2b25a58029__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "9a031f5057320a056e55bded8640c0a45ed79f420cc7948611acb4d98ab3a3eb",
+        "alpha": "d77d2acdc2b5366c4eb62d648380909343f2345977a48868d162778aa84407f1",
+        "alpha_dead": "81a785827cf02983641e768ecc9dbc3284f88b8071024305c7df59cf01e12462"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "d": "xaiAlpha001",
+        "n": "xaiAlpha002",
+        "reader": "xaiAlpha003",
+        "r": "xaiAlpha004",
+        "Q": "xaiAlpha005",
+        "tc": "xaiAlpha006",
+        "nt": "xaiAlpha007",
+        "cur": "xaiAlpha008",
+        "sb": "xaiAlpha009",
+        "writer": "xaiAlpha010"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g014_2ccca7e290",
+      "validation_source": "googlejam4_src/6/googlejam6.p602.Main2.java",
+      "validation_source_sha256": "2f1d9e78853423e5e38d0e524943047378c9f5512d1d13cab294ff5b0e980df2",
+      "files": {
+        "original": "g014_2ccca7e290__original.java",
+        "alpha": "g014_2ccca7e290__alpha.java",
+        "alpha_dead": "g014_2ccca7e290__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "2f1d9e78853423e5e38d0e524943047378c9f5512d1d13cab294ff5b0e980df2",
+        "alpha": "8b0dc4b17bed2d5f19a5e700ce0586805a7b1f32b7c9cc4526abc84df150b1b4",
+        "alpha_dead": "d2b1a99396feb264cd0ef39bd5daa9ac490654c5f28fb34f3be4236488744520"
+      },
+      "alpha_mapping": {
+        "j": "xaiAlpha000",
+        "height": "xaiAlpha001",
+        "st": "xaiAlpha002",
+        "map": "xaiAlpha003",
+        "br": "xaiAlpha004",
+        "minIndex": "xaiAlpha005",
+        "visited": "xaiAlpha006",
+        "arg": "xaiAlpha007",
+        "sb": "xaiAlpha008",
+        "input": "xaiAlpha009",
+        "i": "xaiAlpha010",
+        "t": "xaiAlpha011",
+        "T": "xaiAlpha012",
+        "cnt": "xaiAlpha013"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g015_2dbc964bc2",
+      "validation_source": "googlejam4_src/1/googlejam1.p164.Main.java",
+      "validation_source_sha256": "57cf12ddaf5a0114e0830406f8ba502671d80188147e16bd15a357577a9e2a69",
+      "files": {
+        "original": "g015_2dbc964bc2__original.java",
+        "alpha": "g015_2dbc964bc2__alpha.java",
+        "alpha_dead": "g015_2dbc964bc2__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "57cf12ddaf5a0114e0830406f8ba502671d80188147e16bd15a357577a9e2a69",
+        "alpha": "2747a59050d379523ae0f97724e45a6e9995475e20bfb25291329f315a05a6cb",
+        "alpha_dead": "895116992315a0385acf0b35a342afff6ab205950e6aec185e1422f486326b6d"
+      },
+      "alpha_mapping": {
+        "M": "xaiAlpha000",
+        "args": "xaiAlpha001",
+        "second": "xaiAlpha002",
+        "pw": "xaiAlpha003",
+        "br": "xaiAlpha004",
+        "str": "xaiAlpha005",
+        "N": "xaiAlpha006",
+        "first": "xaiAlpha007",
+        "i": "xaiAlpha008",
+        "diff": "xaiAlpha009",
+        "t": "xaiAlpha010",
+        "T": "xaiAlpha011"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g016_2ea00484c2",
+      "validation_source": "googlejam4_src/1/googlejam1.p815.MushroomMonster.java",
+      "validation_source_sha256": "7028f5eab4a30b0b4b7d24a5cbc33658b61fabdd8485552ded23417bbc0f5bd3",
+      "files": {
+        "original": "g016_2ea00484c2__original.java",
+        "alpha": "g016_2ea00484c2__alpha.java",
+        "alpha_dead": "g016_2ea00484c2__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "7028f5eab4a30b0b4b7d24a5cbc33658b61fabdd8485552ded23417bbc0f5bd3",
+        "alpha": "19e75575f96695c8e78baef9e3fd136c44bf41c41ff71f6eef07e35342737d7a",
+        "alpha_dead": "90125df8c747b03cda1d6f60869809e36bfc2fac42acec3111e5ec1244de93d6"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "totCases": "xaiAlpha001",
+        "j": "xaiAlpha002",
+        "Y": "xaiAlpha003",
+        "data": "xaiAlpha004",
+        "dataAct": "xaiAlpha005",
+        "br": "xaiAlpha006",
+        "N": "xaiAlpha007",
+        "dataAnt": "xaiAlpha008",
+        "Z": "xaiAlpha009",
+        "i": "xaiAlpha010",
+        "dif": "xaiAlpha011",
+        "minDif": "xaiAlpha012"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g017_30a7cba5b2",
+      "validation_source": "googlejam4_src/10/googlejam10.p167.RatherPerplexingShowdown.java",
+      "validation_source_sha256": "7050176d2fa89a3d2a73da846c5e98385b63621353d031be541eb095e0cf2a7e",
+      "files": {
+        "original": "g017_30a7cba5b2__original.java",
+        "alpha": "g017_30a7cba5b2__alpha.java",
+        "alpha_dead": "g017_30a7cba5b2__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "7050176d2fa89a3d2a73da846c5e98385b63621353d031be541eb095e0cf2a7e",
+        "alpha": "be9381093b4bd79efb9d233c1a2f8e56fee7ef320aa91149af85035bdb842836",
+        "alpha_dead": "39512ecec347e802cd56ba8bcc9f065ac8c944835dd14f021d7351f8e16f200e"
+      },
+      "alpha_mapping": {
+        "s": "xaiAlpha000",
+        "args": "xaiAlpha001",
+        "p": "xaiAlpha002",
+        "rte": "xaiAlpha003",
+        "n": "xaiAlpha004",
+        "rounds": "xaiAlpha005",
+        "ch": "xaiAlpha006",
+        "e": "xaiAlpha007",
+        "r": "xaiAlpha008",
+        "in": "xaiAlpha009",
+        "rr": "xaiAlpha010",
+        "IMPOSSIBLE": "xaiAlpha011",
+        "testsNumber": "xaiAlpha012",
+        "out": "xaiAlpha013",
+        "testId": "xaiAlpha014",
+        "ss": "xaiAlpha015",
+        "ar": "xaiAlpha016",
+        "pp": "xaiAlpha017",
+        "i": "xaiAlpha018",
+        "result": "xaiAlpha019"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g018_3352251e50",
+      "validation_source": "googlejam4_src/1/googlejam1.p565.SolverMush.java",
+      "validation_source_sha256": "9175328792ebe83b8841d2ad28aaeae87b5609dfbc1c63cdff93ef09693a4b78",
+      "files": {
+        "original": "g018_3352251e50__original.java",
+        "alpha": "g018_3352251e50__alpha.java",
+        "alpha_dead": "g018_3352251e50__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "9175328792ebe83b8841d2ad28aaeae87b5609dfbc1c63cdff93ef09693a4b78",
+        "alpha": "b0572ba521c510811d251b22a6235f5218a45b4aca020877c4467bc56ed4e768",
+        "alpha_dead": "5b139659c41a6d8d2291690414676be1e1af8c313895369356d1f3327f294659"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "res1": "xaiAlpha001",
+        "j": "xaiAlpha002",
+        "last": "xaiAlpha003",
+        "m": "xaiAlpha004",
+        "N": "xaiAlpha005",
+        "nbTest": "xaiAlpha006",
+        "writer": "xaiAlpha007",
+        "i": "xaiAlpha008",
+        "diff": "xaiAlpha009",
+        "sc": "xaiAlpha010",
+        "biggestDif": "xaiAlpha011"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g019_357ab8a56f",
+      "validation_source": "googlejam4_src/8/googlejam8.p012.Main.java",
+      "validation_source_sha256": "5415d82fa4ccd5610037cd47ee9a62f985e1a2cdcf4b7dcd9a45ad2411887ba4",
+      "files": {
+        "original": "g019_357ab8a56f__original.java",
+        "alpha": "g019_357ab8a56f__alpha.java",
+        "alpha_dead": "g019_357ab8a56f__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "5415d82fa4ccd5610037cd47ee9a62f985e1a2cdcf4b7dcd9a45ad2411887ba4",
+        "alpha": "db90a9c977158223b943e51a576910c97c9ef865869d57ed7c07ac2df56592f0",
+        "alpha_dead": "d7250acbafbbb9677889da9b2f3a7d946c4ba0f0b4c2f344c5f4cde34245750b"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "p": "xaiAlpha001",
+        "n": "xaiAlpha002",
+        "index": "xaiAlpha003",
+        "x": "xaiAlpha004",
+        "i1": "xaiAlpha005",
+        "scanner": "xaiAlpha006",
+        "count": "xaiAlpha007",
+        "index1": "xaiAlpha008",
+        "i3": "xaiAlpha009",
+        "max": "xaiAlpha010",
+        "count1": "xaiAlpha011",
+        "i": "xaiAlpha012",
+        "t": "xaiAlpha013",
+        "count2": "xaiAlpha014"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g020_36da11d250",
+      "validation_source": "googlejam4_src/8/googlejam8.p653.SenateEvac.java",
+      "validation_source_sha256": "e9ce8821a9f560015e4d0381674ebb87b49ecb7e432e8f5e2fc82b29efb478fe",
+      "files": {
+        "original": "g020_36da11d250__original.java",
+        "alpha": "g020_36da11d250__alpha.java",
+        "alpha_dead": "g020_36da11d250__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "e9ce8821a9f560015e4d0381674ebb87b49ecb7e432e8f5e2fc82b29efb478fe",
+        "alpha": "f2c30a04beb23716288b4dfeff5bb50e7c628f7577bb0a3fee1110bb44e2e6ca",
+        "alpha_dead": "c84ed05578e73f887cb7ef9871c8afcfc58a797be4e4ee7e3df33ebe99f11962"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "partyMembers": "xaiAlpha001",
+        "e": "xaiAlpha002",
+        "in": "xaiAlpha003",
+        "partyNumber": "xaiAlpha004",
+        "testFile": "xaiAlpha005",
+        "nextCharacter": "xaiAlpha006",
+        "currentCase": "xaiAlpha007",
+        "lastCandidate": "xaiAlpha008",
+        "nextEvacuee": "xaiAlpha009",
+        "testCases": "xaiAlpha010",
+        "i": "xaiAlpha011",
+        "senatorsInParty": "xaiAlpha012",
+        "totalSenators": "xaiAlpha013"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g021_393bb2ebf5",
+      "validation_source": "googlejam4_src/6/googlejam6.p339.RankAndFile.java",
+      "validation_source_sha256": "4cd0402ca2c1a91fb6cfc79fd4d6a2ac12b72ec72da32134e916f67e20090eec",
+      "files": {
+        "original": "g021_393bb2ebf5__original.java",
+        "alpha": "g021_393bb2ebf5__alpha.java",
+        "alpha_dead": "g021_393bb2ebf5__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "4cd0402ca2c1a91fb6cfc79fd4d6a2ac12b72ec72da32134e916f67e20090eec",
+        "alpha": "b728a2768d860a00b8f596a7361985437625aa822afe5dd5ba1c644f964fd43d",
+        "alpha_dead": "2bbca4a8168da93f0b088aeba2399127f3d4c2b6736f63f640154b5185fe173b"
+      },
+      "alpha_mapping": {
+        "numOfCase": "xaiAlpha000",
+        "args": "xaiAlpha001",
+        "j": "xaiAlpha002",
+        "pw": "xaiAlpha003",
+        "numOfNum": "xaiAlpha004",
+        "height": "xaiAlpha005",
+        "set": "xaiAlpha006",
+        "list": "xaiAlpha007",
+        "sb": "xaiAlpha008",
+        "size": "xaiAlpha009",
+        "i": "xaiAlpha010",
+        "sc": "xaiAlpha011"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g022_3cd05e3df9",
+      "validation_source": "googlejam4_src/6/googlejam6.p340.RandAndFile.java",
+      "validation_source_sha256": "192d56be829b2d979c9d9ffbeef986934c23e701976f52a7f522d7814e65d304",
+      "files": {
+        "original": "g022_3cd05e3df9__original.java",
+        "alpha": "g022_3cd05e3df9__alpha.java",
+        "alpha_dead": "g022_3cd05e3df9__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "192d56be829b2d979c9d9ffbeef986934c23e701976f52a7f522d7814e65d304",
+        "alpha": "40692500eb64f989f51475fda582bbdef67c53f24ce8076a9b73a2f75dd27fa5",
+        "alpha_dead": "324db0f9d6db5c3736f2f20fc4d03958f9a7e273b7fe10470a4b7a1b543487b8"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "j": "xaiAlpha001",
+        "n": "xaiAlpha002",
+        "top": "xaiAlpha003",
+        "key": "xaiAlpha004",
+        "r": "xaiAlpha005",
+        "lists": "xaiAlpha006",
+        "i1": "xaiAlpha007",
+        "map": "xaiAlpha008",
+        "scanner": "xaiAlpha009",
+        "k": "xaiAlpha010",
+        "list": "xaiAlpha011",
+        "h": "xaiAlpha012",
+        "l": "xaiAlpha013",
+        "writer": "xaiAlpha014",
+        "quizname": "xaiAlpha015",
+        "input": "xaiAlpha016",
+        "testname": "xaiAlpha017",
+        "i": "xaiAlpha018",
+        "output": "xaiAlpha019",
+        "t": "xaiAlpha020",
+        "result": "xaiAlpha021"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g023_3e6a56e3a8",
+      "validation_source": "googlejam4_src/3/googlejam3.p120.A.java",
+      "validation_source_sha256": "a6663ac2c207ce62c184781086a8b8015410ba26b68a9695acf0953a482328e2",
+      "files": {
+        "original": "g023_3e6a56e3a8__original.java",
+        "alpha": "g023_3e6a56e3a8__alpha.java",
+        "alpha_dead": "g023_3e6a56e3a8__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "a6663ac2c207ce62c184781086a8b8015410ba26b68a9695acf0953a482328e2",
+        "alpha": "6e8ce39ac5bf8b4c560d687b0bcbdc06db1de5e36075f490507ed71d5ef9bafe",
+        "alpha_dead": "183eb3002504f15a60e91d618edf153e6ddcc99c40511ae85aa24d359dc44b6f"
+      },
+      "alpha_mapping": {
+        "fw": "xaiAlpha000",
+        "args": "xaiAlpha001",
+        "debug": "xaiAlpha002",
+        "line": "xaiAlpha003",
+        "file": "xaiAlpha004",
+        "row": "xaiAlpha005",
+        "br": "xaiAlpha006",
+        "bw": "xaiAlpha007",
+        "i": "xaiAlpha008",
+        "t": "xaiAlpha009"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g024_3f2e78909b",
+      "validation_source": "googlejam4_src/2/googlejam2.p304.Problem1.java",
+      "validation_source_sha256": "4a6c041b484c27433b9b6c70d75eba85e60bf7a8fec694be4efd40e92e30330e",
+      "files": {
+        "original": "g024_3f2e78909b__original.java",
+        "alpha": "g024_3f2e78909b__alpha.java",
+        "alpha_dead": "g024_3f2e78909b__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "4a6c041b484c27433b9b6c70d75eba85e60bf7a8fec694be4efd40e92e30330e",
+        "alpha": "e4ea4375d775708188b1ce12c9b9ec78919b00ad1bc457324859dd94a00a9928",
+        "alpha_dead": "e4a32a9c44406d6c13fd37560f957bbee65fd396f5e2d87cf8ba7c8cba14ec84"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "lines1": "xaiAlpha001",
+        "num": "xaiAlpha002",
+        "index": "xaiAlpha003",
+        "testCaseOutput": "xaiAlpha004",
+        "line": "xaiAlpha005",
+        "reader": "xaiAlpha006",
+        "r": "xaiAlpha007",
+        "v": "xaiAlpha008",
+        "ex": "xaiAlpha009",
+        "strValue": "xaiAlpha010",
+        "lines": "xaiAlpha011",
+        "outputLines": "xaiAlpha012",
+        "N": "xaiAlpha013",
+        "max": "xaiAlpha014",
+        "writer": "xaiAlpha015",
+        "value": "xaiAlpha016",
+        "counts": "xaiAlpha017",
+        "testCases": "xaiAlpha018",
+        "rev": "xaiAlpha019",
+        "i": "xaiAlpha020",
+        "output": "xaiAlpha021",
+        "t": "xaiAlpha022"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g025_406103bd91",
+      "validation_source": "googlejam4_src/3/googlejam3.p147.Solver.java",
+      "validation_source_sha256": "d14a3e3e95ec7f6c06a231d7b06fefff232b2c0779e09f5d73050b7c7f63f87b",
+      "files": {
+        "original": "g025_406103bd91__original.java",
+        "alpha": "g025_406103bd91__alpha.java",
+        "alpha_dead": "g025_406103bd91__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "d14a3e3e95ec7f6c06a231d7b06fefff232b2c0779e09f5d73050b7c7f63f87b",
+        "alpha": "084fb12ac9e440de0c612960d351eacfcb1d5e3134c97ef968df836568bb4167",
+        "alpha_dead": "9fbb1e89c3b782cbcf60bc6a57768c746217719c5c1606e380d3a5b763709a08"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "f": "xaiAlpha001",
+        "ex": "xaiAlpha002",
+        "C": "xaiAlpha003",
+        "clearCount": "xaiAlpha004",
+        "br": "xaiAlpha005",
+        "R": "xaiAlpha006",
+        "caseNum": "xaiAlpha007",
+        "findCount": "xaiAlpha008",
+        "input": "xaiAlpha009",
+        "iox": "xaiAlpha010",
+        "hasExtra": "xaiAlpha011",
+        "output": "xaiAlpha012",
+        "T": "xaiAlpha013",
+        "result": "xaiAlpha014",
+        "filename": "xaiAlpha015",
+        "W": "xaiAlpha016"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g026_48935ec9d5",
+      "validation_source": "googlejam4_src/7/googlejam7.p301.CloseMatch.java",
+      "validation_source_sha256": "8c649361f45f2d5f4d20c4e7b05eceebefc366d780a0f1baed01a5ba943719f7",
+      "files": {
+        "original": "g026_48935ec9d5__original.java",
+        "alpha": "g026_48935ec9d5__alpha.java",
+        "alpha_dead": "g026_48935ec9d5__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "8c649361f45f2d5f4d20c4e7b05eceebefc366d780a0f1baed01a5ba943719f7",
+        "alpha": "27e85d64b50b030c0f17590e37a3a3a550939f080fe1ce90337da374cb0e1e44",
+        "alpha_dead": "a18bf97f78904c7dbb3e5de5519bb6a0779e6691a440295656a3c1cd11d8b1aa"
+      },
+      "alpha_mapping": {
+        "s": "xaiAlpha000",
+        "args": "xaiAlpha001",
+        "secondHalf": "xaiAlpha002",
+        "j": "xaiAlpha003",
+        "firstHalf": "xaiAlpha004",
+        "cases": "xaiAlpha005",
+        "line": "xaiAlpha006",
+        "poss": "xaiAlpha007",
+        "scorej": "xaiAlpha008",
+        "b": "xaiAlpha009",
+        "jperms": "xaiAlpha010",
+        "k": "xaiAlpha011",
+        "word": "xaiAlpha012",
+        "done": "xaiAlpha013",
+        "scores": "xaiAlpha014",
+        "s2": "xaiAlpha015",
+        "cperms": "xaiAlpha016",
+        "a": "xaiAlpha017",
+        "i": "xaiAlpha018",
+        "diff": "xaiAlpha019",
+        "scorec": "xaiAlpha020",
+        "s1": "xaiAlpha021"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g027_4caf8e20ec",
+      "validation_source": "googlejam4_src/1/googlejam1.p199.ProblemA.java",
+      "validation_source_sha256": "5b0aed956892c7dd3907af807fa478a557afb794f50d200d45b17ec6fba1ce4d",
+      "files": {
+        "original": "g027_4caf8e20ec__original.java",
+        "alpha": "g027_4caf8e20ec__alpha.java",
+        "alpha_dead": "g027_4caf8e20ec__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "5b0aed956892c7dd3907af807fa478a557afb794f50d200d45b17ec6fba1ce4d",
+        "alpha": "3591cb119354109eecde33ce2f901e0fa3b8c0cd4ded34d7dbab57e3e74bf1b3",
+        "alpha_dead": "9aa17bfa34c7104ab088af83395f4293f22a15898ab9fe27bf8d7e7669b2f5cf"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "currentClass": "xaiAlpha001",
+        "numberOfIntervals": "xaiAlpha002",
+        "j": "xaiAlpha003",
+        "e": "xaiAlpha004",
+        "filenameOutput": "xaiAlpha005",
+        "numOfTestcases": "xaiAlpha006",
+        "minimum": "xaiAlpha007",
+        "numOfMushrooms": "xaiAlpha008",
+        "filenameInput": "xaiAlpha009",
+        "path": "xaiAlpha010",
+        "constantSpeedMinimum": "xaiAlpha011",
+        "speed": "xaiAlpha012",
+        "outputString": "xaiAlpha013",
+        "input": "xaiAlpha014",
+        "i": "xaiAlpha015",
+        "output": "xaiAlpha016",
+        "inputStringArray": "xaiAlpha017"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g028_4f12d72785",
+      "validation_source": "googlejam4_src/3/googlejam3.p500.ProbA.java",
+      "validation_source_sha256": "ba2264a6670f0eecfa75fe002ee1062fe8063b465ce839c30f82f08d762c8f57",
+      "files": {
+        "original": "g028_4f12d72785__original.java",
+        "alpha": "g028_4f12d72785__alpha.java",
+        "alpha_dead": "g028_4f12d72785__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "ba2264a6670f0eecfa75fe002ee1062fe8063b465ce839c30f82f08d762c8f57",
+        "alpha": "5ce14c8fb386afd385299cfcaf705774cda5247c3f5ba7b5edcdc05b8d4188f8",
+        "alpha_dead": "f8b6df18c537258fb8626197d778baaf2a727d6cafd195a6333c42e855f335c8"
+      },
+      "alpha_mapping": {
+        "s": "xaiAlpha000",
+        "c": "xaiAlpha001",
+        "r": "xaiAlpha002",
+        "w": "xaiAlpha003",
+        "ans": "xaiAlpha004",
+        "arg": "xaiAlpha005",
+        "i": "xaiAlpha006",
+        "t": "xaiAlpha007"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g029_4fd90e5d30",
+      "validation_source": "googlejam4_src/6/googlejam6.p418.MyClass.java",
+      "validation_source_sha256": "258fef06b5143ec594f910ca4ff5387e8572ef6aaf8e9c6ace1bc9a87720f0fe",
+      "files": {
+        "original": "g029_4fd90e5d30__original.java",
+        "alpha": "g029_4fd90e5d30__alpha.java",
+        "alpha_dead": "g029_4fd90e5d30__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "258fef06b5143ec594f910ca4ff5387e8572ef6aaf8e9c6ace1bc9a87720f0fe",
+        "alpha": "d166e8ef53104b5c3dd225a14f2374b69739e1ef2e561f2bd03bd591c44e1cfa",
+        "alpha_dead": "fba748e9add7252d37088bcf5daca5daad79461596e1cd37b17a96029bf5786e"
+      },
+      "alpha_mapping": {
+        "bw2": "xaiAlpha000",
+        "j": "xaiAlpha001",
+        "n": "xaiAlpha002",
+        "count": "xaiAlpha003",
+        "Arr": "xaiAlpha004",
+        "k": "xaiAlpha005",
+        "br": "xaiAlpha006",
+        "N": "xaiAlpha007",
+        "bw": "xaiAlpha008",
+        "arguments": "xaiAlpha009",
+        "Line": "xaiAlpha010",
+        "i": "xaiAlpha011",
+        "t": "xaiAlpha012",
+        "T": "xaiAlpha013"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "source": "googlejam4_src/9/googlejam9.p125.B.java",
+      "reason": "compile_failure",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_eu7xez4s/B.java:24: error: cannot find symbol\n\t\t\txaiAlpha007 = new Scanner(System.xaiAlpha007);\n\t\t\t                                ^\n  symbol:   variable xaiAlpha007\n  location: class System\n/tmp/codeclone_truth_compile_eu7xez4s/B.java:27: error: cannot find symbol\n\t\t\tSystem.xaiAlpha010.println(\"Ouverture\");\n\t\t\t      ^\n  symbol:   variable xaiAlpha010\n  location: class System\n2 errors\n"
+        },
+        "alpha_dead": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_b72uv4ti/B.java:27: error: cannot find symbol\n\t\t\txaiAlpha007 = new Scanner(System.xaiAlpha007);\n\t\t\t                                ^\n  symbol:   variable xaiAlpha007\n  location: class System\n/tmp/codeclone_truth_compile_b72uv4ti/B.java:30: error: cannot find symbol\n\t\t\tSystem.xaiAlpha010.println(\"Ouverture\");\n\t\t\t      ^\n  symbol:   variable xaiAlpha010\n  location: class System\n2 errors\n"
+        }
+      }
+    },
+    {
+      "source": "googlejam4_src/8/googlejam8.p640.A.java",
+      "reason": "compile_failure",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_v46v68s1/A.java:9: error: cannot find symbol\n\t\t\txaiAlpha007 = new Scanner(System.xaiAlpha007);\n\t\t\t                                ^\n  symbol:   variable xaiAlpha007\n  location: class System\n1 error\n"
+        },
+        "alpha_dead": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_65a55ove/A.java:12: error: cannot find symbol\n\t\t\txaiAlpha007 = new Scanner(System.xaiAlpha007);\n\t\t\t                                ^\n  symbol:   variable xaiAlpha007\n  location: class System\n1 error\n"
+        }
+      }
+    },
+    {
+      "source": "googlejam4_src/11/googlejam11.p139.Main_Round2_2016_B.java",
+      "reason": "compile_failure",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_x2jsn3xa/Main_Round2_2016_B.java:49: error: cannot find symbol\n\t\t\t\txaiAlpha006 = Math.xaiAlpha006(xaiAlpha006, xaiAlpha004);\n\t\t\t\t                  ^\n  symbol:   method xaiAlpha006(double,double)\n  location: class Math\n1 error\n"
+        },
+        "alpha_dead": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_xa8jy8ud/Main_Round2_2016_B.java:52: error: cannot find symbol\n\t\t\t\txaiAlpha006 = Math.xaiAlpha006(xaiAlpha006, xaiAlpha004);\n\t\t\t\t                  ^\n  symbol:   method xaiAlpha006(double,double)\n  location: class Math\n1 error\n"
+        }
+      }
+    },
+    {
+      "source": "googlejam4_src/8/googlejam8.p836.Main.java",
+      "reason": "compile_failure",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_8sjpzjuh/Main.java:9: error: cannot find symbol\n\t    Scanner xaiAlpha004 = new Scanner(new BufferedReader(new InputStreamReader(System.xaiAlpha004)));\n\t                                                                                     ^\n  symbol:   variable xaiAlpha004\n  location: class System\n1 error\n"
+        },
+        "alpha_dead": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_alyubmj3/Main.java:12: error: cannot find symbol\n\t    Scanner xaiAlpha004 = new Scanner(new BufferedReader(new InputStreamReader(System.xaiAlpha004)));\n\t                                                                                     ^\n  symbol:   variable xaiAlpha004\n  location: class System\n1 error\n"
+        }
+      }
+    },
+    {
+      "source": "googlejam4_src/8/googlejam8.p708.TFirst.java",
+      "reason": "compile_failure",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_7mdew9ra/TFirst.java:33: error: cannot find symbol\n\t\t\tSystem.xaiAlpha009.print(\"Case #\" + (xaiAlpha011+1) + \":\");\n\t\t\t      ^\n  symbol:   variable xaiAlpha009\n  location: class System\n/tmp/codeclone_truth_compile_7mdew9ra/TFirst.java:57: error: cannot find symbol\n\t\t\t                System.xaiAlpha009.print(\" \" + xaiAlpha013.getKey());     \n\t\t\t                      ^\n  symbol:   variable xaiAlpha009\n  location: class System\n/tmp/codeclone_truth_compile_7mdew9ra/TFirst.java:66: error: cannot find symbol\n\t\t\t            \t\tSystem.xaiAlpha009.print(\" \" + xaiAlpha015);\n\t\t\t            \t\t      ^\n  symbol:   variable xaiAlpha009\n  location: class System\n/tmp/codeclone_truth_compile_7mdew9ra/TFirst.java:73: error: cannot find symbol\n\t\t\t\t                System.xaiAlpha009.print(xaiAlpha006); \n\t\t\t\t                      ^\n  symbol:   variable xaiAlpha009\n  location: class System\n/tmp/codeclone_truth_compile_7mdew9ra/TFirst.java:81: error: cannot find symbol\n\t\t\tSystem.xaiAlpha009.print(\" \"); \t\t        \n\t\t\t      ^\n  symbol:   variable xaiAlpha009\n  location: class System\n/tmp/codeclone_truth_compile_7mdew9ra/TFirst.java:84: error: cannot find symbol\n\t\t\t\t   System.xaiAlpha009.print(xaiAlpha013.getKey());\n\t\t\t\t         ^\n  symbol:   variable xaiAlpha009\n  location: class System\n/tmp/codeclone_truth_compile_7mdew9ra/TFirst.java:87: error: cannot find symbol\n\t\t\tSystem.xaiAlpha009.println();\n\t\t\t      ^\n  symbol:   variable xaiAlpha009\n  location: class System\n7 errors\n"
+        },
+        "alpha_dead": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_66sl0tai/TFirst.java:36: error: cannot find symbol\n\t\t\tSystem.xaiAlpha009.print(\"Case #\" + (xaiAlpha011+1) + \":\");\n\t\t\t      ^\n  symbol:   variable xaiAlpha009\n  location: class System\n/tmp/codeclone_truth_compile_66sl0tai/TFirst.java:60: error: cannot find symbol\n\t\t\t                System.xaiAlpha009.print(\" \" + xaiAlpha013.getKey());     \n\t\t\t                      ^\n  symbol:   variable xaiAlpha009\n  location: class System\n/tmp/codeclone_truth_compile_66sl0tai/TFirst.java:69: error: cannot find symbol\n\t\t\t            \t\tSystem.xaiAlpha009.print(\" \" + xaiAlpha015);\n\t\t\t            \t\t      ^\n  symbol:   variable xaiAlpha009\n  location: class System\n/tmp/codeclone_truth_compile_66sl0tai/TFirst.java:76: error: cannot find symbol\n\t\t\t\t                System.xaiAlpha009.print(xaiAlpha006); \n\t\t\t\t                      ^\n  symbol:   variable xaiAlpha009\n  location: class System\n/tmp/codeclone_truth_compile_66sl0tai/TFirst.java:84: error: cannot find symbol\n\t\t\tSystem.xaiAlpha009.print(\" \"); \t\t        \n\t\t\t      ^\n  symbol:   variable xaiAlpha009\n  location: class System\n/tmp/codeclone_truth_compile_66sl0tai/TFirst.java:87: error: cannot find symbol\n\t\t\t\t   System.xaiAlpha009.print(xaiAlpha013.getKey());\n\t\t\t\t         ^\n  symbol:   variable xaiAlpha009\n  location: class System\n/tmp/codeclone_truth_compile_66sl0tai/TFirst.java:90: error: cannot find symbol\n\t\t\tSystem.xaiAlpha009.println();\n\t\t\t      ^\n  symbol:   variable xaiAlpha009\n  location: class System\n7 errors\n"
+        }
+      }
+    },
+    {
+      "source": "googlejam4_src/2/googlejam2.p347.A.java",
+      "reason": "compile_failure",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_ni48tbir/A.java:28: error: cannot find symbol\n\t\t\t\t\t\t\t.toString()).xaiAlpha009().toString());\n\t\t\t\t\t\t\t            ^\n  symbol:   method xaiAlpha009()\n  location: class StringBuilder\n1 error\n"
+        },
+        "alpha_dead": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_ew7fm1tk/A.java:31: error: cannot find symbol\n\t\t\t\t\t\t\t.toString()).xaiAlpha009().toString());\n\t\t\t\t\t\t\t            ^\n  symbol:   method xaiAlpha009()\n  location: class StringBuilder\n1 error\n"
+        }
+      }
+    },
+    {
+      "source": "googlejam4_src/8/googlejam8.p018.CodeJamQuestion.java",
+      "reason": "compile_failure",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_hmi3qeq3/CodeJamQuestion.java:77: error: cannot find symbol\n            System.xaiAlpha008.println(\"ERROR\");\n                  ^\n  symbol:   variable xaiAlpha008\n  location: class System\n1 error\n"
+        },
+        "alpha_dead": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_o08mhjp7/CodeJamQuestion.java:80: error: cannot find symbol\n            System.xaiAlpha008.println(\"ERROR\");\n                  ^\n  symbol:   variable xaiAlpha008\n  location: class System\n1 error\n"
+        }
+      }
+    },
+    {
+      "source": "googlejam4_src/6/googlejam6.p678.RankAndFileTester.java",
+      "reason": "compile_failure",
+      "compilation": {
+        "original": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_m9iipvzo/RankAndFileTester.java:17: error: cannot find symbol\n\t\tRankAndFile t = new RankAndFile(inputFile);//parse it\n\t\t^\n  symbol:   class RankAndFile\n  location: class RankAndFileTester\n/tmp/codeclone_truth_compile_m9iipvzo/RankAndFileTester.java:17: error: cannot find symbol\n\t\tRankAndFile t = new RankAndFile(inputFile);//parse it\n\t\t                    ^\n  symbol:   class RankAndFile\n  location: class RankAndFileTester\n2 errors\n"
+        },
+        "alpha": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_6qt3mzqw/RankAndFileTester.java:17: error: cannot find symbol\n\t\tRankAndFile xaiAlpha003 = new RankAndFile(xaiAlpha001);//parse it\n\t\t^\n  symbol:   class RankAndFile\n  location: class RankAndFileTester\n/tmp/codeclone_truth_compile_6qt3mzqw/RankAndFileTester.java:17: error: cannot find symbol\n\t\tRankAndFile xaiAlpha003 = new RankAndFile(xaiAlpha001);//parse it\n\t\t                              ^\n  symbol:   class RankAndFile\n  location: class RankAndFileTester\n2 errors\n"
+        },
+        "alpha_dead": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_eppgxr_r/RankAndFileTester.java:20: error: cannot find symbol\n\t\tRankAndFile xaiAlpha003 = new RankAndFile(xaiAlpha001);//parse it\n\t\t^\n  symbol:   class RankAndFile\n  location: class RankAndFileTester\n/tmp/codeclone_truth_compile_eppgxr_r/RankAndFileTester.java:20: error: cannot find symbol\n\t\tRankAndFile xaiAlpha003 = new RankAndFile(xaiAlpha001);//parse it\n\t\t                              ^\n  symbol:   class RankAndFile\n  location: class RankAndFileTester\n2 errors\n"
+        }
+      }
+    },
+    {
+      "source": "googlejam4_src/1/googlejam1.p484.App.java",
+      "reason": "compile_failure",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_jjtq3ydq/App.java:60: error: cannot find symbol\n\t\t\t\t\t\tSystem.xaiAlpha009.println(xaiAlpha009);\n\t\t\t\t\t\t      ^\n  symbol:   variable xaiAlpha009\n  location: class System\n/tmp/codeclone_truth_compile_jjtq3ydq/App.java:72: error: cannot find symbol\n\t\tSystem.xaiAlpha009.println(String.format(\"Done. Spend %d ms\", xaiAlpha018 - xaiAlpha008));\n\t\t      ^\n  symbol:   variable xaiAlpha009\n  location: class System\n2 errors\n"
+        },
+        "alpha_dead": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_yj6wwtfu/App.java:63: error: cannot find symbol\n\t\t\t\t\t\tSystem.xaiAlpha009.println(xaiAlpha009);\n\t\t\t\t\t\t      ^\n  symbol:   variable xaiAlpha009\n  location: class System\n/tmp/codeclone_truth_compile_yj6wwtfu/App.java:75: error: cannot find symbol\n\t\tSystem.xaiAlpha009.println(String.format(\"Done. Spend %d ms\", xaiAlpha018 - xaiAlpha008));\n\t\t      ^\n  symbol:   variable xaiAlpha009\n  location: class System\n2 errors\n"
+        }
+      }
+    },
+    {
+      "source": "googlejam4_src/1/googlejam1.p377.GoogleCodeJam_p1.java",
+      "reason": "no public static void main body"
+    },
+    {
+      "source": "googlejam4_src/2/googlejam2.p173.CounterCulture.java",
+      "reason": "compile_failure",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_ltm6qjgq/CounterCulture.java:30: error: cannot find symbol\n                int xaiAlpha004 = Integer.parseInt(xaiAlpha008.xaiAlpha004().toString());\n                                                              ^\n  symbol:   method xaiAlpha004()\n  location: variable xaiAlpha008 of type StringBuilder\n1 error\n"
+        },
+        "alpha_dead": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_kkvlaewb/CounterCulture.java:33: error: cannot find symbol\n                int xaiAlpha004 = Integer.parseInt(xaiAlpha008.xaiAlpha004().toString());\n                                                              ^\n  symbol:   method xaiAlpha004()\n  location: variable xaiAlpha008 of type StringBuilder\n1 error\n"
+        }
+      }
+    },
+    {
+      "source": "googlejam4_src/6/googlejam6.p522.LastWord.java",
+      "reason": "compile_failure",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_o_y1uao_/LastWord.java:19: error: cannot find symbol\n                    String[] xaiAlpha010 = xaiAlpha008.readLine().xaiAlpha010(\" \");\n                                                                 ^\n  symbol:   method xaiAlpha010(String)\n  location: class String\n/tmp/codeclone_truth_compile_o_y1uao_/LastWord.java:27: error: cannot find symbol\n                List<Integer> xaiAlpha007 = xaiAlpha006.entrySet().stream().filter(set -> set.getValue() % 2 != 0).map(Map.Entry::getKey).map(xaiAlpha000 -> Integer.parseInt(xaiAlpha000)).xaiAlpha007(Collectors.toList());\n                                                                                                                                                                                           ^\n  symbol:   method xaiAlpha007(Collector<Object,CAP#1,List<Object>>)\n  location: interface Stream<Integer>\n  where CAP#1 is a fresh type-variable:\n    CAP#1 extends Object from capture of ?\n2 errors\n"
+        },
+        "alpha_dead": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_nv2suf_5/LastWord.java:22: error: cannot find symbol\n                    String[] xaiAlpha010 = xaiAlpha008.readLine().xaiAlpha010(\" \");\n                                                                 ^\n  symbol:   method xaiAlpha010(String)\n  location: class String\n/tmp/codeclone_truth_compile_nv2suf_5/LastWord.java:30: error: cannot find symbol\n                List<Integer> xaiAlpha007 = xaiAlpha006.entrySet().stream().filter(set -> set.getValue() % 2 != 0).map(Map.Entry::getKey).map(xaiAlpha000 -> Integer.parseInt(xaiAlpha000)).xaiAlpha007(Collectors.toList());\n                                                                                                                                                                                           ^\n  symbol:   method xaiAlpha007(Collector<Object,CAP#1,List<Object>>)\n  location: interface Stream<Integer>\n  where CAP#1 is a fresh type-variable:\n    CAP#1 extends Object from capture of ?\n2 errors\n"
+        }
+      }
+    }
+  ]
+}

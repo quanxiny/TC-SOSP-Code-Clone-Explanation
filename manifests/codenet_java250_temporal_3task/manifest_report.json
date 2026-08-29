@@ -1,0 +1,215 @@
+{
+  "dataset": "Project_CodeNet_Java250",
+  "source": "IBM Project CodeNet official Java250 benchmark and metadata",
+  "stream_type": "submission_time_domain_incremental",
+  "ordering_claim": "strict_chronological_unix_submission_timestamp",
+  "task_order": [
+    "T1",
+    "T2",
+    "T3"
+  ],
+  "timestamp_boundaries": {
+    "T1_before": {
+      "unix": 1560713391,
+      "utc": "2019-06-16T19:29:51+00:00"
+    },
+    "T2_before": {
+      "unix": 1586790405,
+      "utc": "2020-04-13T15:06:45+00:00"
+    },
+    "T3_from": {
+      "unix": 1586790405,
+      "utc": "2020-04-13T15:06:45+00:00"
+    }
+  },
+  "selection_protocol": {
+    "all_java250_sources": 75000,
+    "all_java250_problems": 250,
+    "time_boundaries": "global one-third and two-third submission-date ranks",
+    "user_group_split": "sha256 salted global 70/15/15",
+    "per_user_deduplication": "earliest accepted submission per problem/task/user",
+    "problem_selection": "metadata-only descending minimum validation/test cell size, then train cell size and retained total; hash tie-break",
+    "selected_problems": [
+      "p04030",
+      "p03775",
+      "p03371",
+      "p03146",
+      "p03854",
+      "p03814",
+      "p03835",
+      "p03998",
+      "p03106",
+      "p03457",
+      "p03136",
+      "p03470"
+    ],
+    "selected_fragments": 3396,
+    "pair_sampling": "balanced unique hash-ranked same-problem/cross-problem pairs"
+  },
+  "selected_source_dir": "./external_data/Project_CodeNet/selected_temporal_12problem",
+  "selected_fragments_manifest": "./manifests/codenet_java250_temporal_3task/selected_fragments.jsonl",
+  "selected_fragments_manifest_sha256": "59b285e71d2f3bcfd4cbce01b786f4cfe1bbca19064aca881e01905528ab07a6",
+  "metadata_manifest_sha256": "b8674ff04a9adb6c73d19d8b82c7cbe3d9435a84b89c9e2ed31ece9c6c59d988",
+  "tasks": {
+    "T1": {
+      "train": {
+        "path": "./manifests/codenet_java250_temporal_3task/T1_train.txt",
+        "sha256": "e1f444efb413bc8d1acb05b83359c3124b6abf265f66619c8798ae78e26290b1",
+        "pairs": 12000,
+        "positive_pairs": 6000,
+        "negative_pairs": 6000,
+        "fragments": 1074,
+        "users": 518,
+        "problems": 12,
+        "earliest_submission_utc": "2016-09-26T21:40:47+00:00",
+        "latest_submission_utc": "2019-06-15T17:18:24+00:00"
+      },
+      "validation": {
+        "path": "./manifests/codenet_java250_temporal_3task/T1_validation.txt",
+        "sha256": "00a6d01b3c8a0d955b6d7775f255b4357e109cd54f0c15798015a68f512db394",
+        "pairs": 1000,
+        "positive_pairs": 500,
+        "negative_pairs": 500,
+        "fragments": 204,
+        "users": 105,
+        "problems": 12,
+        "earliest_submission_utc": "2016-11-02T15:06:00+00:00",
+        "latest_submission_utc": "2019-06-15T20:39:43+00:00"
+      },
+      "test": {
+        "path": "./manifests/codenet_java250_temporal_3task/T1_test.txt",
+        "sha256": "5e341a64d1490fb49b5b4e48dca62c2837ce47724ab48a75a74dbd97b28b8ca1",
+        "pairs": 1000,
+        "positive_pairs": 500,
+        "negative_pairs": 500,
+        "fragments": 200,
+        "users": 98,
+        "problems": 12,
+        "earliest_submission_utc": "2016-09-27T14:40:08+00:00",
+        "latest_submission_utc": "2019-06-14T01:47:19+00:00"
+      }
+    },
+    "T2": {
+      "train": {
+        "path": "./manifests/codenet_java250_temporal_3task/T2_train.txt",
+        "sha256": "db0d2112db2209440e836a575ec6d6a069aa4a22e478881fc96e18d364afa37c",
+        "pairs": 12000,
+        "positive_pairs": 6000,
+        "negative_pairs": 6000,
+        "fragments": 734,
+        "users": 300,
+        "problems": 12,
+        "earliest_submission_utc": "2019-06-17T00:30:49+00:00",
+        "latest_submission_utc": "2020-04-13T05:42:03+00:00"
+      },
+      "validation": {
+        "path": "./manifests/codenet_java250_temporal_3task/T2_validation.txt",
+        "sha256": "db93bcdb973b31e1577420384970191b6e23127e80ed17e613941afa87e2cbe5",
+        "pairs": 1000,
+        "positive_pairs": 500,
+        "negative_pairs": 500,
+        "fragments": 158,
+        "users": 63,
+        "problems": 12,
+        "earliest_submission_utc": "2019-06-17T21:05:38+00:00",
+        "latest_submission_utc": "2020-04-07T20:06:23+00:00"
+      },
+      "test": {
+        "path": "./manifests/codenet_java250_temporal_3task/T2_test.txt",
+        "sha256": "f41146a4e068681cea2c9aeafd727ddc280fe9d0982f3e605ba9c98d9cb2becc",
+        "pairs": 1000,
+        "positive_pairs": 500,
+        "negative_pairs": 500,
+        "fragments": 166,
+        "users": 66,
+        "problems": 12,
+        "earliest_submission_utc": "2019-06-23T23:23:15+00:00",
+        "latest_submission_utc": "2020-04-12T07:51:27+00:00"
+      }
+    },
+    "T3": {
+      "train": {
+        "path": "./manifests/codenet_java250_temporal_3task/T3_train.txt",
+        "sha256": "db94d580482f9e130d8b948ffc889b82a9518c36c96d85436e9b029df449e46e",
+        "pairs": 12000,
+        "positive_pairs": 6000,
+        "negative_pairs": 6000,
+        "fragments": 552,
+        "users": 215,
+        "problems": 12,
+        "earliest_submission_utc": "2020-04-13T17:10:02+00:00",
+        "latest_submission_utc": "2020-09-30T21:50:21+00:00"
+      },
+      "validation": {
+        "path": "./manifests/codenet_java250_temporal_3task/T3_validation.txt",
+        "sha256": "4d4423fb86857f8be61bd142ecc475f5f0a86ecd0f8c7a70ec67be261144b41d",
+        "pairs": 1000,
+        "positive_pairs": 500,
+        "negative_pairs": 500,
+        "fragments": 168,
+        "users": 62,
+        "problems": 12,
+        "earliest_submission_utc": "2020-04-13T19:03:44+00:00",
+        "latest_submission_utc": "2020-09-30T18:00:07+00:00"
+      },
+      "test": {
+        "path": "./manifests/codenet_java250_temporal_3task/T3_test.txt",
+        "sha256": "cf5316c37a9442e903e0988e89f2d094309a0f3eb0ce063274dc468941874531",
+        "pairs": 1000,
+        "positive_pairs": 500,
+        "negative_pairs": 500,
+        "fragments": 140,
+        "users": 54,
+        "problems": 12,
+        "earliest_submission_utc": "2020-04-13T19:35:17+00:00",
+        "latest_submission_utc": "2020-09-28T12:05:45+00:00"
+      }
+    }
+  },
+  "fragment_overlap": {
+    "T1_test__T1_train": 0,
+    "T1_test__T1_validation": 0,
+    "T1_test__T2_test": 0,
+    "T1_test__T2_train": 0,
+    "T1_test__T2_validation": 0,
+    "T1_test__T3_test": 0,
+    "T1_test__T3_train": 0,
+    "T1_test__T3_validation": 0,
+    "T1_train__T1_validation": 0,
+    "T1_train__T2_test": 0,
+    "T1_train__T2_train": 0,
+    "T1_train__T2_validation": 0,
+    "T1_train__T3_test": 0,
+    "T1_train__T3_train": 0,
+    "T1_train__T3_validation": 0,
+    "T1_validation__T2_test": 0,
+    "T1_validation__T2_train": 0,
+    "T1_validation__T2_validation": 0,
+    "T1_validation__T3_test": 0,
+    "T1_validation__T3_train": 0,
+    "T1_validation__T3_validation": 0,
+    "T2_test__T2_train": 0,
+    "T2_test__T2_validation": 0,
+    "T2_test__T3_test": 0,
+    "T2_test__T3_train": 0,
+    "T2_test__T3_validation": 0,
+    "T2_train__T2_validation": 0,
+    "T2_train__T3_test": 0,
+    "T2_train__T3_train": 0,
+    "T2_train__T3_validation": 0,
+    "T2_validation__T3_test": 0,
+    "T2_validation__T3_train": 0,
+    "T2_validation__T3_validation": 0,
+    "T3_test__T3_train": 0,
+    "T3_test__T3_validation": 0,
+    "T3_train__T3_validation": 0
+  },
+  "global_users_by_split": {
+    "test": 200,
+    "train": 922,
+    "validation": 206
+  },
+  "contract_violations": [],
+  "test_read": false,
+  "test_policy": "test manifests are constructed from frozen metadata but remain unavailable to model selection and validation experiments"
+}

@@ -1,0 +1,1174 @@
+{
+  "config_sha256": "8d2b684c8ae62c3be8e1164c3e50c7babb7386ca7c1b3ba515b4e784a15185d0",
+  "configuration": {
+    "schema_version": 1,
+    "experiment_id": "C12_semantic_optimal_objective_lambda05",
+    "stage": "explanation",
+    "status": "ready_objective_ablation",
+    "dataset": "GCJ",
+    "graph_type": "CFG",
+    "split": "paper_clean",
+    "seed": 42,
+    "device": "cuda:0",
+    "loss": {
+      "name": "task_conditioned_symmetric_discrete_keep_drop",
+      "alpha": 1.0,
+      "gamma": 2.0
+    },
+    "output_dir": "artifacts/pilots/C12_semantic_optimal_objective_lambda05_seed42",
+    "resume": true,
+    "model": {
+      "encoder": "codegraph_pniat_gat_edgepool",
+      "hidden": 16,
+      "gat_heads": 16,
+      "dropout": 0.1,
+      "bilstm_hidden": 128,
+      "bilstm_layers": 2
+    },
+    "training": {
+      "epochs": 10,
+      "batch_size": 64,
+      "graph_batch_size": 128,
+      "optimizer": "adam",
+      "learning_rate": 0.001,
+      "weight_decay": 0.0005,
+      "selection_metric": "macro_f1",
+      "evaluate_every": 1,
+      "amp": false,
+      "tf32": true
+    },
+    "sampling": {
+      "method": "full_dataset",
+      "train_fraction": 1.0,
+      "manifest": null,
+      "preserve_labels": true
+    },
+    "evaluation": {
+      "validation_policy": "every_epoch",
+      "test_policy": "after_selection_only",
+      "save_predictions": true,
+      "metrics": [
+        "macro_f1",
+        "mcc",
+        "pr_auc",
+        "roc_auc",
+        "macro_precision",
+        "macro_recall",
+        "map_at_r",
+        "mrr",
+        "recall_at_k",
+        "precision_at_k",
+        "swap_probability_error",
+        "encoder_graphs_per_second",
+        "cached_pairs_per_second",
+        "peak_gpu_memory_mb"
+      ]
+    },
+    "provenance": {
+      "baseline_commit": "23a20b7e5f27a217a966401c6c969150bfa023dc",
+      "preprocessor_commit": "684b9b8128174b704d323e13341385e75f29da7d"
+    },
+    "paths": {
+      "source_dir": "../CodeGraph4CCDetector/googlejam4_src",
+      "vector_dir": "../CodeGraph4CCDetector/artifacts/gcj_cfg16_repaired",
+      "train_split": "../CodeGraph4CCDetector/artifacts/paper_protocol/train_balanced_seed1337.txt",
+      "validation_split": "../CodeGraph4CCDetector/DataSetJsonVec/GCJ/javadata/valid.txt",
+      "test_split": "../CodeGraph4CCDetector/DataSetJsonVec/GCJ/javadata/test.txt"
+    },
+    "data_contract": {
+      "allow_fragment_overlap": false,
+      "group_field": null,
+      "group_field_status": "missing_verified_metadata",
+      "test_is_sealed": true
+    },
+    "predictor": {
+      "checkpoint": "../CodeGraph4CCDetector/artifacts/formal_paper_protocol_seed1337/epoch_013.pt",
+      "checkpoint_role": "paper_clean_validation_selected_epoch",
+      "frozen": true,
+      "ordered_baselines": true,
+      "symmetric_candidate": "minimum_clone_probability_over_both_orders"
+    },
+    "explanation": {
+      "output": [
+        "left_core",
+        "right_core",
+        "undirected_core_mapping",
+        "left_diff",
+        "right_diff"
+      ],
+      "optimize": [
+        "keep",
+        "remove",
+        "swap_consistency"
+      ],
+      "alignment_ground_truth": "transformation_provenance_only",
+      "attention_is_explanation": false,
+      "sample_pairs": 100,
+      "selection": "lowest_sha256_per_normalized_label",
+      "top_node_fraction": 0.2,
+      "integrated_gradients_steps": 8,
+      "mask_optimization_steps": 20,
+      "mask_learning_rate": 0.1,
+      "mask_sparsity_lambda": 0.01,
+      "bootstrap_resamples": 2000,
+      "mask_semantics": "zero_node_features_keep_graph_topology_fixed",
+      "optimal_sufficiency_weight": 0.5,
+      "optimal_semantic_coefficient": 0.0,
+      "optimal_structure_coefficient": 0.0,
+      "candidate_sources": [
+        "symmetric_grad_x_input",
+        "target_conditioned_statement_similarity",
+        "paired_relation_marginal",
+        "cfg_neighbour_diffusion",
+        "encoder_internal_node_token_attention_prior"
+      ],
+      "candidate_selection": "maximize exact symmetric necessity minus absolute sufficiency gap at fixed node budget",
+      "positive_task_semantics": "common semantic statement pair",
+      "negative_task_semantics": "contrastive unmatched statement pair",
+      "attention_prior_negative_controls": [
+        "deterministically_shuffled",
+        "uniform"
+      ]
+    },
+    "baselines": [
+      "symmetric_grad_x_input",
+      "symmetric_semantic_optimal_pair"
+    ]
+  },
+  "checkpoint": "../CodeGraph4CCDetector/artifacts/formal_paper_protocol_seed1337/epoch_013.pt",
+  "checkpoint_sha256": "380bd98d949b428711e66f9e8aa92e1c4ed6d39dcb905e7e0542f34719fca61c",
+  "model_parameter_count": 1143943,
+  "validation_manifest": "./artifacts/pilots/C12_semantic_optimal_objective_lambda05_seed42/validation_explanation_manifest.txt",
+  "validation_manifest_sha256": "344893dfec4ab327b58cb2cf986fcd67580ce74281f032afd4d55bfbe3518ee2",
+  "sample_pairs": 100,
+  "unique_graphs": 115,
+  "methods": {
+    "symmetric_grad_x_input": {
+      "pairs": 100,
+      "problem_pair_clusters": 23,
+      "necessity_drop": {
+        "mean": 0.17305992886424065,
+        "median": 0.02322724461555481,
+        "bootstrap_95_ci": [
+          0.11760038937907666,
+          0.23059515797346825
+        ],
+        "problem_pair_cluster_bootstrap_95_ci": [
+          0.08007505335439746,
+          0.2584880638000643
+        ]
+      },
+      "sufficiency_gap": {
+        "mean": 0.03423918858170509,
+        "median": 0.002558290958404541,
+        "bootstrap_95_ci": [
+          0.012107424333691595,
+          0.06292407195828853
+        ],
+        "problem_pair_cluster_bootstrap_95_ci": [
+          0.0037485626417029594,
+          0.06274243190861575
+        ]
+      },
+      "swap_jaccard": {
+        "mean": 1.0,
+        "median": 1.0,
+        "bootstrap_95_ci": [
+          1.0,
+          1.0
+        ],
+        "problem_pair_cluster_bootstrap_95_ci": [
+          1.0,
+          1.0
+        ]
+      },
+      "selected_node_fraction": {
+        "mean": 0.213433796410056,
+        "median": 0.2111111111111111,
+        "bootstrap_95_ci": [
+          0.21175493894553912,
+          0.215352258902569
+        ],
+        "problem_pair_cluster_bootstrap_95_ci": [
+          0.2115869531170736,
+          0.21575326719357935
+        ]
+      },
+      "seconds": {
+        "mean": 0.27396558217995337,
+        "median": 0.18006340699503198,
+        "bootstrap_95_ci": [
+          0.18151038921505824,
+          0.4364900463052473
+        ],
+        "problem_pair_cluster_bootstrap_95_ci": [
+          0.18235943960335277,
+          0.4107408883253346
+        ]
+      },
+      "absolute_sufficiency_gap": {
+        "mean": 0.037559341341257095,
+        "median": 0.003517329692840576,
+        "bootstrap_95_ci": [
+          0.015788309395313265,
+          0.06663549334555863
+        ],
+        "problem_pair_cluster_bootstrap_95_ci": [
+          0.007489915412915798,
+          0.06693755266792846
+        ]
+      },
+      "prediction_accuracy": 0.99,
+      "by_label": {
+        "0": {
+          "pairs": 50,
+          "problem_pair_clusters": 19,
+          "necessity_drop": {
+            "mean": 0.06066560626029968,
+            "median": 0.012179017066955566,
+            "bootstrap_95_ci": [
+              0.025344908624887467,
+              0.10724049860239027
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.023880221379038533,
+              0.09565110816375201
+            ]
+          },
+          "sufficiency_gap": {
+            "mean": 0.007288811206817627,
+            "median": 0.0028631389141082764,
+            "bootstrap_95_ci": [
+              0.001713338762521744,
+              0.014325317710638039
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.0025153463386975313,
+              0.015359620648351582
+            ]
+          },
+          "swap_jaccard": {
+            "mean": 1.0,
+            "median": 1.0,
+            "bootstrap_95_ci": [
+              1.0,
+              1.0
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              1.0,
+              1.0
+            ]
+          },
+          "selected_node_fraction": {
+            "mean": 0.21333104902943248,
+            "median": 0.21199102316123591,
+            "bootstrap_95_ci": [
+              0.21109355966996635,
+              0.21557987726294514
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.21097255859013184,
+              0.2165136097421544
+            ]
+          },
+          "seconds": {
+            "mean": 0.3268952500197338,
+            "median": 0.18060206349764485,
+            "bootstrap_95_ci": [
+              0.18115461927826984,
+              0.6172056339586852
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.1811342465722903,
+              0.5400414470185084
+            ]
+          },
+          "absolute_sufficiency_gap": {
+            "mean": 0.009991683959960938,
+            "median": 0.0035316646099090576,
+            "bootstrap_95_ci": [
+              0.0052262039184570305,
+              0.0164404864013195
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.005103667576452894,
+              0.01696842605132235
+            ]
+          },
+          "prediction_accuracy": 1.0
+        },
+        "1": {
+          "pairs": 50,
+          "problem_pair_clusters": 4,
+          "necessity_drop": {
+            "mean": 0.2854542514681816,
+            "median": 0.07732301950454712,
+            "bootstrap_95_ci": [
+              0.1974386422224343,
+              0.3812196688428521
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.18260768231223612,
+              0.5040032109245658
+            ]
+          },
+          "sufficiency_gap": {
+            "mean": 0.061189565956592556,
+            "median": 0.002558290958404541,
+            "bootstrap_95_ci": [
+              0.0182529716193676,
+              0.11722403609752655
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.0010949373245239258,
+              0.09214740494887035
+            ]
+          },
+          "swap_jaccard": {
+            "mean": 1.0,
+            "median": 1.0,
+            "bootstrap_95_ci": [
+              1.0,
+              1.0
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              1.0,
+              1.0
+            ]
+          },
+          "selected_node_fraction": {
+            "mean": 0.21353654379067963,
+            "median": 0.2111111111111111,
+            "bootstrap_95_ci": [
+              0.21099360224994437,
+              0.21692917715632828
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.21104911051996997,
+              0.21716333505525745
+            ]
+          },
+          "seconds": {
+            "mean": 0.2210359143401729,
+            "median": 0.17969691498728935,
+            "bootstrap_95_ci": [
+              0.1795595992370945,
+              0.30251779759670894
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.1781099280310996,
+              0.25347786739592176
+            ]
+          },
+          "absolute_sufficiency_gap": {
+            "mean": 0.06512699872255326,
+            "median": 0.0034734904766082764,
+            "bootstrap_95_ci": [
+              0.024127889811992643,
+              0.12015522595867512
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.009620820774751552,
+              0.09374216519579102
+            ]
+          },
+          "prediction_accuracy": 0.98
+        }
+      },
+      "by_prediction_correctness": {
+        "correct": {
+          "pairs": 99,
+          "problem_pair_clusters": 23,
+          "necessity_drop": {
+            "mean": 0.17546002175470796,
+            "median": 0.023656904697418213,
+            "bootstrap_95_ci": [
+              0.12117586209241188,
+              0.23539174965516937
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.07697253119960172,
+              0.264304238870248
+            ]
+          },
+          "sufficiency_gap": {
+            "mean": 0.034815101460977035,
+            "median": 0.002575516700744629,
+            "bootstrap_95_ci": [
+              0.01250087022781372,
+              0.06382847668584248
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.004198011961569519,
+              0.06137831688320175
+            ]
+          },
+          "swap_jaccard": {
+            "mean": 1.0,
+            "median": 1.0,
+            "bootstrap_95_ci": [
+              1.0,
+              1.0
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              1.0,
+              1.0
+            ]
+          },
+          "selected_node_fraction": {
+            "mean": 0.21281419056798817,
+            "median": 0.2111111111111111,
+            "bootstrap_95_ci": [
+              0.21142562582363436,
+              0.21434485724008012
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.21137937990332256,
+              0.21468172844796038
+            ]
+          },
+          "seconds": {
+            "mean": 0.275005605515102,
+            "median": 0.18035076398518868,
+            "bootstrap_95_ci": [
+              0.1815047001669882,
+              0.4398048823004391
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.18239381084189196,
+              0.41909264899851006
+            ]
+          },
+          "absolute_sufficiency_gap": {
+            "mean": 0.03770866613797467,
+            "median": 0.0033974647521972656,
+            "bootstrap_95_ci": [
+              0.015345231707047935,
+              0.06534346350365212
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.00797661786960346,
+              0.06564477618586569
+            ]
+          },
+          "prediction_accuracy": 1.0
+        },
+        "incorrect": {
+          "pairs": 1,
+          "problem_pair_clusters": 1,
+          "necessity_drop": {
+            "mean": -0.0645492672920227,
+            "median": -0.0645492672920227,
+            "bootstrap_95_ci": [
+              -0.0645492672920227,
+              -0.0645492672920227
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              -0.0645492672920227,
+              -0.0645492672920227
+            ]
+          },
+          "sufficiency_gap": {
+            "mean": -0.02277618646621704,
+            "median": -0.02277618646621704,
+            "bootstrap_95_ci": [
+              -0.02277618646621704,
+              -0.02277618646621704
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              -0.02277618646621704,
+              -0.02277618646621704
+            ]
+          },
+          "swap_jaccard": {
+            "mean": 1.0,
+            "median": 1.0,
+            "bootstrap_95_ci": [
+              1.0,
+              1.0
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              1.0,
+              1.0
+            ]
+          },
+          "selected_node_fraction": {
+            "mean": 0.27477477477477474,
+            "median": 0.27477477477477474,
+            "bootstrap_95_ci": [
+              0.27477477477477474,
+              0.27477477477477474
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.27477477477477474,
+              0.27477477477477474
+            ]
+          },
+          "seconds": {
+            "mean": 0.17100327200023457,
+            "median": 0.17100327200023457,
+            "bootstrap_95_ci": [
+              0.17100327200023457,
+              0.17100327200023457
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.17100327200023457,
+              0.17100327200023457
+            ]
+          },
+          "absolute_sufficiency_gap": {
+            "mean": 0.02277618646621704,
+            "median": 0.02277618646621704,
+            "bootstrap_95_ci": [
+              0.02277618646621704,
+              0.02277618646621704
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.02277618646621704,
+              0.02277618646621704
+            ]
+          },
+          "prediction_accuracy": 0.0
+        }
+      }
+    },
+    "symmetric_semantic_optimal_pair": {
+      "pairs": 100,
+      "problem_pair_clusters": 23,
+      "necessity_drop": {
+        "mean": 0.3088337540160865,
+        "median": 0.09879618883132935,
+        "bootstrap_95_ci": [
+          0.24120691103860736,
+          0.38065837011183606
+        ],
+        "problem_pair_cluster_bootstrap_95_ci": [
+          0.16700952294651286,
+          0.42792874501269396
+        ]
+      },
+      "sufficiency_gap": {
+        "mean": 0.0011780774593353272,
+        "median": 0.0015890002250671387,
+        "bootstrap_95_ci": [
+          -0.002630287542939186,
+          0.004133126005530356
+        ],
+        "problem_pair_cluster_bootstrap_95_ci": [
+          -0.0024101087393943203,
+          0.004590618306839907
+        ]
+      },
+      "swap_jaccard": {
+        "mean": 1.0,
+        "median": 1.0,
+        "bootstrap_95_ci": [
+          1.0,
+          1.0
+        ],
+        "problem_pair_cluster_bootstrap_95_ci": [
+          1.0,
+          1.0
+        ]
+      },
+      "selected_node_fraction": {
+        "mean": 0.213433796410056,
+        "median": 0.2111111111111111,
+        "bootstrap_95_ci": [
+          0.2117226634696427,
+          0.21540531877385757
+        ],
+        "problem_pair_cluster_bootstrap_95_ci": [
+          0.2116575319108545,
+          0.21570755020707724
+        ]
+      },
+      "seconds": {
+        "mean": 0.5098892755110864,
+        "median": 0.5140601964958478,
+        "bootstrap_95_ci": [
+          0.4954359858247917,
+          0.5268704804652298
+        ],
+        "problem_pair_cluster_bootstrap_95_ci": [
+          0.4907057943973058,
+          0.5278753659260282
+        ]
+      },
+      "absolute_sufficiency_gap": {
+        "mean": 0.007089937925338745,
+        "median": 0.0024016201496124268,
+        "bootstrap_95_ci": [
+          0.004405904680490493,
+          0.01047940807044506
+        ],
+        "problem_pair_cluster_bootstrap_95_ci": [
+          0.004614076245229138,
+          0.009711618040950554
+        ]
+      },
+      "semantic_pair_quality": {
+        "mean": 0.8023570048809051,
+        "median": 0.8065715432167053,
+        "bootstrap_95_ci": [
+          0.7809890638142823,
+          0.8239482911974192
+        ],
+        "problem_pair_cluster_bootstrap_95_ci": [
+          0.7302647556180571,
+          0.8487497705894026
+        ]
+      },
+      "induced_cfg_coverage": {
+        "mean": 0.06592070393729955,
+        "median": 0.06450747093185782,
+        "bootstrap_95_ci": [
+          0.060538251012330874,
+          0.07125081013806629
+        ],
+        "problem_pair_cluster_bootstrap_95_ci": [
+          0.05928593950053522,
+          0.07570908558149635
+        ]
+      },
+      "candidate_objective": {
+        "mean": 0.30528906582854687,
+        "median": 0.09538708627223969,
+        "bootstrap_95_ci": [
+          0.2409570665631909,
+          0.3785335630930495
+        ],
+        "problem_pair_cluster_bootstrap_95_ci": [
+          0.16420681659556643,
+          0.42147685885583186
+        ]
+      },
+      "prediction_accuracy": 0.99,
+      "by_label": {
+        "0": {
+          "pairs": 50,
+          "problem_pair_clusters": 19,
+          "necessity_drop": {
+            "mean": 0.13620514273643494,
+            "median": 0.04128977656364441,
+            "bootstrap_95_ci": [
+              0.07845933514833449,
+              0.2053359363675116
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.08107465163019358,
+              0.19115868427367366
+            ]
+          },
+          "sufficiency_gap": {
+            "mean": 0.002674030065536499,
+            "median": 0.0023376941680908203,
+            "bootstrap_95_ci": [
+              -0.0005870342552661895,
+              0.005280063003301619
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.0017368269486482753,
+              0.003742126589236051
+            ]
+          },
+          "swap_jaccard": {
+            "mean": 1.0,
+            "median": 1.0,
+            "bootstrap_95_ci": [
+              1.0,
+              1.0
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              1.0,
+              1.0
+            ]
+          },
+          "selected_node_fraction": {
+            "mean": 0.21333104902943248,
+            "median": 0.21199102316123591,
+            "bootstrap_95_ci": [
+              0.21125230782041116,
+              0.21564461287592404
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.21094202206343626,
+              0.21626992406487452
+            ]
+          },
+          "seconds": {
+            "mean": 0.5213122412003577,
+            "median": 0.5153218214982189,
+            "bootstrap_95_ci": [
+              0.49944669850253554,
+              0.5518162826742337
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.5026808556596013,
+              0.5403810200087941
+            ]
+          },
+          "absolute_sufficiency_gap": {
+            "mean": 0.005775963068008423,
+            "median": 0.0029198527336120605,
+            "bootstrap_95_ci": [
+              0.003629622250795364,
+              0.00862142863869667
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.003243880442668947,
+              0.008637006656278536
+            ]
+          },
+          "semantic_pair_quality": {
+            "mean": 0.71139688372612,
+            "median": 0.7048449516296387,
+            "bootstrap_95_ci": [
+              0.6972439987361432,
+              0.7257880209982395
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.6921854462940246,
+              0.7253267956915527
+            ]
+          },
+          "induced_cfg_coverage": {
+            "mean": 0.06854304482229054,
+            "median": 0.06903472542762756,
+            "bootstrap_95_ci": [
+              0.06161661494732834,
+              0.07582757985987701
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.06091931642644341,
+              0.07624592650855185
+            ]
+          },
+          "candidate_objective": {
+            "mean": 0.13331772327423097,
+            "median": 0.03516244888305664,
+            "bootstrap_95_ci": [
+              0.07730319418013096,
+              0.19858560499548897
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.08198202864399978,
+              0.18747491628270255
+            ]
+          },
+          "prediction_accuracy": 1.0
+        },
+        "1": {
+          "pairs": 50,
+          "problem_pair_clusters": 4,
+          "necessity_drop": {
+            "mean": 0.481462365295738,
+            "median": 0.5149962157011032,
+            "bootstrap_95_ci": [
+              0.3721254550013691,
+              0.5848435843922198
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.366709024837131,
+              0.7253132137702778
+            ]
+          },
+          "sufficiency_gap": {
+            "mean": -0.00031787514686584475,
+            "median": 0.0009523928165435791,
+            "bootstrap_95_ci": [
+              -0.007047290295362473,
+              0.004618306547403335
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              -0.009452381554771872,
+              0.007109810324276195
+            ]
+          },
+          "swap_jaccard": {
+            "mean": 1.0,
+            "median": 1.0,
+            "bootstrap_95_ci": [
+              1.0,
+              1.0
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              1.0,
+              1.0
+            ]
+          },
+          "selected_node_fraction": {
+            "mean": 0.21353654379067963,
+            "median": 0.2111111111111111,
+            "bootstrap_95_ci": [
+              0.2108687705516245,
+              0.21656135358681947
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.21104911051996997,
+              0.21716333505525745
+            ]
+          },
+          "seconds": {
+            "mean": 0.4984663098218152,
+            "median": 0.5138732275081566,
+            "bootstrap_95_ci": [
+              0.48403848091326657,
+              0.5121126405313261
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.45843006517679896,
+              0.5251241259367412
+            ]
+          },
+          "absolute_sufficiency_gap": {
+            "mean": 0.008403912782669068,
+            "median": 0.001607745885848999,
+            "bootstrap_95_ci": [
+              0.003960209637880326,
+              0.015334404200315467
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.005480302918341852,
+              0.013174013087623998
+            ]
+          },
+          "semantic_pair_quality": {
+            "mean": 0.8933171260356904,
+            "median": 0.9089790284633636,
+            "bootstrap_95_ci": [
+              0.8759882028400898,
+              0.9082647081017494
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.8582688600589068,
+              0.9097319915890694
+            ]
+          },
+          "induced_cfg_coverage": {
+            "mean": 0.06329836305230856,
+            "median": 0.05860298406332731,
+            "bootstrap_95_ci": [
+              0.05568336313171312,
+              0.07108652953291311
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.05184810006370147,
+              0.08659888245165348
+            ]
+          },
+          "candidate_objective": {
+            "mean": 0.4772604083828628,
+            "median": 0.49075886607170105,
+            "bootstrap_95_ci": [
+              0.3703897214531899,
+              0.577553234336432
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.36297083889846415,
+              0.7201257435372099
+            ]
+          },
+          "prediction_accuracy": 0.98
+        }
+      },
+      "by_prediction_correctness": {
+        "correct": {
+          "pairs": 99,
+          "problem_pair_clusters": 23,
+          "necessity_drop": {
+            "mean": 0.3067825965940802,
+            "median": 0.09121334552764893,
+            "bootstrap_95_ci": [
+              0.23716246430677448,
+              0.3784065325589229
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.15434002991517384,
+              0.42443539023768306
+            ]
+          },
+          "sufficiency_gap": {
+            "mean": 0.002480900046801326,
+            "median": 0.001595914363861084,
+            "bootstrap_95_ci": [
+              0.00029822583451415553,
+              0.004593275291751128
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.00039976278632323934,
+              0.005255385670315456
+            ]
+          },
+          "swap_jaccard": {
+            "mean": 1.0,
+            "median": 1.0,
+            "bootstrap_95_ci": [
+              1.0,
+              1.0
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              1.0,
+              1.0
+            ]
+          },
+          "selected_node_fraction": {
+            "mean": 0.21281419056798817,
+            "median": 0.2111111111111111,
+            "bootstrap_95_ci": [
+              0.2114582683329256,
+              0.21428011426374693
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.21145389412103963,
+              0.21470331273942955
+            ]
+          },
+          "seconds": {
+            "mean": 0.511605499415174,
+            "median": 0.5140709099941887,
+            "bootstrap_95_ci": [
+              0.49850690917478224,
+              0.5281939251184042
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.4937077469462647,
+              0.530706083404601
+            ]
+          },
+          "absolute_sufficiency_gap": {
+            "mean": 0.005870630644788646,
+            "median": 0.0023871660232543945,
+            "bootstrap_95_ci": [
+              0.003987130191591051,
+              0.008010843697220386
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.0037287802519941613,
+              0.008192385628443674
+            ]
+          },
+          "semantic_pair_quality": {
+            "mean": 0.8043776636171822,
+            "median": 0.8076265454292297,
+            "bootstrap_95_ci": [
+              0.7835908535303492,
+              0.8257273065772923
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.7306293324535449,
+              0.8535762209886815
+            ]
+          },
+          "induced_cfg_coverage": {
+            "mean": 0.06635166242285961,
+            "median": 0.06512605212628841,
+            "bootstrap_95_ci": [
+              0.061439005660852704,
+              0.07158038854490816
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.05949637520469433,
+              0.07620932025621616
+            ]
+          },
+          "candidate_objective": {
+            "mean": 0.3038475648829281,
+            "median": 0.08617344498634338,
+            "bootstrap_95_ci": [
+              0.2341522324463409,
+              0.3735211133124363
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.15126212281248871,
+              0.41707785238503103
+            ]
+          },
+          "prediction_accuracy": 1.0
+        },
+        "incorrect": {
+          "pairs": 1,
+          "problem_pair_clusters": 1,
+          "necessity_drop": {
+            "mean": 0.5118983387947083,
+            "median": 0.5118983387947083,
+            "bootstrap_95_ci": [
+              0.5118983387947083,
+              0.5118983387947083
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.5118983387947083,
+              0.5118983387947083
+            ]
+          },
+          "sufficiency_gap": {
+            "mean": -0.12780135869979858,
+            "median": -0.12780135869979858,
+            "bootstrap_95_ci": [
+              -0.12780135869979858,
+              -0.12780135869979858
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              -0.12780135869979858,
+              -0.12780135869979858
+            ]
+          },
+          "swap_jaccard": {
+            "mean": 1.0,
+            "median": 1.0,
+            "bootstrap_95_ci": [
+              1.0,
+              1.0
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              1.0,
+              1.0
+            ]
+          },
+          "selected_node_fraction": {
+            "mean": 0.27477477477477474,
+            "median": 0.27477477477477474,
+            "bootstrap_95_ci": [
+              0.27477477477477474,
+              0.27477477477477474
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.27477477477477474,
+              0.27477477477477474
+            ]
+          },
+          "seconds": {
+            "mean": 0.33998310900642537,
+            "median": 0.33998310900642537,
+            "bootstrap_95_ci": [
+              0.33998310900642537,
+              0.33998310900642537
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.33998310900642537,
+              0.33998310900642537
+            ]
+          },
+          "absolute_sufficiency_gap": {
+            "mean": 0.12780135869979858,
+            "median": 0.12780135869979858,
+            "bootstrap_95_ci": [
+              0.12780135869979858,
+              0.12780135869979858
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.12780135869979858,
+              0.12780135869979858
+            ]
+          },
+          "semantic_pair_quality": {
+            "mean": 0.6023117899894714,
+            "median": 0.6023117899894714,
+            "bootstrap_95_ci": [
+              0.6023117899894714,
+              0.6023117899894714
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.6023117899894714,
+              0.6023117899894714
+            ]
+          },
+          "induced_cfg_coverage": {
+            "mean": 0.023255813866853714,
+            "median": 0.023255813866853714,
+            "bootstrap_95_ci": [
+              0.023255813866853714,
+              0.023255813866853714
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.023255813866853714,
+              0.023255813866853714
+            ]
+          },
+          "candidate_objective": {
+            "mean": 0.44799765944480896,
+            "median": 0.44799765944480896,
+            "bootstrap_95_ci": [
+              0.44799765944480896,
+              0.44799765944480896
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.44799765944480896,
+              0.44799765944480896
+            ]
+          },
+          "prediction_accuracy": 0.0
+        }
+      }
+    }
+  },
+  "paired_comparisons": {
+    "symmetric_semantic_optimal_pair_minus_symmetric_grad_x_input": {
+      "pairs": 100,
+      "positive_means_candidate_is_better_for": [
+        "necessity_drop_delta",
+        "absolute_sufficiency_gap_improvement",
+        "swap_jaccard_delta"
+      ],
+      "necessity_drop_delta": {
+        "mean": 0.1357738251518458,
+        "bootstrap_95_ci": [
+          0.09376995321433061,
+          0.18137971606757494
+        ],
+        "problem_pair_cluster_bootstrap_95_ci": [
+          0.07935242370091569,
+          0.17654951048574857
+        ]
+      },
+      "absolute_sufficiency_gap_improvement": {
+        "mean": 0.03046940341591835,
+        "bootstrap_95_ci": [
+          0.008483948826789855,
+          0.05835039188712835
+        ],
+        "problem_pair_cluster_bootstrap_95_ci": [
+          0.0006974026374518872,
+          0.058028301994961035
+        ]
+      },
+      "swap_jaccard_delta": {
+        "mean": 0.0,
+        "bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "problem_pair_cluster_bootstrap_95_ci": [
+          0.0,
+          0.0
+        ]
+      },
+      "seconds_delta": {
+        "mean": 0.2359236933311331,
+        "bootstrap_95_ci": [
+          0.08139882096878864,
+          0.3265733497764449
+        ],
+        "problem_pair_cluster_bootstrap_95_ci": [
+          0.10353129016603818,
+          0.332842337621762
+        ]
+      }
+    }
+  },
+  "metric_direction": {
+    "necessity_drop": "higher_is_better",
+    "sufficiency_gap": "lower_absolute_is_better",
+    "swap_jaccard": "higher_is_better",
+    "semantic_pair_quality": "higher_is_better_task_conditioned_proxy",
+    "induced_cfg_coverage": "higher_is_better_structural_proxy",
+    "seconds": "lower_is_better"
+  },
+  "test_metrics": null,
+  "test_policy": "sealed_during_method_comparison",
+  "limitations": [
+    "feature masking keeps graph topology fixed",
+    "integrated gradients uses a zero-feature baseline",
+    "node-level provenance ground truth is unavailable for natural validation pairs"
+  ]
+}

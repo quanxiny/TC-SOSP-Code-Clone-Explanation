@@ -1,0 +1,221 @@
+{
+  "scope": "GCJ natural validation pairs only",
+  "timing": "single-GPU end-to-end explanation wall time per graph pair",
+  "records": {
+    "symmetric_gnnexplainer_node_mask_adapted": {
+      "path": "./artifacts/pilots/C9_natural_validation_strong_baselines_seed42/symmetric_gnnexplainer_node_mask_adapted_records.jsonl",
+      "sha256": "b9e70824c9aa5ceb01e84eb5309bdc75b5505e564400b0f8d2da6b6837bb981f"
+    },
+    "symmetric_grad_x_input": {
+      "path": "./artifacts/pilots/C9_natural_validation_strong_baselines_seed42/symmetric_grad_x_input_records.jsonl",
+      "sha256": "5def909c64699c6bf3bb58090428515439cea482029f33beea95880f9de94e1a"
+    },
+    "symmetric_semantic_optimal_pair": {
+      "path": "./artifacts/pilots/C9_natural_validation_strong_baselines_seed42/symmetric_semantic_optimal_pair_records.jsonl",
+      "sha256": "a307e6a2c1d10ae517c1a186a90139089336b0f26e24a7b44309f913233d5990"
+    },
+    "symmetric_subgraphx_mcts_shapley_adapted": {
+      "path": "./artifacts/pilots/C9_natural_validation_strong_baselines_seed42/symmetric_subgraphx_mcts_shapley_adapted_records.jsonl",
+      "sha256": "7f932cc49050ad32a006b36d00eb04bddaa3907eb4b4e54d1cc464c8b109b362"
+    }
+  },
+  "methods": {
+    "symmetric_gnnexplainer_node_mask_adapted": {
+      "pairs": 100,
+      "mean_seconds": 3.3566352773029937,
+      "median_seconds": 3.301185226009693,
+      "spearman_total_nodes_vs_seconds": 0.25993992953209516,
+      "spearman_p_raw": 0.009007287013284565,
+      "ols_seconds_intercept": 3.1642603091002974,
+      "ols_seconds_per_additional_node": 0.0025612430861762236,
+      "size_quartiles": [
+        {
+          "quartile": 1,
+          "pairs": 25,
+          "minimum_total_nodes": 28,
+          "maximum_total_nodes": 60,
+          "mean_total_nodes": 46.44,
+          "mean_seconds": 3.274283161725616,
+          "median_seconds": 3.271232555998722
+        },
+        {
+          "quartile": 2,
+          "pairs": 25,
+          "minimum_total_nodes": 61,
+          "maximum_total_nodes": 77,
+          "mean_total_nodes": 67.36,
+          "mean_seconds": 3.317104567761999,
+          "median_seconds": 3.2538872029981576
+        },
+        {
+          "quartile": 3,
+          "pairs": 25,
+          "minimum_total_nodes": 78,
+          "maximum_total_nodes": 89,
+          "mean_total_nodes": 82.76,
+          "mean_seconds": 3.4711087384819983,
+          "median_seconds": 3.338888340018457
+        },
+        {
+          "quartile": 4,
+          "pairs": 25,
+          "minimum_total_nodes": 89,
+          "maximum_total_nodes": 168,
+          "mean_total_nodes": 103.88,
+          "mean_seconds": 3.3640446412423626,
+          "median_seconds": 3.3617270230024587
+        }
+      ],
+      "mean_time_ratio_to_tc_sosp": 6.008119761202047
+    },
+    "symmetric_grad_x_input": {
+      "pairs": 100,
+      "mean_seconds": 0.3024656003585551,
+      "median_seconds": 0.21714534099737648,
+      "spearman_total_nodes_vs_seconds": 0.2921390331048305,
+      "spearman_p_raw": 0.0031851021958253,
+      "ols_seconds_intercept": 0.19871401562328722,
+      "ols_seconds_per_additional_node": 0.0013813285146487607,
+      "size_quartiles": [
+        {
+          "quartile": 1,
+          "pairs": 25,
+          "minimum_total_nodes": 28,
+          "maximum_total_nodes": 60,
+          "mean_total_nodes": 46.44,
+          "mean_seconds": 0.21430954439914784,
+          "median_seconds": 0.21141257300041616
+        },
+        {
+          "quartile": 2,
+          "pairs": 25,
+          "minimum_total_nodes": 61,
+          "maximum_total_nodes": 77,
+          "mean_total_nodes": 67.36,
+          "mean_seconds": 0.21612361155916004,
+          "median_seconds": 0.21487730101216584
+        },
+        {
+          "quartile": 3,
+          "pairs": 25,
+          "minimum_total_nodes": 78,
+          "maximum_total_nodes": 89,
+          "mean_total_nodes": 82.76,
+          "mean_seconds": 0.5588102964765858,
+          "median_seconds": 0.2201829550031107
+        },
+        {
+          "quartile": 4,
+          "pairs": 25,
+          "minimum_total_nodes": 89,
+          "maximum_total_nodes": 168,
+          "mean_total_nodes": 103.88,
+          "mean_seconds": 0.2206189489993267,
+          "median_seconds": 0.2200942519993987
+        }
+      ],
+      "mean_time_ratio_to_tc_sosp": 0.5413902317258039
+    },
+    "symmetric_semantic_optimal_pair": {
+      "pairs": 100,
+      "mean_seconds": 0.5586831505887676,
+      "median_seconds": 0.555016942002112,
+      "spearman_total_nodes_vs_seconds": 0.5436990318786225,
+      "spearman_p_raw": 5.045943258989039e-09,
+      "ols_seconds_intercept": 0.4492348832916027,
+      "ols_seconds_per_additional_node": 0.0014571730434983987,
+      "size_quartiles": [
+        {
+          "quartile": 1,
+          "pairs": 25,
+          "minimum_total_nodes": 28,
+          "maximum_total_nodes": 60,
+          "mean_total_nodes": 46.44,
+          "mean_seconds": 0.5187395842012483,
+          "median_seconds": 0.5228931290039327
+        },
+        {
+          "quartile": 2,
+          "pairs": 25,
+          "minimum_total_nodes": 61,
+          "maximum_total_nodes": 77,
+          "mean_total_nodes": 67.36,
+          "mean_seconds": 0.5502276419172994,
+          "median_seconds": 0.5390644159924705
+        },
+        {
+          "quartile": 3,
+          "pairs": 25,
+          "minimum_total_nodes": 78,
+          "maximum_total_nodes": 89,
+          "mean_total_nodes": 82.76,
+          "mean_seconds": 0.5716961544787046,
+          "median_seconds": 0.5547022839891724
+        },
+        {
+          "quartile": 4,
+          "pairs": 25,
+          "minimum_total_nodes": 89,
+          "maximum_total_nodes": 168,
+          "mean_total_nodes": 103.88,
+          "mean_seconds": 0.5940692217578181,
+          "median_seconds": 0.584953087993199
+        }
+      ],
+      "mean_time_ratio_to_tc_sosp": 1.0
+    },
+    "symmetric_subgraphx_mcts_shapley_adapted": {
+      "pairs": 100,
+      "mean_seconds": 23.800791271808556,
+      "median_seconds": 23.647739755513612,
+      "spearman_total_nodes_vs_seconds": 0.5749616961975648,
+      "spearman_p_raw": 3.9481085994641484e-10,
+      "ols_seconds_intercept": 18.748505164651128,
+      "ols_seconds_per_additional_node": 0.06726515919527928,
+      "size_quartiles": [
+        {
+          "quartile": 1,
+          "pairs": 25,
+          "minimum_total_nodes": 28,
+          "maximum_total_nodes": 60,
+          "mean_total_nodes": 46.44,
+          "mean_seconds": 22.114451593239792,
+          "median_seconds": 22.266959562024567
+        },
+        {
+          "quartile": 2,
+          "pairs": 25,
+          "minimum_total_nodes": 61,
+          "maximum_total_nodes": 77,
+          "mean_total_nodes": 67.36,
+          "mean_seconds": 23.440252027880632,
+          "median_seconds": 23.95210472299368
+        },
+        {
+          "quartile": 3,
+          "pairs": 25,
+          "minimum_total_nodes": 78,
+          "maximum_total_nodes": 89,
+          "mean_total_nodes": 82.76,
+          "mean_seconds": 24.138771595676662,
+          "median_seconds": 23.66923370899167
+        },
+        {
+          "quartile": 4,
+          "pairs": 25,
+          "minimum_total_nodes": 89,
+          "maximum_total_nodes": 168,
+          "mean_total_nodes": 103.88,
+          "mean_seconds": 25.509689870437143,
+          "median_seconds": 25.271934558986686
+        }
+      ],
+      "mean_time_ratio_to_tc_sosp": 42.60159134336899
+    }
+  },
+  "test_metrics": null,
+  "limitations": [
+    "quartiles are descriptive empirical scaling, not an asymptotic complexity proof",
+    "GPU timing includes method-specific predictor calls and synchronization"
+  ]
+}

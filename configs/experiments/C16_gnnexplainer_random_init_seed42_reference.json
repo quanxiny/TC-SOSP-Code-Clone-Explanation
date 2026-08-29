@@ -1,0 +1,14 @@
+{
+  "extends": "C9_natural_validation_strong_baselines.json",
+  "experiment_id": "C16_gnnexplainer_random_init_seed42_reference",
+  "status": "ready_stochastic_explainer_robustness",
+  "device": "cuda:0",
+  "explanation": {
+    "explainer_seed": 42,
+    "gnnexplainer_initialization_std": 0.1
+  },
+  "baselines": [
+    "symmetric_gnnexplainer_node_mask_adapted"
+  ],
+  "output_dir": "artifacts/pilots/C16_gnnexplainer_random_init_seed42_reference"
+}

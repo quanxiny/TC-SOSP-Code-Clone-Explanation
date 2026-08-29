@@ -1,0 +1,14 @@
+{
+  "extends": "C1_semantic_optimal_subgraph_pair.json",
+  "experiment_id": "C5_optimal_subgraph_checkpoint_seed42",
+  "seed": 42,
+  "predictor": {
+    "checkpoint": "artifacts/pilots/A0_focal_seed42/epoch_010.pt",
+    "checkpoint_role": "paper_clean_10pct_validation_selected_seed42"
+  },
+  "baselines": [
+    "symmetric_grad_x_input",
+    "symmetric_semantic_optimal_pair"
+  ],
+  "output_dir": "artifacts/pilots/C5_optimal_subgraph_checkpoint_seed42"
+}

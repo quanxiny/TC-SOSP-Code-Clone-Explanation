@@ -1,0 +1,34 @@
+{
+  "extends": "C0_symmetric_explanation.json",
+  "experiment_id": "C1_semantic_optimal_subgraph_pair",
+  "status": "ready",
+  "explanation": {
+    "sample_pairs": 100,
+    "top_node_fraction": 0.2,
+    "optimal_sufficiency_weight": 1.0,
+    "optimal_semantic_coefficient": 0.0,
+    "optimal_structure_coefficient": 0.0,
+    "candidate_sources": [
+      "symmetric_grad_x_input",
+      "target_conditioned_statement_similarity",
+      "paired_relation_marginal",
+      "cfg_neighbour_diffusion",
+      "encoder_internal_node_token_attention_prior"
+    ],
+    "candidate_selection": "maximize exact symmetric necessity minus absolute sufficiency gap at fixed node budget",
+    "positive_task_semantics": "common semantic statement pair",
+    "negative_task_semantics": "contrastive unmatched statement pair",
+    "attention_prior_negative_controls": ["deterministically_shuffled", "uniform"],
+    "attention_is_explanation": false
+  },
+  "baselines": [
+    "symmetric_grad_x_input",
+    "symmetric_semantic_optimal_pair",
+    "symmetric_semantic_attention_optimal_pair",
+    "symmetric_semantic_shuffled_attention_optimal_pair"
+  ],
+  "loss": {
+    "name": "task_conditioned_symmetric_discrete_keep_drop"
+  },
+  "output_dir": "artifacts/pilots/C1_semantic_optimal_subgraph_pair_seed42"
+}

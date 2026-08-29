@@ -1,0 +1,16 @@
+{
+  "method": "lowest_sha256_per_normalized_label",
+  "seed": 42,
+  "fraction": 0.1,
+  "input": "../CodeGraph4CCDetector/artifacts/paper_protocol/train_balanced_seed1337.txt",
+  "input_sha256": "2a63f41ad38612a8f97437e241e87fbd6993f8d2966fce6206472b796432d652",
+  "input_pairs": 352036,
+  "selected_pairs": 35204,
+  "selected_by_normalized_label": {
+    "0": 17602,
+    "1": 17602
+  },
+  "selected_unique_fragments": 1333,
+  "output": "./manifests/pilot_A_seed42_10pct.txt",
+  "output_sha256": "db0e4299454c212c163b9126628c991a69161f1d67b7f221dc0f31481af99903"
+}

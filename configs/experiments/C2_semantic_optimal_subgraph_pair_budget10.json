@@ -1,0 +1,13 @@
+{
+  "extends": "C1_semantic_optimal_subgraph_pair.json",
+  "experiment_id": "C2_semantic_optimal_subgraph_pair_budget10",
+  "explanation": {
+    "top_node_fraction": 0.1,
+    "attention_prior_negative_controls": []
+  },
+  "baselines": [
+    "symmetric_grad_x_input",
+    "symmetric_semantic_optimal_pair"
+  ],
+  "output_dir": "artifacts/pilots/C2_semantic_optimal_subgraph_pair_budget10_seed42"
+}

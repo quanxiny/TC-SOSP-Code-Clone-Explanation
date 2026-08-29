@@ -1,0 +1,226 @@
+diff --git a/jsonparse.py b/jsonparse.py
+index df59f05..efe9407 100644
+--- a/jsonparse.py
++++ b/jsonparse.py
+@@ -24,9 +24,11 @@ def saveAllDataToRam(sourceCodePath,jsonVecPath):
+     for root, dirs, files in os.walk(sourceCodePath):
+         for file in tqdm(files):
+             try:
+-                sourceCodeFolderID = file.split(".")[0][-1]
+-                CodePath = sourceCodePath + sourceCodeFolderID +'/'+ file
+-                jsonPath = jsonVecPath + file + ".json"
++                # Preserve the real relative directory.  The original code
++                # inferred it from the last character of "googlejamN", which
++                # maps folders 10/11/12 to 0/1/2 and silently loses pairs.
++                CodePath = os.path.join(root, file).replace(os.sep, "/")
++                jsonPath = os.path.join(jsonVecPath, file + ".json")
+                
+                 #for codedata
+                 data = json.load(open(jsonPath))
+@@ -85,7 +87,8 @@ def saveAllDataToRam(sourceCodePath,jsonVecPath):
+                 adjacency, node2node_features = get_adj_node2node(features, edge_index, edgesAttr)
+                 ramData[CodePath] = [features, edge_index, edgesAttr, adjacency, node2node_features]
+                 count+=1
+-            except:
++            except Exception as error:
++                print("failed to load {}: {}".format(file, error))
+                 faildFileNum+=1
+     print(count, faildFileNum)
+     print("ramData", len(ramData))
+@@ -103,11 +106,12 @@ def saveTestDataToRam(testList,sourceCodePath,jsonVecPath):
+     for root, dirs, files in os.walk(sourceCodePath):
+         for file in tqdm(files):
+             try:
+-                sourceCodeFolderID = file.split(".")[0][-1]
+-                CodePath = sourceCodePath + sourceCodeFolderID +'/'+ file
++                # Use os.walk's directory instead of truncating multi-digit
++                # GCJ problem IDs to their last character.
++                CodePath = os.path.join(root, file).replace(os.sep, "/")
+                 if CodePath not in testList:
+                     continue
+-                jsonPath = jsonVecPath + file + ".json"
++                jsonPath = os.path.join(jsonVecPath, file + ".json")
+                
+                 #for codedata
+                 data = json.load(open(jsonPath))
+@@ -163,7 +167,8 @@ def saveTestDataToRam(testList,sourceCodePath,jsonVecPath):
+                 adjacency, node2node_features = get_adj_node2node(features, edge_index, edgesAttr)
+                 ramData[CodePath] = [features, edge_index, edgesAttr, adjacency, node2node_features]
+                 count+=1
+-            except:
++            except Exception as error:
++                print("failed to load {}: {}".format(file, error))
+                 faildFileNum+=1
+     print(count, faildFileNum)
+     return ramData 
+@@ -185,4 +190,4 @@ def getCodePairDataList(ramData, pathlist):
+         except:
+             notFindNum += 1
+     
+-    return datalist
+\ No newline at end of file
++    return datalist
+diff --git a/layers/GAT_with_edge.py b/layers/GAT_with_edge.py
+index b48679d..d759bb8 100644
+--- a/layers/GAT_with_edge.py
++++ b/layers/GAT_with_edge.py
+@@ -3,6 +3,8 @@ import torch
+ from torch._C import device
+ import torch.nn as nn
+ import torch.nn.functional as F
++from torch_geometric.utils import softmax as grouped_softmax
++from torch_scatter import scatter_add
+ 
+ 
+ class GraphAttentionLayer(nn.Module):
+@@ -53,6 +55,35 @@ class GraphAttentionLayer(nn.Module):
+ 
+         return h_prime, edge_attr
+ 
++    def forward_sparse(
++            self, h, edge_attr, edge_index,
++            attention_edge_attr=None, attention_edge_index=None):
++        """Equivalent edge-only implementation of the dense attention step."""
++        h = F.dropout(h, self.dropout, training=self.training)
++        Wh = torch.mm(h, self.W)
++        transformed_edges = torch.mm(edge_attr, self.W)
++        if attention_edge_attr is None:
++            attention_edge_attr = edge_attr
++            attention_edge_index = edge_index
++        transformed_attention_edges = torch.mm(attention_edge_attr, self.W)
++        sources = attention_edge_index[0]
++        targets = attention_edge_index[1]
++        combinations = torch.cat(
++            [Wh[sources], Wh[targets], transformed_attention_edges], dim=1
++        )
++        scores = self.leakyrelu(torch.matmul(combinations, self.a).squeeze(1))
++        attention = grouped_softmax(scores, sources, num_nodes=Wh.size(0))
++        attention = F.dropout(attention, self.dropout, training=self.training)
++        h_prime = scatter_add(
++            attention.unsqueeze(1) * Wh[targets],
++            sources,
++            dim=0,
++            dim_size=Wh.size(0),
++        )
++        if self.concat:
++            return F.elu(h_prime), F.elu(transformed_edges)
++        return h_prime, transformed_edges
++
+     def _prepare_attentional_mechanism_input(self, Wh, node2node_features): #[2708, 8]
+         N = Wh.size()[0] # number of nodes
+         # Below, two matrices are created that contain embeddings in their rows in different orders.
+@@ -96,4 +127,3 @@ class GraphAttentionLayer(nn.Module):
+ 
+     def __repr__(self):
+         return self.__class__.__name__ + ' (' + str(self.in_features) + ' -> ' + str(self.out_features) + ')'
+-
+diff --git a/layers/singleNodeAttention.py b/layers/singleNodeAttention.py
+index 6ce8dcd..d4ee0e5 100644
+--- a/layers/singleNodeAttention.py
++++ b/layers/singleNodeAttention.py
+@@ -3,6 +3,7 @@ import numpy as np
+ import torch
+ import torch.nn as nn
+ import torch.nn.functional as F
++from torch_geometric.utils import softmax as grouped_softmax
+ 
+ device = "cuda" if torch.cuda.is_available() else "cpu"
+ class SingleNodeAttentionLayer(nn.Module):
+@@ -40,22 +41,22 @@ class SingleNodeAttentionLayer(nn.Module):
+ 
+         self.leakyrelu = nn.LeakyReLU(self.alpha)
+ 
+-    def forward(self, features): 
++    def forward(self, features, batch=None):
+         
+         W1_features = torch.matmul(features, self.W1)
+-        simple_attention1 = F.softmax(torch.matmul(W1_features,self.a1),dim=0)
++        simple_attention1 = self._softmax(torch.matmul(W1_features,self.a1), batch)
+         weighted_node_feature1 = torch.bmm(simple_attention1.permute(0,2,1), W1_features).squeeze(1)
+         
+         W2_features = torch.matmul(features, self.W2)
+-        simple_attention2 = F.softmax(torch.matmul(W2_features,self.a2),dim=0)
++        simple_attention2 = self._softmax(torch.matmul(W2_features,self.a2), batch)
+         weighted_node_feature2 = torch.bmm(simple_attention2.permute(0,2,1), W2_features).squeeze(1)
+ 
+         W3_features = torch.matmul(features, self.W3)
+-        simple_attention3 = F.softmax(torch.matmul(W3_features,self.a3),dim=0)
++        simple_attention3 = self._softmax(torch.matmul(W3_features,self.a3), batch)
+         weighted_node_feature3 = torch.bmm(simple_attention3.permute(0,2,1), W3_features).squeeze(1)
+ 
+         W4_features = torch.matmul(features, self.W4)
+-        simple_attention4 = F.softmax(torch.matmul(W4_features,self.a4),dim=0)
++        simple_attention4 = self._softmax(torch.matmul(W4_features,self.a4), batch)
+         weighted_node_feature4 = torch.bmm(simple_attention4.permute(0,2,1), W4_features).squeeze(1)
+ 
+         weighted_node_feature_multi = torch.cat([weighted_node_feature1, weighted_node_feature2, weighted_node_feature3, weighted_node_feature4], dim=1)
+@@ -71,6 +72,13 @@ class SingleNodeAttentionLayer(nn.Module):
+ 
+         #exit()
+         return h  # 返回所有结点的单一向量组成的二维张量特征数据
++
++    @staticmethod
++    def _softmax(scores, batch):
++        if batch is None:
++            return F.softmax(scores, dim=0)
++        graph_count = int(batch.max().item()) + 1
++        return grouped_softmax(scores, batch, num_nodes=graph_count)
+         
+     
+ 
+@@ -174,4 +182,4 @@ class SingleNodeAttentionLayer(nn.Module):
+         return self.__class__.__name__ + ' (' + str(self.in_features) + ' -> ' + str(self.out_features) + ')'
+ 
+ 
+-'''
+\ No newline at end of file
++'''
+diff --git a/myModels/GAT_Edgepool_clone_detection.py b/myModels/GAT_Edgepool_clone_detection.py
+index 1948284..47f97a3 100644
+--- a/myModels/GAT_Edgepool_clone_detection.py
++++ b/myModels/GAT_Edgepool_clone_detection.py
+@@ -144,6 +144,39 @@ class CodeCloneDetection(nn.Module):
+         out = F.softmax(self.bi_lstm(lstm_data),dim=-1)
+         return out
+ 
++    def encode_batched(
++            self, features, edge_index, edges_attr, batch,
++            attention_edge_index=None, attention_edges_attr=None):
++        """Encode several disconnected graphs while preserving graph boundaries."""
++        graph_count = int(batch.max().item()) + 1
++        h = self.h(features, batch)
++        pooled = [self.gpool1(h, batch, size=graph_count)]
++
++        gat_outputs = [
++            attention.forward_sparse(
++                h, edges_attr, edge_index,
++                attention_edges_attr, attention_edge_index,
++            )
++            for attention in self.GAT
++        ]
++        h = torch.cat([item[0] for item in gat_outputs], dim=1)
++        edges_attr = torch.cat([item[1] for item in gat_outputs], dim=1)
++        h, edge_index, edges_attr, batch, _ = self.edge_pool1(
++            h, edge_index, edges_attr, batch=batch
++        )
++        pooled.append(self.gpool2(h, batch, size=graph_count))
++
++        h, edges_attr = self.out_att.forward_sparse(h, edges_attr, edge_index)
++        h, edge_index, edges_attr, batch, _ = self.edge_pool2(
++            h, edge_index, edges_attr, batch=batch
++        )
++        pooled.append(self.gpool3(h, batch, size=graph_count))
++        return self.jump(pooled)
++
++    def detect_embeddings(self, first, second):
++        lstm_data = torch.stack([first, second], dim=1)
++        return F.softmax(self.bi_lstm(lstm_data), dim=-1)
++
+     def _get_adj_node2node(self, h, edge_index, edge_attr):
+         indices = edge_index.to('cuda')
+         values = torch.ones((len(edge_index[0]))).to('cuda')
+@@ -158,4 +191,3 @@ class CodeCloneDetection(nn.Module):
+         
+     def __repr__(self):
+         return self.__class__.__name__
+-

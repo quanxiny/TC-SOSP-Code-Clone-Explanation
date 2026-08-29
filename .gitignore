@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+*.log
+.pytest_cache/
+.coverage
+.idea/
+.vscode/
+.DS_Store
+
+# Locally cloned dependencies and environments
+.conda/
+third_party/
+
+# New run products. Curated records already tracked under artifacts/ remain visible.
+artifacts/**/*.pt
+artifacts/**/*.pth
+artifacts/**/*.ckpt
+artifacts/**/*_predictions.jsonl
+artifacts/**/latest_training.pt
+external_data/Project_CodeNet/
+

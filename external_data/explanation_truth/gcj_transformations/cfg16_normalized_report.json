@@ -1,0 +1,20 @@
+{
+  "input_dir": "./external_data/explanation_truth/gcj_transformations/preprocessed_raw/outPut_cfg/codeJsonVec",
+  "output_dir": "./external_data/explanation_truth/gcj_transformations/cfg16_normalized",
+  "dimension": 16,
+  "input_files": 90,
+  "output_files": 90,
+  "method_object_count_distribution": {
+    "1": 87,
+    "2": 3
+  },
+  "multi_method_files": 3,
+  "minimum_nodes": 10,
+  "maximum_nodes": 89,
+  "average_nodes": 40.5,
+  "minimum_edges": 10,
+  "maximum_edges": 111,
+  "average_edges": 47.56666666666667,
+  "failures": [],
+  "output_manifest_sha256": "530ce4caa40ef1ab8334d644ea68478561dc8e00da743aeae44018088d2e75ab"
+}

@@ -1,0 +1,5263 @@
+{
+  "benchmark": "Project CodeNet T3 validation-only transformation explanation truth",
+  "samples": 30,
+  "pairs": 60,
+  "truth_axes": {
+    "alpha_correspondence": "exact node text and CFG topology after inverse rename",
+    "dead_distractor": "unmatched CFG nodes introduced by a semantics-neutral block"
+  },
+  "mean_known_irrelevant_nodes": 3.0,
+  "minimum_known_irrelevant_nodes": 3,
+  "maximum_known_irrelevant_nodes": 3,
+  "source_manifest": "./external_data/explanation_truth/codenet_transformations/transformation_manifest.json",
+  "source_manifest_sha256": "b72cca6fad86557c4714ab4fe853570468c4a7a06b552e0a92b4aa20e4277b35",
+  "raw_dir": "./external_data/explanation_truth/codenet_transformations/preprocessed_raw/outPut_cfg/codeJson",
+  "vector_dir": "./external_data/explanation_truth/codenet_transformations/cfg16_normalized",
+  "pair_manifest": "./external_data/explanation_truth/codenet_transformations/truth_pairs.txt",
+  "pair_manifest_sha256": "70ba334340fe79d608575109e8ad7beb09af413e3d730328dc7bb959c3820ede",
+  "test_used": false,
+  "records": [
+    {
+      "sample_id": "g000_01710738b6",
+      "validation_source": "p03146/s789031288.java",
+      "files": {
+        "original": "g000_01710738b6__original.java",
+        "alpha": "g000_01710738b6__alpha.java",
+        "alpha_dead": "g000_01710738b6__alpha_dead.java"
+      },
+      "vector_graph_sha256": {
+        "original": "44d9759e4cfa080e394c83400090447dbf2d5c24a1743db34967cdd54a3663ae",
+        "alpha": "a0727be0e6deba94cf6a9a26c2cfae64b22dd1b5c98f97b6b25fd36dc421dd80",
+        "alpha_dead": "297c415865f298f865748b8603961b29bcf2553ac60da9d62b483a23280975a6"
+      },
+      "node_counts": {
+        "original": 13,
+        "alpha": 13,
+        "alpha_dead": 16
+      },
+      "original_to_alpha_node_mapping": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          12,
+          12
+        ]
+      ],
+      "alpha_to_alpha_dead_node_mapping": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          12,
+          15
+        ]
+      ],
+      "alpha_dead_known_irrelevant_nodes": [
+        0,
+        1,
+        2
+      ],
+      "alpha_dead_known_irrelevant_node_text": {
+        "0": "int __xai_dead_000 = 0 ; ",
+        "1": "__xai_dead_000 != 0",
+        "2": "System . out . print ( \\\"\\\" ) ; "
+      },
+      "alpha_cfg_topology_exactly_preserved": true,
+      "compilation_all_variants": true
+    },
+    {
+      "sample_id": "g001_04404afa39",
+      "validation_source": "p03136/s766912518.java",
+      "files": {
+        "original": "g001_04404afa39__original.java",
+        "alpha": "g001_04404afa39__alpha.java",
+        "alpha_dead": "g001_04404afa39__alpha_dead.java"
+      },
+      "vector_graph_sha256": {
+        "original": "a06579c2ab7ff88f85aef11ae80f9e0ce4ea348c3b0a3428f309debd7abffe28",
+        "alpha": "3c770e4771b6646b3210142c5bdd21980f07313829844d9d906efc8eb38d5220",
+        "alpha_dead": "45402e221d000f877d47b191568918d70ec900557ff2b85897ec269eed898f10"
+      },
+      "node_counts": {
+        "original": 16,
+        "alpha": 16,
+        "alpha_dead": 19
+      },
+      "original_to_alpha_node_mapping": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          13,
+          13
+        ],
+        [
+          14,
+          14
+        ],
+        [
+          15,
+          15
+        ]
+      ],
+      "alpha_to_alpha_dead_node_mapping": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          12,
+          15
+        ],
+        [
+          13,
+          16
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          15,
+          18
+        ]
+      ],
+      "alpha_dead_known_irrelevant_nodes": [
+        0,
+        1,
+        2
+      ],
+      "alpha_dead_known_irrelevant_node_text": {
+        "0": "int __xai_dead_000 = 0 ; ",
+        "1": "__xai_dead_000 != 0",
+        "2": "System . out . print ( \\\"\\\" ) ; "
+      },
+      "alpha_cfg_topology_exactly_preserved": true,
+      "compilation_all_variants": true
+    },
+    {
+      "sample_id": "g002_0a57e1905d",
+      "validation_source": "p03814/s958277274.java",
+      "files": {
+        "original": "g002_0a57e1905d__original.java",
+        "alpha": "g002_0a57e1905d__alpha.java",
+        "alpha_dead": "g002_0a57e1905d__alpha_dead.java"
+      },
+      "vector_graph_sha256": {
+        "original": "63e479aa7b1e453ede61a0e54beabe4c00fd5869da6bb42ecb760b397024961b",
+        "alpha": "eff962f089c8aa9fe25d282ef78051eb421118784e4b69d9c364af146dff76fe",
+        "alpha_dead": "5a067e9cbff86233fe8c4eafb8a8e58181b3f224714c711cdb8a68d20187ee72"
+      },
+      "node_counts": {
+        "original": 2,
+        "alpha": 2,
+        "alpha_dead": 5
+      },
+      "original_to_alpha_node_mapping": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "alpha_to_alpha_dead_node_mapping": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "alpha_dead_known_irrelevant_nodes": [
+        0,
+        1,
+        2
+      ],
+      "alpha_dead_known_irrelevant_node_text": {
+        "0": "int __xai_dead_000 = 0 ; ",
+        "1": "__xai_dead_000 != 0",
+        "2": "System . out . print ( \\\"\\\" ) ; "
+      },
+      "alpha_cfg_topology_exactly_preserved": true,
+      "compilation_all_variants": true
+    },
+    {
+      "sample_id": "g003_0e61a59f4f",
+      "validation_source": "p03775/s407181076.java",
+      "files": {
+        "original": "g003_0e61a59f4f__original.java",
+        "alpha": "g003_0e61a59f4f__alpha.java",
+        "alpha_dead": "g003_0e61a59f4f__alpha_dead.java"
+      },
+      "vector_graph_sha256": {
+        "original": "794be06e1f9e1dc2801f9d2b15df96e310bb809d2e20ed9cd95d7f0b5259d058",
+        "alpha": "7a564294ada40958f38eadca2e6a7aff48790ba6840115142a9f69c042a87d9c",
+        "alpha_dead": "acdf2ca36007ba8bc997186c6570ee4504d337fd290df1fbbd7611024a45b220"
+      },
+      "node_counts": {
+        "original": 15,
+        "alpha": 15,
+        "alpha_dead": 18
+      },
+      "original_to_alpha_node_mapping": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          13,
+          13
+        ],
+        [
+          14,
+          14
+        ]
+      ],
+      "alpha_to_alpha_dead_node_mapping": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          12,
+          15
+        ],
+        [
+          13,
+          16
+        ],
+        [
+          14,
+          17
+        ]
+      ],
+      "alpha_dead_known_irrelevant_nodes": [
+        0,
+        1,
+        2
+      ],
+      "alpha_dead_known_irrelevant_node_text": {
+        "0": "int __xai_dead_000 = 0 ; ",
+        "1": "__xai_dead_000 != 0",
+        "2": "System . out . print ( \\\"\\\" ) ; "
+      },
+      "alpha_cfg_topology_exactly_preserved": true,
+      "compilation_all_variants": true
+    },
+    {
+      "sample_id": "g004_11a77173db",
+      "validation_source": "p03835/s011127237.java",
+      "files": {
+        "original": "g004_11a77173db__original.java",
+        "alpha": "g004_11a77173db__alpha.java",
+        "alpha_dead": "g004_11a77173db__alpha_dead.java"
+      },
+      "vector_graph_sha256": {
+        "original": "ba4054f5c6e12625976ebde0904d029da21dd11bf6aa2cfaa28aead9a3169f74",
+        "alpha": "946945d590b38b4e31e60aaa4c6867255e18703be4755da2cf1011191f2f3463",
+        "alpha_dead": "8d0960e4f9468b727052891e869a6f3eca14fc9cfb2f7eca00fa2e669382bee6"
+      },
+      "node_counts": {
+        "original": 14,
+        "alpha": 14,
+        "alpha_dead": 17
+      },
+      "original_to_alpha_node_mapping": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          13,
+          13
+        ]
+      ],
+      "alpha_to_alpha_dead_node_mapping": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          12,
+          15
+        ],
+        [
+          13,
+          16
+        ]
+      ],
+      "alpha_dead_known_irrelevant_nodes": [
+        0,
+        1,
+        2
+      ],
+      "alpha_dead_known_irrelevant_node_text": {
+        "0": "int __xai_dead_000 = 0 ; ",
+        "1": "__xai_dead_000 != 0",
+        "2": "System . out . print ( \\\"\\\" ) ; "
+      },
+      "alpha_cfg_topology_exactly_preserved": true,
+      "compilation_all_variants": true
+    },
+    {
+      "sample_id": "g005_134556f55d",
+      "validation_source": "p03371/s621821334.java",
+      "files": {
+        "original": "g005_134556f55d__original.java",
+        "alpha": "g005_134556f55d__alpha.java",
+        "alpha_dead": "g005_134556f55d__alpha_dead.java"
+      },
+      "vector_graph_sha256": {
+        "original": "ee678cb20c4fdf9115d4d5c541877a9f6a9f0c17f709f22196b2dcdd74b8399f",
+        "alpha": "223981391b8b0e31a01013661f5613cc63aa731893a4e7d337a16eef631b5f18",
+        "alpha_dead": "b2b6331eba39c3c6500984f0b2abb51aecc5b146ada14ebe947c9cf38506bba4"
+      },
+      "node_counts": {
+        "original": 9,
+        "alpha": 9,
+        "alpha_dead": 12
+      },
+      "original_to_alpha_node_mapping": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ]
+      ],
+      "alpha_to_alpha_dead_node_mapping": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          11
+        ]
+      ],
+      "alpha_dead_known_irrelevant_nodes": [
+        0,
+        1,
+        2
+      ],
+      "alpha_dead_known_irrelevant_node_text": {
+        "0": "int __xai_dead_000 = 0 ; ",
+        "1": "__xai_dead_000 != 0",
+        "2": "System . out . print ( \\\"\\\" ) ; "
+      },
+      "alpha_cfg_topology_exactly_preserved": true,
+      "compilation_all_variants": true
+    },
+    {
+      "sample_id": "g006_14c370cf53",
+      "validation_source": "p03106/s174487847.java",
+      "files": {
+        "original": "g006_14c370cf53__original.java",
+        "alpha": "g006_14c370cf53__alpha.java",
+        "alpha_dead": "g006_14c370cf53__alpha_dead.java"
+      },
+      "vector_graph_sha256": {
+        "original": "393d4e98a7f6f07d398c107b0f1cd31b0bee7bd76661014ab0e8a00ff006fcd1",
+        "alpha": "53efd165d1a1cd27f007d62587f20d65e1a3837172860fd2ac69b52f5edf29ce",
+        "alpha_dead": "dcc28f3ca461efd06928210fc6f249548881cb1cabbd0ad761db9fa90c66f614"
+      },
+      "node_counts": {
+        "original": 13,
+        "alpha": 13,
+        "alpha_dead": 16
+      },
+      "original_to_alpha_node_mapping": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          12,
+          12
+        ]
+      ],
+      "alpha_to_alpha_dead_node_mapping": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          12,
+          15
+        ]
+      ],
+      "alpha_dead_known_irrelevant_nodes": [
+        0,
+        1,
+        2
+      ],
+      "alpha_dead_known_irrelevant_node_text": {
+        "0": "int __xai_dead_000 = 0 ; ",
+        "1": "__xai_dead_000 != 0",
+        "2": "System . out . print ( \\\"\\\" ) ; "
+      },
+      "alpha_cfg_topology_exactly_preserved": true,
+      "compilation_all_variants": true
+    },
+    {
+      "sample_id": "g007_1609541820",
+      "validation_source": "p03136/s867851709.java",
+      "files": {
+        "original": "g007_1609541820__original.java",
+        "alpha": "g007_1609541820__alpha.java",
+        "alpha_dead": "g007_1609541820__alpha_dead.java"
+      },
+      "vector_graph_sha256": {
+        "original": "5bae74cb9a8c622f4db3b89e8959e20c6591bf908333118d93e20e3db0aaabea",
+        "alpha": "b2afb035ed74a749b18aba5d98628f82de3916199e6594348e5809f05e3967be",
+        "alpha_dead": "c5dccf95e1e43bdcc78e95b6c358f29fd9a847be79bd09fb5841986a7d559969"
+      },
+      "node_counts": {
+        "original": 13,
+        "alpha": 13,
+        "alpha_dead": 16
+      },
+      "original_to_alpha_node_mapping": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          12,
+          12
+        ]
+      ],
+      "alpha_to_alpha_dead_node_mapping": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          12,
+          15
+        ]
+      ],
+      "alpha_dead_known_irrelevant_nodes": [
+        0,
+        1,
+        2
+      ],
+      "alpha_dead_known_irrelevant_node_text": {
+        "0": "int __xai_dead_000 = 0 ; ",
+        "1": "__xai_dead_000 != 0",
+        "2": "System . out . print ( \\\"\\\" ) ; "
+      },
+      "alpha_cfg_topology_exactly_preserved": true,
+      "compilation_all_variants": true
+    },
+    {
+      "sample_id": "g008_17badf1517",
+      "validation_source": "p03146/s570731363.java",
+      "files": {
+        "original": "g008_17badf1517__original.java",
+        "alpha": "g008_17badf1517__alpha.java",
+        "alpha_dead": "g008_17badf1517__alpha_dead.java"
+      },
+      "vector_graph_sha256": {
+        "original": "ce2c048741e4f5abad8521d0d53a3b104398c4d571589726782357317c037e3c",
+        "alpha": "264df0f4753c39875ff739113145b6ffa47d4dc61281a77f50200958b98636bb",
+        "alpha_dead": "c9dbd7483ae8de84bfe9b66620de9faf1cdcd191d1481f3c2497fa7c1f4414dc"
+      },
+      "node_counts": {
+        "original": 14,
+        "alpha": 14,
+        "alpha_dead": 17
+      },
+      "original_to_alpha_node_mapping": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          13,
+          13
+        ]
+      ],
+      "alpha_to_alpha_dead_node_mapping": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          12,
+          15
+        ],
+        [
+          13,
+          16
+        ]
+      ],
+      "alpha_dead_known_irrelevant_nodes": [
+        0,
+        1,
+        2
+      ],
+      "alpha_dead_known_irrelevant_node_text": {
+        "0": "int __xai_dead_000 = 0 ; ",
+        "1": "__xai_dead_000 != 0",
+        "2": "System . out . print ( \\\"\\\" ) ; "
+      },
+      "alpha_cfg_topology_exactly_preserved": true,
+      "compilation_all_variants": true
+    },
+    {
+      "sample_id": "g009_1f68de3a2b",
+      "validation_source": "p03854/s688311570.java",
+      "files": {
+        "original": "g009_1f68de3a2b__original.java",
+        "alpha": "g009_1f68de3a2b__alpha.java",
+        "alpha_dead": "g009_1f68de3a2b__alpha_dead.java"
+      },
+      "vector_graph_sha256": {
+        "original": "75608fbd4c28e771318ccf9e5c0613676a5542c73582d73959be0afaf683072c",
+        "alpha": "6bd5e7d3d14d0900d110e79e4db50961c8fd38c75cb37deb99c4ad9817036120",
+        "alpha_dead": "bd55a6cbd10498f4b7521311ae8189f0257501a6e666d1c36dabec1fa24d9363"
+      },
+      "node_counts": {
+        "original": 39,
+        "alpha": 39,
+        "alpha_dead": 42
+      },
+      "original_to_alpha_node_mapping": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          13,
+          13
+        ],
+        [
+          14,
+          14
+        ],
+        [
+          15,
+          15
+        ],
+        [
+          16,
+          16
+        ],
+        [
+          17,
+          17
+        ],
+        [
+          18,
+          18
+        ],
+        [
+          19,
+          19
+        ],
+        [
+          20,
+          20
+        ],
+        [
+          21,
+          21
+        ],
+        [
+          22,
+          22
+        ],
+        [
+          23,
+          23
+        ],
+        [
+          24,
+          24
+        ],
+        [
+          25,
+          25
+        ],
+        [
+          26,
+          26
+        ],
+        [
+          27,
+          27
+        ],
+        [
+          28,
+          28
+        ],
+        [
+          29,
+          29
+        ],
+        [
+          30,
+          30
+        ],
+        [
+          31,
+          31
+        ],
+        [
+          32,
+          32
+        ],
+        [
+          33,
+          33
+        ],
+        [
+          34,
+          34
+        ],
+        [
+          35,
+          35
+        ],
+        [
+          36,
+          36
+        ],
+        [
+          37,
+          37
+        ],
+        [
+          38,
+          38
+        ]
+      ],
+      "alpha_to_alpha_dead_node_mapping": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          12,
+          15
+        ],
+        [
+          13,
+          16
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          15,
+          18
+        ],
+        [
+          16,
+          19
+        ],
+        [
+          17,
+          20
+        ],
+        [
+          18,
+          21
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          23
+        ],
+        [
+          21,
+          24
+        ],
+        [
+          22,
+          25
+        ],
+        [
+          23,
+          26
+        ],
+        [
+          24,
+          27
+        ],
+        [
+          25,
+          28
+        ],
+        [
+          26,
+          29
+        ],
+        [
+          27,
+          30
+        ],
+        [
+          28,
+          31
+        ],
+        [
+          29,
+          32
+        ],
+        [
+          30,
+          33
+        ],
+        [
+          31,
+          34
+        ],
+        [
+          32,
+          35
+        ],
+        [
+          33,
+          36
+        ],
+        [
+          34,
+          37
+        ],
+        [
+          35,
+          38
+        ],
+        [
+          36,
+          39
+        ],
+        [
+          37,
+          40
+        ],
+        [
+          38,
+          41
+        ]
+      ],
+      "alpha_dead_known_irrelevant_nodes": [
+        0,
+        1,
+        2
+      ],
+      "alpha_dead_known_irrelevant_node_text": {
+        "0": "int __xai_dead_000 = 0 ; ",
+        "1": "__xai_dead_000 != 0",
+        "2": "System . out . print ( \\\"\\\" ) ; "
+      },
+      "alpha_cfg_topology_exactly_preserved": true,
+      "compilation_all_variants": true
+    },
+    {
+      "sample_id": "g010_217ecb367b",
+      "validation_source": "p03835/s726570924.java",
+      "files": {
+        "original": "g010_217ecb367b__original.java",
+        "alpha": "g010_217ecb367b__alpha.java",
+        "alpha_dead": "g010_217ecb367b__alpha_dead.java"
+      },
+      "vector_graph_sha256": {
+        "original": "0c2a6707ea91add6ddf601cef5f104276286545b8f76efbef4493e9f45562fb3",
+        "alpha": "e2633091f3a72c6d60ac2f47e3834b3ff9ac5f946ba5e5891879ab0b4ab5dee2",
+        "alpha_dead": "64affbeaf72935e273fcad2e95d6adde55eabae3d3d75eff9fa3cf827c5b571a"
+      },
+      "node_counts": {
+        "original": 12,
+        "alpha": 12,
+        "alpha_dead": 15
+      },
+      "original_to_alpha_node_mapping": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ]
+      ],
+      "alpha_to_alpha_dead_node_mapping": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          11,
+          14
+        ]
+      ],
+      "alpha_dead_known_irrelevant_nodes": [
+        0,
+        1,
+        2
+      ],
+      "alpha_dead_known_irrelevant_node_text": {
+        "0": "int __xai_dead_000 = 0 ; ",
+        "1": "__xai_dead_000 != 0",
+        "2": "System . out . print ( \\\"\\\" ) ; "
+      },
+      "alpha_cfg_topology_exactly_preserved": true,
+      "compilation_all_variants": true
+    },
+    {
+      "sample_id": "g011_224173782e",
+      "validation_source": "p03854/s114349922.java",
+      "files": {
+        "original": "g011_224173782e__original.java",
+        "alpha": "g011_224173782e__alpha.java",
+        "alpha_dead": "g011_224173782e__alpha_dead.java"
+      },
+      "vector_graph_sha256": {
+        "original": "d6bf685ef6c745ebd217d247b7fa06c048105cdb7ba0b86f5cb9fa4fc95d857f",
+        "alpha": "2b0ea266c91e186c64c82e755982c2c3ce44b330e62db3c96bc6bcadd5f9a24f",
+        "alpha_dead": "ec42942c07ca82e590b69ea99769aa9a2f76e4f34e87c7be3b46ed335620e73b"
+      },
+      "node_counts": {
+        "original": 26,
+        "alpha": 26,
+        "alpha_dead": 29
+      },
+      "original_to_alpha_node_mapping": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          13,
+          13
+        ],
+        [
+          14,
+          14
+        ],
+        [
+          15,
+          15
+        ],
+        [
+          16,
+          16
+        ],
+        [
+          17,
+          17
+        ],
+        [
+          18,
+          18
+        ],
+        [
+          19,
+          19
+        ],
+        [
+          20,
+          20
+        ],
+        [
+          21,
+          21
+        ],
+        [
+          22,
+          22
+        ],
+        [
+          23,
+          23
+        ],
+        [
+          24,
+          24
+        ],
+        [
+          25,
+          25
+        ]
+      ],
+      "alpha_to_alpha_dead_node_mapping": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          12,
+          15
+        ],
+        [
+          13,
+          16
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          15,
+          18
+        ],
+        [
+          16,
+          19
+        ],
+        [
+          17,
+          20
+        ],
+        [
+          18,
+          21
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          23
+        ],
+        [
+          21,
+          24
+        ],
+        [
+          22,
+          25
+        ],
+        [
+          23,
+          26
+        ],
+        [
+          24,
+          27
+        ],
+        [
+          25,
+          28
+        ]
+      ],
+      "alpha_dead_known_irrelevant_nodes": [
+        0,
+        1,
+        2
+      ],
+      "alpha_dead_known_irrelevant_node_text": {
+        "0": "int __xai_dead_000 = 0 ; ",
+        "1": "__xai_dead_000 != 0",
+        "2": "System . out . print ( \\\"\\\" ) ; "
+      },
+      "alpha_cfg_topology_exactly_preserved": true,
+      "compilation_all_variants": true
+    },
+    {
+      "sample_id": "g012_227397c350",
+      "validation_source": "p03775/s810187397.java",
+      "files": {
+        "original": "g012_227397c350__original.java",
+        "alpha": "g012_227397c350__alpha.java",
+        "alpha_dead": "g012_227397c350__alpha_dead.java"
+      },
+      "vector_graph_sha256": {
+        "original": "98335c465c040c8e4febdbff6b24a5cc06947a63b4df6388f5e12e1070f2af5f",
+        "alpha": "b8fec6b17e67520d385b250dccd16848cd806db03b2eff6b77a496c8df3b06c3",
+        "alpha_dead": "531d3b1ed5fa6e8591028a697943c78b07976c63a5df2294568cb17999c40bde"
+      },
+      "node_counts": {
+        "original": 11,
+        "alpha": 11,
+        "alpha_dead": 14
+      },
+      "original_to_alpha_node_mapping": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ]
+      ],
+      "alpha_to_alpha_dead_node_mapping": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          10,
+          13
+        ]
+      ],
+      "alpha_dead_known_irrelevant_nodes": [
+        0,
+        1,
+        2
+      ],
+      "alpha_dead_known_irrelevant_node_text": {
+        "0": "int __xai_dead_000 = 0 ; ",
+        "1": "__xai_dead_000 != 0",
+        "2": "System . out . print ( \\\"\\\" ) ; "
+      },
+      "alpha_cfg_topology_exactly_preserved": true,
+      "compilation_all_variants": true
+    },
+    {
+      "sample_id": "g013_25589dddc0",
+      "validation_source": "p04030/s939653423.java",
+      "files": {
+        "original": "g013_25589dddc0__original.java",
+        "alpha": "g013_25589dddc0__alpha.java",
+        "alpha_dead": "g013_25589dddc0__alpha_dead.java"
+      },
+      "vector_graph_sha256": {
+        "original": "5c4c21a9086a2419b938277af6553bceb22791910fa0c110b50440547d9ea258",
+        "alpha": "6d437f168d88fac76f253be16f171fb7dd3fab220609bd99854fd4625c9c85ba",
+        "alpha_dead": "946092bc2df729c848579dd27a9ed8a853d61a732a787f1a6ea834003a5b4ac2"
+      },
+      "node_counts": {
+        "original": 15,
+        "alpha": 15,
+        "alpha_dead": 18
+      },
+      "original_to_alpha_node_mapping": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          13,
+          13
+        ],
+        [
+          14,
+          14
+        ]
+      ],
+      "alpha_to_alpha_dead_node_mapping": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          12,
+          15
+        ],
+        [
+          13,
+          16
+        ],
+        [
+          14,
+          17
+        ]
+      ],
+      "alpha_dead_known_irrelevant_nodes": [
+        0,
+        1,
+        2
+      ],
+      "alpha_dead_known_irrelevant_node_text": {
+        "0": "int __xai_dead_000 = 0 ; ",
+        "1": "__xai_dead_000 != 0",
+        "2": "System . out . print ( \\\"\\\" ) ; "
+      },
+      "alpha_cfg_topology_exactly_preserved": true,
+      "compilation_all_variants": true
+    },
+    {
+      "sample_id": "g014_28f1f0d5c0",
+      "validation_source": "p03998/s395279439.java",
+      "files": {
+        "original": "g014_28f1f0d5c0__original.java",
+        "alpha": "g014_28f1f0d5c0__alpha.java",
+        "alpha_dead": "g014_28f1f0d5c0__alpha_dead.java"
+      },
+      "vector_graph_sha256": {
+        "original": "2128a648d1bdf4ef41fa22dc1aaedc6dd5704b5bd1077852598d4360439f6974",
+        "alpha": "4d3adc9ec662e15e987e6fe965407087e56ff8bd824f224d7eff52f840c82eb9",
+        "alpha_dead": "dedd26deba89f546a900034e87eaf2f8bd76171ba8b5cd9692424212052e3d33"
+      },
+      "node_counts": {
+        "original": 58,
+        "alpha": 58,
+        "alpha_dead": 61
+      },
+      "original_to_alpha_node_mapping": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          13,
+          13
+        ],
+        [
+          14,
+          14
+        ],
+        [
+          15,
+          15
+        ],
+        [
+          16,
+          16
+        ],
+        [
+          17,
+          17
+        ],
+        [
+          18,
+          18
+        ],
+        [
+          19,
+          19
+        ],
+        [
+          20,
+          20
+        ],
+        [
+          21,
+          21
+        ],
+        [
+          22,
+          22
+        ],
+        [
+          23,
+          23
+        ],
+        [
+          24,
+          24
+        ],
+        [
+          25,
+          25
+        ],
+        [
+          26,
+          26
+        ],
+        [
+          27,
+          27
+        ],
+        [
+          28,
+          28
+        ],
+        [
+          29,
+          29
+        ],
+        [
+          30,
+          30
+        ],
+        [
+          31,
+          31
+        ],
+        [
+          32,
+          32
+        ],
+        [
+          33,
+          33
+        ],
+        [
+          34,
+          34
+        ],
+        [
+          35,
+          35
+        ],
+        [
+          36,
+          36
+        ],
+        [
+          37,
+          37
+        ],
+        [
+          38,
+          38
+        ],
+        [
+          39,
+          39
+        ],
+        [
+          40,
+          40
+        ],
+        [
+          41,
+          41
+        ],
+        [
+          42,
+          42
+        ],
+        [
+          43,
+          43
+        ],
+        [
+          44,
+          44
+        ],
+        [
+          45,
+          45
+        ],
+        [
+          46,
+          46
+        ],
+        [
+          47,
+          47
+        ],
+        [
+          48,
+          48
+        ],
+        [
+          49,
+          49
+        ],
+        [
+          50,
+          50
+        ],
+        [
+          51,
+          51
+        ],
+        [
+          52,
+          52
+        ],
+        [
+          53,
+          53
+        ],
+        [
+          54,
+          54
+        ],
+        [
+          55,
+          55
+        ],
+        [
+          56,
+          56
+        ],
+        [
+          57,
+          57
+        ]
+      ],
+      "alpha_to_alpha_dead_node_mapping": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          12,
+          15
+        ],
+        [
+          13,
+          16
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          15,
+          18
+        ],
+        [
+          16,
+          19
+        ],
+        [
+          17,
+          20
+        ],
+        [
+          18,
+          21
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          23
+        ],
+        [
+          21,
+          24
+        ],
+        [
+          22,
+          25
+        ],
+        [
+          23,
+          26
+        ],
+        [
+          24,
+          27
+        ],
+        [
+          25,
+          28
+        ],
+        [
+          26,
+          29
+        ],
+        [
+          27,
+          30
+        ],
+        [
+          28,
+          31
+        ],
+        [
+          29,
+          32
+        ],
+        [
+          30,
+          33
+        ],
+        [
+          31,
+          34
+        ],
+        [
+          32,
+          35
+        ],
+        [
+          33,
+          36
+        ],
+        [
+          34,
+          37
+        ],
+        [
+          35,
+          38
+        ],
+        [
+          36,
+          39
+        ],
+        [
+          37,
+          40
+        ],
+        [
+          38,
+          41
+        ],
+        [
+          39,
+          42
+        ],
+        [
+          40,
+          43
+        ],
+        [
+          41,
+          44
+        ],
+        [
+          42,
+          45
+        ],
+        [
+          43,
+          46
+        ],
+        [
+          44,
+          47
+        ],
+        [
+          45,
+          48
+        ],
+        [
+          46,
+          49
+        ],
+        [
+          47,
+          50
+        ],
+        [
+          48,
+          51
+        ],
+        [
+          49,
+          52
+        ],
+        [
+          50,
+          53
+        ],
+        [
+          51,
+          54
+        ],
+        [
+          52,
+          55
+        ],
+        [
+          53,
+          56
+        ],
+        [
+          54,
+          57
+        ],
+        [
+          55,
+          58
+        ],
+        [
+          56,
+          59
+        ],
+        [
+          57,
+          60
+        ]
+      ],
+      "alpha_dead_known_irrelevant_nodes": [
+        0,
+        1,
+        2
+      ],
+      "alpha_dead_known_irrelevant_node_text": {
+        "0": "int __xai_dead_000 = 0 ; ",
+        "1": "__xai_dead_000 != 0",
+        "2": "System . out . print ( \\\"\\\" ) ; "
+      },
+      "alpha_cfg_topology_exactly_preserved": true,
+      "compilation_all_variants": true
+    },
+    {
+      "sample_id": "g015_2bd56ecbc0",
+      "validation_source": "p03457/s503333334.java",
+      "files": {
+        "original": "g015_2bd56ecbc0__original.java",
+        "alpha": "g015_2bd56ecbc0__alpha.java",
+        "alpha_dead": "g015_2bd56ecbc0__alpha_dead.java"
+      },
+      "vector_graph_sha256": {
+        "original": "23054a35a6f944fc265b16bf46986f0decd42796b66c205b2f212ff5ffb59683",
+        "alpha": "6974beaafb01357458c2a706a6693c4723d9167be3003006ff970d851ad11694",
+        "alpha_dead": "757397b6befca71c32723466c5c7998b6ab6b33aae8d7b2310308fadd89222a4"
+      },
+      "node_counts": {
+        "original": 22,
+        "alpha": 22,
+        "alpha_dead": 25
+      },
+      "original_to_alpha_node_mapping": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          13,
+          13
+        ],
+        [
+          14,
+          14
+        ],
+        [
+          15,
+          15
+        ],
+        [
+          16,
+          16
+        ],
+        [
+          17,
+          17
+        ],
+        [
+          18,
+          18
+        ],
+        [
+          19,
+          19
+        ],
+        [
+          20,
+          20
+        ],
+        [
+          21,
+          21
+        ]
+      ],
+      "alpha_to_alpha_dead_node_mapping": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          12,
+          15
+        ],
+        [
+          13,
+          16
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          15,
+          18
+        ],
+        [
+          16,
+          19
+        ],
+        [
+          17,
+          20
+        ],
+        [
+          18,
+          21
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          23
+        ],
+        [
+          21,
+          24
+        ]
+      ],
+      "alpha_dead_known_irrelevant_nodes": [
+        0,
+        1,
+        2
+      ],
+      "alpha_dead_known_irrelevant_node_text": {
+        "0": "int __xai_dead_000 = 0 ; ",
+        "1": "__xai_dead_000 != 0",
+        "2": "System . out . print ( \\\"\\\" ) ; "
+      },
+      "alpha_cfg_topology_exactly_preserved": true,
+      "compilation_all_variants": true
+    },
+    {
+      "sample_id": "g016_2be07d5d28",
+      "validation_source": "p03371/s654039626.java",
+      "files": {
+        "original": "g016_2be07d5d28__original.java",
+        "alpha": "g016_2be07d5d28__alpha.java",
+        "alpha_dead": "g016_2be07d5d28__alpha_dead.java"
+      },
+      "vector_graph_sha256": {
+        "original": "66583f7b227007f6e7f14a44f2ffd7df42ced32e70eae2b05d1c9f97aee33adf",
+        "alpha": "9a70466eb2f93ab878e9d2aa1759e760dcb7fce4555d33abeca9f77f4da93a35",
+        "alpha_dead": "9ca47c536c9883b7b00867baddd6b947c3e7652a323bd1846196d617d9bbd9ea"
+      },
+      "node_counts": {
+        "original": 17,
+        "alpha": 17,
+        "alpha_dead": 20
+      },
+      "original_to_alpha_node_mapping": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          13,
+          13
+        ],
+        [
+          14,
+          14
+        ],
+        [
+          15,
+          15
+        ],
+        [
+          16,
+          16
+        ]
+      ],
+      "alpha_to_alpha_dead_node_mapping": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          12,
+          15
+        ],
+        [
+          13,
+          16
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          15,
+          18
+        ],
+        [
+          16,
+          19
+        ]
+      ],
+      "alpha_dead_known_irrelevant_nodes": [
+        0,
+        1,
+        2
+      ],
+      "alpha_dead_known_irrelevant_node_text": {
+        "0": "int __xai_dead_000 = 0 ; ",
+        "1": "__xai_dead_000 != 0",
+        "2": "System . out . print ( \\\"\\\" ) ; "
+      },
+      "alpha_cfg_topology_exactly_preserved": true,
+      "compilation_all_variants": true
+    },
+    {
+      "sample_id": "g017_2cc8f5dcd6",
+      "validation_source": "p03106/s742395686.java",
+      "files": {
+        "original": "g017_2cc8f5dcd6__original.java",
+        "alpha": "g017_2cc8f5dcd6__alpha.java",
+        "alpha_dead": "g017_2cc8f5dcd6__alpha_dead.java"
+      },
+      "vector_graph_sha256": {
+        "original": "e74585dd45195ffbdb584e95152fdaa62ec988f35b888d1ad49f9bb052a8c2e6",
+        "alpha": "174f6ff213312a288ed5c94c40e3c731afa5acf887051b91fbb8d4c9f9e10e62",
+        "alpha_dead": "04db634fccf8b29bc98b4589fcd485ca52c3c2ec7210eae6dc9957b847c3b8cf"
+      },
+      "node_counts": {
+        "original": 12,
+        "alpha": 12,
+        "alpha_dead": 15
+      },
+      "original_to_alpha_node_mapping": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ]
+      ],
+      "alpha_to_alpha_dead_node_mapping": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          11,
+          14
+        ]
+      ],
+      "alpha_dead_known_irrelevant_nodes": [
+        0,
+        1,
+        2
+      ],
+      "alpha_dead_known_irrelevant_node_text": {
+        "0": "int __xai_dead_000 = 0 ; ",
+        "1": "__xai_dead_000 != 0",
+        "2": "System . out . print ( \\\"\\\" ) ; "
+      },
+      "alpha_cfg_topology_exactly_preserved": true,
+      "compilation_all_variants": true
+    },
+    {
+      "sample_id": "g018_324502dd17",
+      "validation_source": "p03814/s351665685.java",
+      "files": {
+        "original": "g018_324502dd17__original.java",
+        "alpha": "g018_324502dd17__alpha.java",
+        "alpha_dead": "g018_324502dd17__alpha_dead.java"
+      },
+      "vector_graph_sha256": {
+        "original": "e326cc89c3f7225754f4b3dc8179d9480e881694f3841112d8e3e4450f0762e6",
+        "alpha": "825bf13f1ed198766fdc7278f6a39b56150db286245847da070c1d87daf73448",
+        "alpha_dead": "d2fc8372cac7ff2052098e84ba7dafe9c0ec93dda954129f993537e4471e7b7e"
+      },
+      "node_counts": {
+        "original": 9,
+        "alpha": 9,
+        "alpha_dead": 12
+      },
+      "original_to_alpha_node_mapping": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ]
+      ],
+      "alpha_to_alpha_dead_node_mapping": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          11
+        ]
+      ],
+      "alpha_dead_known_irrelevant_nodes": [
+        0,
+        1,
+        2
+      ],
+      "alpha_dead_known_irrelevant_node_text": {
+        "0": "int __xai_dead_000 = 0 ; ",
+        "1": "__xai_dead_000 != 0",
+        "2": "System . out . print ( \\\"\\\" ) ; "
+      },
+      "alpha_cfg_topology_exactly_preserved": true,
+      "compilation_all_variants": true
+    },
+    {
+      "sample_id": "g019_33cde7cb86",
+      "validation_source": "p03854/s489068396.java",
+      "files": {
+        "original": "g019_33cde7cb86__original.java",
+        "alpha": "g019_33cde7cb86__alpha.java",
+        "alpha_dead": "g019_33cde7cb86__alpha_dead.java"
+      },
+      "vector_graph_sha256": {
+        "original": "cf4ec1770af40598b5c2a6ceb1f8840487484783eeed3a3bad9144fda42e9214",
+        "alpha": "53356d88f5f4d1d5c8f75a8b0355a29a741afa0fe16c99dfda1f1da541cb15de",
+        "alpha_dead": "2ef41f6c1806281d6dd85cbf46ec2cabb7862eb90f00ffab1b0bfb4ccc85e3f9"
+      },
+      "node_counts": {
+        "original": 7,
+        "alpha": 7,
+        "alpha_dead": 10
+      },
+      "original_to_alpha_node_mapping": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "alpha_to_alpha_dead_node_mapping": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          9
+        ]
+      ],
+      "alpha_dead_known_irrelevant_nodes": [
+        0,
+        1,
+        2
+      ],
+      "alpha_dead_known_irrelevant_node_text": {
+        "0": "int __xai_dead_000 = 0 ; ",
+        "1": "__xai_dead_000 != 0",
+        "2": "System . out . print ( \\\"\\\" ) ; "
+      },
+      "alpha_cfg_topology_exactly_preserved": true,
+      "compilation_all_variants": true
+    },
+    {
+      "sample_id": "g020_3827fbe6a6",
+      "validation_source": "p04030/s896616990.java",
+      "files": {
+        "original": "g020_3827fbe6a6__original.java",
+        "alpha": "g020_3827fbe6a6__alpha.java",
+        "alpha_dead": "g020_3827fbe6a6__alpha_dead.java"
+      },
+      "vector_graph_sha256": {
+        "original": "0e8a7ca968a32f0489ee41bcda9393b8215e148e1e0b230365eb47717aa63baf",
+        "alpha": "f3d63157d162c271c873cabaa333aa857eafed8f52676e84111f163592d513eb",
+        "alpha_dead": "ebac1dc01dacf4601ab2eda43ef8eebb0703d20f0033490b643cde7d1e4c14c9"
+      },
+      "node_counts": {
+        "original": 15,
+        "alpha": 15,
+        "alpha_dead": 18
+      },
+      "original_to_alpha_node_mapping": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          13,
+          13
+        ],
+        [
+          14,
+          14
+        ]
+      ],
+      "alpha_to_alpha_dead_node_mapping": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          12,
+          15
+        ],
+        [
+          13,
+          16
+        ],
+        [
+          14,
+          17
+        ]
+      ],
+      "alpha_dead_known_irrelevant_nodes": [
+        0,
+        1,
+        2
+      ],
+      "alpha_dead_known_irrelevant_node_text": {
+        "0": "int __xai_dead_000 = 0 ; ",
+        "1": "__xai_dead_000 != 0",
+        "2": "System . out . print ( \\\"\\\" ) ; "
+      },
+      "alpha_cfg_topology_exactly_preserved": true,
+      "compilation_all_variants": true
+    },
+    {
+      "sample_id": "g021_3cfdce5846",
+      "validation_source": "p03106/s359783495.java",
+      "files": {
+        "original": "g021_3cfdce5846__original.java",
+        "alpha": "g021_3cfdce5846__alpha.java",
+        "alpha_dead": "g021_3cfdce5846__alpha_dead.java"
+      },
+      "vector_graph_sha256": {
+        "original": "f00052e2e4301b1a2ef364495f0c38c9636e926f18a481b72a42be01d6f6f670",
+        "alpha": "9db39ad2f99cc65fd8526694cd3a0191e6667f5870f7b17d02d7ff34bc510647",
+        "alpha_dead": "cb2133717adbef7b5a1fe11b787cc058bab3c17c8bb299cb7db28d7fac852e3a"
+      },
+      "node_counts": {
+        "original": 11,
+        "alpha": 11,
+        "alpha_dead": 14
+      },
+      "original_to_alpha_node_mapping": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ]
+      ],
+      "alpha_to_alpha_dead_node_mapping": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          10,
+          13
+        ]
+      ],
+      "alpha_dead_known_irrelevant_nodes": [
+        0,
+        1,
+        2
+      ],
+      "alpha_dead_known_irrelevant_node_text": {
+        "0": "int __xai_dead_000 = 0 ; ",
+        "1": "__xai_dead_000 != 0",
+        "2": "System . out . print ( \\\"\\\" ) ; "
+      },
+      "alpha_cfg_topology_exactly_preserved": true,
+      "compilation_all_variants": true
+    },
+    {
+      "sample_id": "g022_3d5220fde9",
+      "validation_source": "p03106/s017019512.java",
+      "files": {
+        "original": "g022_3d5220fde9__original.java",
+        "alpha": "g022_3d5220fde9__alpha.java",
+        "alpha_dead": "g022_3d5220fde9__alpha_dead.java"
+      },
+      "vector_graph_sha256": {
+        "original": "2c6a6ea1b7e50ebc8d4144778b8014c6b81dbe1ec2962cef5112caa6e5b72eac",
+        "alpha": "fefa8813a7c42c2976a4e6e34c2650164b90d9b3183d1007135f582c4f3b558a",
+        "alpha_dead": "b846db542e60e65a9881714b5943ef6559a259ef520d19723581bdc0322bfef2"
+      },
+      "node_counts": {
+        "original": 13,
+        "alpha": 13,
+        "alpha_dead": 16
+      },
+      "original_to_alpha_node_mapping": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          12,
+          12
+        ]
+      ],
+      "alpha_to_alpha_dead_node_mapping": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          12,
+          15
+        ]
+      ],
+      "alpha_dead_known_irrelevant_nodes": [
+        0,
+        1,
+        2
+      ],
+      "alpha_dead_known_irrelevant_node_text": {
+        "0": "int __xai_dead_000 = 0 ; ",
+        "1": "__xai_dead_000 != 0",
+        "2": "System . out . print ( \\\"\\\" ) ; "
+      },
+      "alpha_cfg_topology_exactly_preserved": true,
+      "compilation_all_variants": true
+    },
+    {
+      "sample_id": "g023_3dc1c86fc0",
+      "validation_source": "p03998/s152912732.java",
+      "files": {
+        "original": "g023_3dc1c86fc0__original.java",
+        "alpha": "g023_3dc1c86fc0__alpha.java",
+        "alpha_dead": "g023_3dc1c86fc0__alpha_dead.java"
+      },
+      "vector_graph_sha256": {
+        "original": "37a74a320a6a9f4c10c82775d25970256721fdce454ba41613e8aec9d11cd86d",
+        "alpha": "4ed666008c4aa7d79515cf028385a4432f3d8422f2fbecfaa99b01bfe8c5c85c",
+        "alpha_dead": "223e4563c040ac6f8a3c03f453a1f4e4f5fcfb915a78894b3e93533cbdbf921d"
+      },
+      "node_counts": {
+        "original": 32,
+        "alpha": 32,
+        "alpha_dead": 35
+      },
+      "original_to_alpha_node_mapping": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          13,
+          13
+        ],
+        [
+          14,
+          14
+        ],
+        [
+          15,
+          15
+        ],
+        [
+          16,
+          16
+        ],
+        [
+          17,
+          17
+        ],
+        [
+          18,
+          18
+        ],
+        [
+          19,
+          19
+        ],
+        [
+          20,
+          20
+        ],
+        [
+          21,
+          21
+        ],
+        [
+          22,
+          22
+        ],
+        [
+          23,
+          23
+        ],
+        [
+          24,
+          24
+        ],
+        [
+          25,
+          25
+        ],
+        [
+          26,
+          26
+        ],
+        [
+          27,
+          27
+        ],
+        [
+          28,
+          28
+        ],
+        [
+          29,
+          29
+        ],
+        [
+          30,
+          30
+        ],
+        [
+          31,
+          31
+        ]
+      ],
+      "alpha_to_alpha_dead_node_mapping": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          12,
+          15
+        ],
+        [
+          13,
+          16
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          15,
+          18
+        ],
+        [
+          16,
+          19
+        ],
+        [
+          17,
+          20
+        ],
+        [
+          18,
+          21
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          23
+        ],
+        [
+          21,
+          24
+        ],
+        [
+          22,
+          25
+        ],
+        [
+          23,
+          26
+        ],
+        [
+          24,
+          27
+        ],
+        [
+          25,
+          28
+        ],
+        [
+          26,
+          29
+        ],
+        [
+          27,
+          30
+        ],
+        [
+          28,
+          31
+        ],
+        [
+          29,
+          32
+        ],
+        [
+          30,
+          33
+        ],
+        [
+          31,
+          34
+        ]
+      ],
+      "alpha_dead_known_irrelevant_nodes": [
+        0,
+        1,
+        2
+      ],
+      "alpha_dead_known_irrelevant_node_text": {
+        "0": "int __xai_dead_000 = 0 ; ",
+        "1": "__xai_dead_000 != 0",
+        "2": "System . out . print ( \\\"\\\" ) ; "
+      },
+      "alpha_cfg_topology_exactly_preserved": true,
+      "compilation_all_variants": true
+    },
+    {
+      "sample_id": "g024_3e17f4c4b5",
+      "validation_source": "p03998/s606466972.java",
+      "files": {
+        "original": "g024_3e17f4c4b5__original.java",
+        "alpha": "g024_3e17f4c4b5__alpha.java",
+        "alpha_dead": "g024_3e17f4c4b5__alpha_dead.java"
+      },
+      "vector_graph_sha256": {
+        "original": "dde283d4ecabdf1b95a011555eba858561125f19c18aaf92196e4cffab4ca754",
+        "alpha": "74a5405337a8623e874e450d92683527894b02e4efc863c09ab40408803e28d2",
+        "alpha_dead": "da173a049defc46798d8a88e467bb021328769a30cce23078ec3fc54d0d56b04"
+      },
+      "node_counts": {
+        "original": 35,
+        "alpha": 35,
+        "alpha_dead": 38
+      },
+      "original_to_alpha_node_mapping": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          13,
+          13
+        ],
+        [
+          14,
+          14
+        ],
+        [
+          15,
+          15
+        ],
+        [
+          16,
+          16
+        ],
+        [
+          17,
+          17
+        ],
+        [
+          18,
+          18
+        ],
+        [
+          19,
+          19
+        ],
+        [
+          20,
+          20
+        ],
+        [
+          21,
+          21
+        ],
+        [
+          22,
+          22
+        ],
+        [
+          23,
+          23
+        ],
+        [
+          24,
+          24
+        ],
+        [
+          25,
+          25
+        ],
+        [
+          26,
+          26
+        ],
+        [
+          27,
+          27
+        ],
+        [
+          28,
+          28
+        ],
+        [
+          29,
+          29
+        ],
+        [
+          30,
+          30
+        ],
+        [
+          31,
+          31
+        ],
+        [
+          32,
+          32
+        ],
+        [
+          33,
+          33
+        ],
+        [
+          34,
+          34
+        ]
+      ],
+      "alpha_to_alpha_dead_node_mapping": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          12,
+          15
+        ],
+        [
+          13,
+          16
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          15,
+          18
+        ],
+        [
+          16,
+          19
+        ],
+        [
+          17,
+          20
+        ],
+        [
+          18,
+          21
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          23
+        ],
+        [
+          21,
+          24
+        ],
+        [
+          22,
+          25
+        ],
+        [
+          23,
+          26
+        ],
+        [
+          24,
+          27
+        ],
+        [
+          25,
+          28
+        ],
+        [
+          26,
+          29
+        ],
+        [
+          27,
+          30
+        ],
+        [
+          28,
+          31
+        ],
+        [
+          29,
+          32
+        ],
+        [
+          30,
+          33
+        ],
+        [
+          31,
+          34
+        ],
+        [
+          32,
+          35
+        ],
+        [
+          33,
+          36
+        ],
+        [
+          34,
+          37
+        ]
+      ],
+      "alpha_dead_known_irrelevant_nodes": [
+        0,
+        1,
+        2
+      ],
+      "alpha_dead_known_irrelevant_node_text": {
+        "0": "int __xai_dead_000 = 0 ; ",
+        "1": "__xai_dead_000 != 0",
+        "2": "System . out . print ( \\\"\\\" ) ; "
+      },
+      "alpha_cfg_topology_exactly_preserved": true,
+      "compilation_all_variants": true
+    },
+    {
+      "sample_id": "g025_415bd2dfba",
+      "validation_source": "p03835/s941438188.java",
+      "files": {
+        "original": "g025_415bd2dfba__original.java",
+        "alpha": "g025_415bd2dfba__alpha.java",
+        "alpha_dead": "g025_415bd2dfba__alpha_dead.java"
+      },
+      "vector_graph_sha256": {
+        "original": "aa31f758b9111b13af6c879ff23cc605f8e1e67052371f6c2a4ec08e8ec2a33c",
+        "alpha": "f9af2df6479fc8ab3dd55c2168c1208fcfee2bfecb3af88ff539d7e6e56e43e8",
+        "alpha_dead": "d82e32edbea4c022b1670e2a2bba6b3e343f62d2c67cacc9f53e62adf585dadc"
+      },
+      "node_counts": {
+        "original": 21,
+        "alpha": 21,
+        "alpha_dead": 24
+      },
+      "original_to_alpha_node_mapping": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          13,
+          13
+        ],
+        [
+          14,
+          14
+        ],
+        [
+          15,
+          15
+        ],
+        [
+          16,
+          16
+        ],
+        [
+          17,
+          17
+        ],
+        [
+          18,
+          18
+        ],
+        [
+          19,
+          19
+        ],
+        [
+          20,
+          20
+        ]
+      ],
+      "alpha_to_alpha_dead_node_mapping": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          12,
+          15
+        ],
+        [
+          13,
+          16
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          15,
+          18
+        ],
+        [
+          16,
+          19
+        ],
+        [
+          17,
+          20
+        ],
+        [
+          18,
+          21
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          23
+        ]
+      ],
+      "alpha_dead_known_irrelevant_nodes": [
+        0,
+        1,
+        2
+      ],
+      "alpha_dead_known_irrelevant_node_text": {
+        "0": "int __xai_dead_000 = 0 ; ",
+        "1": "__xai_dead_000 != 0",
+        "2": "System . out . print ( \\\"\\\" ) ; "
+      },
+      "alpha_cfg_topology_exactly_preserved": true,
+      "compilation_all_variants": true
+    },
+    {
+      "sample_id": "g026_43b88d37c8",
+      "validation_source": "p03854/s430201999.java",
+      "files": {
+        "original": "g026_43b88d37c8__original.java",
+        "alpha": "g026_43b88d37c8__alpha.java",
+        "alpha_dead": "g026_43b88d37c8__alpha_dead.java"
+      },
+      "vector_graph_sha256": {
+        "original": "d716fa368b1f5154d3c9908fafeb939307d20e0d7ef5583b70f1a978c27f9e62",
+        "alpha": "a59998fdb503ae03bfb520db7211d310365c59ac97c3f0f79ffacb291e11ab3e",
+        "alpha_dead": "acb7d0538ae54ddb3c75776ae30466abe81385111843d7b09596e6117cee244f"
+      },
+      "node_counts": {
+        "original": 22,
+        "alpha": 22,
+        "alpha_dead": 25
+      },
+      "original_to_alpha_node_mapping": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          13,
+          13
+        ],
+        [
+          14,
+          14
+        ],
+        [
+          15,
+          15
+        ],
+        [
+          16,
+          16
+        ],
+        [
+          17,
+          17
+        ],
+        [
+          18,
+          18
+        ],
+        [
+          19,
+          19
+        ],
+        [
+          20,
+          20
+        ],
+        [
+          21,
+          21
+        ]
+      ],
+      "alpha_to_alpha_dead_node_mapping": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          12,
+          15
+        ],
+        [
+          13,
+          16
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          15,
+          18
+        ],
+        [
+          16,
+          19
+        ],
+        [
+          17,
+          20
+        ],
+        [
+          18,
+          21
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          20,
+          23
+        ],
+        [
+          21,
+          24
+        ]
+      ],
+      "alpha_dead_known_irrelevant_nodes": [
+        0,
+        1,
+        2
+      ],
+      "alpha_dead_known_irrelevant_node_text": {
+        "0": "int __xai_dead_000 = 0 ; ",
+        "1": "__xai_dead_000 != 0",
+        "2": "System . out . print ( \\\"\\\" ) ; "
+      },
+      "alpha_cfg_topology_exactly_preserved": true,
+      "compilation_all_variants": true
+    },
+    {
+      "sample_id": "g027_4610275559",
+      "validation_source": "p03775/s435071814.java",
+      "files": {
+        "original": "g027_4610275559__original.java",
+        "alpha": "g027_4610275559__alpha.java",
+        "alpha_dead": "g027_4610275559__alpha_dead.java"
+      },
+      "vector_graph_sha256": {
+        "original": "7276afed4b6ede8b2c286d64d8a0b6f773b6611a6d1431e07a500e987cc0d161",
+        "alpha": "fea53bf7861bfdefad07ca6d7ae30e572396e065e4ac6c2a47459db386b33301",
+        "alpha_dead": "2ef287d181198fee7ed69bd9882863c2f899f5930e528d938615d4d3747a6f9f"
+      },
+      "node_counts": {
+        "original": 12,
+        "alpha": 12,
+        "alpha_dead": 15
+      },
+      "original_to_alpha_node_mapping": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ]
+      ],
+      "alpha_to_alpha_dead_node_mapping": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          11,
+          14
+        ]
+      ],
+      "alpha_dead_known_irrelevant_nodes": [
+        0,
+        1,
+        2
+      ],
+      "alpha_dead_known_irrelevant_node_text": {
+        "0": "int __xai_dead_000 = 0 ; ",
+        "1": "__xai_dead_000 != 0",
+        "2": "System . out . print ( \\\"\\\" ) ; "
+      },
+      "alpha_cfg_topology_exactly_preserved": true,
+      "compilation_all_variants": true
+    },
+    {
+      "sample_id": "g028_475f7ce732",
+      "validation_source": "p03835/s015869796.java",
+      "files": {
+        "original": "g028_475f7ce732__original.java",
+        "alpha": "g028_475f7ce732__alpha.java",
+        "alpha_dead": "g028_475f7ce732__alpha_dead.java"
+      },
+      "vector_graph_sha256": {
+        "original": "36b3ef1cd02c63671cd351192c8a72c88cd99db3942914efba71093f7d5669e7",
+        "alpha": "d67ac90e4ac2005fd34bd1e01f9d3a16067e6cf083fe4fd79f34b097887cde88",
+        "alpha_dead": "36c3721ffeda42e755a0f4b3c4da5cfd844dc14fa7e0dd3358beb6e7167687cf"
+      },
+      "node_counts": {
+        "original": 13,
+        "alpha": 13,
+        "alpha_dead": 16
+      },
+      "original_to_alpha_node_mapping": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          12,
+          12
+        ]
+      ],
+      "alpha_to_alpha_dead_node_mapping": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          12,
+          15
+        ]
+      ],
+      "alpha_dead_known_irrelevant_nodes": [
+        0,
+        1,
+        2
+      ],
+      "alpha_dead_known_irrelevant_node_text": {
+        "0": "int __xai_dead_000 = 0 ; ",
+        "1": "__xai_dead_000 != 0",
+        "2": "System . out . print ( \\\"\\\" ) ; "
+      },
+      "alpha_cfg_topology_exactly_preserved": true,
+      "compilation_all_variants": true
+    },
+    {
+      "sample_id": "g029_47f2c673b7",
+      "validation_source": "p03371/s616391046.java",
+      "files": {
+        "original": "g029_47f2c673b7__original.java",
+        "alpha": "g029_47f2c673b7__alpha.java",
+        "alpha_dead": "g029_47f2c673b7__alpha_dead.java"
+      },
+      "vector_graph_sha256": {
+        "original": "cde70021abe1706e94e0146e41fb5f6c683a62f5828613a7ff40ee68b04c5439",
+        "alpha": "9288205baa32694d005d4fb5e5b742982b7a28c58fffabec6e2e90cb8c3aadcb",
+        "alpha_dead": "9d079099273cfc7b98f1fbfbf83071ed53e19d24f21e433a9c73494e9d198069"
+      },
+      "node_counts": {
+        "original": 13,
+        "alpha": 13,
+        "alpha_dead": 16
+      },
+      "original_to_alpha_node_mapping": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          12,
+          12
+        ]
+      ],
+      "alpha_to_alpha_dead_node_mapping": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          12,
+          15
+        ]
+      ],
+      "alpha_dead_known_irrelevant_nodes": [
+        0,
+        1,
+        2
+      ],
+      "alpha_dead_known_irrelevant_node_text": {
+        "0": "int __xai_dead_000 = 0 ; ",
+        "1": "__xai_dead_000 != 0",
+        "2": "System . out . print ( \\\"\\\" ) ; "
+      },
+      "alpha_cfg_topology_exactly_preserved": true,
+      "compilation_all_variants": true
+    }
+  ]
+}

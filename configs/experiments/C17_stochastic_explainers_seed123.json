@@ -1,0 +1,14 @@
+{
+  "extends": "C16_gnnexplainer_random_init_seed42_reference.json",
+  "experiment_id": "C17_stochastic_explainers_seed123",
+  "status": "ready_stochastic_explainer_robustness",
+  "device": "cuda:0",
+  "explanation": {
+    "explainer_seed": 123
+  },
+  "baselines": [
+    "symmetric_gnnexplainer_node_mask_adapted",
+    "symmetric_subgraphx_mcts_shapley_adapted"
+  ],
+  "output_dir": "artifacts/pilots/C17_stochastic_explainers_seed123"
+}

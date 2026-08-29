@@ -1,0 +1,29 @@
+{
+  "extends": "C8_transformation_truth_strong_baselines.json",
+  "experiment_id": "C10_codenet_transformation_truth_strong_baselines",
+  "status": "ready_after_truth_preprocessing",
+  "dataset": "Project_CodeNet_Java250",
+  "split": "T3_validation_derived_transformations",
+  "device": "cuda:0",
+  "predictor": {
+    "checkpoint": "../Continual-Code-Clone-Detection/artifacts/external_continual/E6_codenet_temporal_fragment_replay_16mb_seed42/after_T3.pt",
+    "checkpoint_role": "frozen_seed42_final_fragment_replay_checkpoint",
+    "frozen": true,
+    "ordered_baselines": false,
+    "symmetric_candidate": "minimum_clone_probability_over_both_orders"
+  },
+  "paths": {
+    "source_dir": "external_data/explanation_truth/codenet_transformations/sources",
+    "vector_dir": "external_data/explanation_truth/codenet_transformations/cfg16_normalized"
+  },
+  "truth": {
+    "manifest": "external_data/explanation_truth/codenet_transformations/explanation_truth_manifest.json",
+    "axes": [
+      "alpha_rename_node_correspondence",
+      "known_irrelevant_dead_node_rejection"
+    ],
+    "validation_derived_only": true,
+    "independent_from_GCJ_explanation_truth": true
+  },
+  "output_dir": "artifacts/explanation_truth/C10_codenet_transformation_truth_strong_baselines_seed42"
+}

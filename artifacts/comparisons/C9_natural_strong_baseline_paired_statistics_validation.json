@@ -1,0 +1,502 @@
+{
+  "scope": "100 balanced GCJ natural validation pairs",
+  "candidate": "symmetric_semantic_optimal_pair",
+  "comparisons": {
+    "symmetric_grad_x_input": {
+      "positive_means_tc_sosp_is_better": true,
+      "overall": {
+        "necessity_delta": {
+          "n": 100,
+          "positive": 82,
+          "zero": 15,
+          "negative": 3,
+          "median": 0.026731163263320923,
+          "wilcoxon_two_sided_statistic": 57.0,
+          "wilcoxon_two_sided_p_raw": 1.0885997957187337e-16,
+          "matched_rank_biserial": 0.9934336525307798,
+          "descriptive": {
+            "n": 100,
+            "mean": 0.13563059670617805,
+            "bootstrap_95_ci": [
+              0.09299143695581007,
+              0.18108639981260058
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.0754021725526636,
+              0.17635009162071713
+            ]
+          },
+          "wilcoxon_two_sided_p_holm_9_endpoints": 7.620198570031136e-16
+        },
+        "absolute_sufficiency_gap_reduction": {
+          "n": 100,
+          "positive": 55,
+          "zero": 17,
+          "negative": 28,
+          "median": 0.000309675931930542,
+          "wilcoxon_two_sided_statistic": 1308.0,
+          "wilcoxon_two_sided_p_raw": 8.43141291711686e-05,
+          "matched_rank_biserial": 0.5226620768789444,
+          "descriptive": {
+            "n": 100,
+            "mean": 0.030643052011728285,
+            "bootstrap_95_ci": [
+              0.00860219931602478,
+              0.05975370348989963
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.0006280648211638135,
+              0.05928517918253082
+            ]
+          },
+          "wilcoxon_two_sided_p_holm_9_endpoints": 0.0003372565166846744
+        },
+        "swap_jaccard_delta": {
+          "n": 100,
+          "positive": 0,
+          "zero": 100,
+          "negative": 0,
+          "median": 0.0,
+          "wilcoxon_two_sided_statistic": 0.0,
+          "wilcoxon_two_sided_p_raw": 1.0,
+          "matched_rank_biserial": 0.0,
+          "descriptive": {
+            "n": 100,
+            "mean": 0.0,
+            "bootstrap_95_ci": [
+              0.0,
+              0.0
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "wilcoxon_two_sided_p_holm_9_endpoints": 1.0
+        }
+      },
+      "by_true_label": {
+        "0": {
+          "necessity_delta": {
+            "n": 50,
+            "mean": 0.07525530815124512,
+            "bootstrap_95_ci": [
+              0.03251044675707817,
+              0.13015068000555036
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.02907960936360175,
+              0.1366668679071711
+            ]
+          },
+          "absolute_sufficiency_gap_reduction": {
+            "n": 50,
+            "mean": 0.004563018083572388,
+            "bootstrap_95_ci": [
+              0.00030098551511764524,
+              0.011054946005344388
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.00012965382173143588,
+              0.012413310351003194
+            ]
+          },
+          "swap_jaccard_delta": {
+            "n": 50,
+            "mean": 0.0,
+            "bootstrap_95_ci": [
+              0.0,
+              0.0
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "1": {
+          "necessity_delta": {
+            "n": 50,
+            "mean": 0.19600588526111096,
+            "bootstrap_95_ci": [
+              0.13044544325349852,
+              0.2697284694615518
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.1766463023463816,
+              0.2213047017576173
+            ]
+          },
+          "absolute_sufficiency_gap_reduction": {
+            "n": 50,
+            "mean": 0.056723085939884184,
+            "bootstrap_95_ci": [
+              0.014020576119422914,
+              0.11173028168082236
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              -0.0019755959510803223,
+              0.08871892038025433
+            ]
+          },
+          "swap_jaccard_delta": {
+            "n": 50,
+            "mean": 0.0,
+            "bootstrap_95_ci": [
+              0.0,
+              0.0
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.0,
+              0.0
+            ]
+          }
+        }
+      }
+    },
+    "symmetric_gnnexplainer_node_mask_adapted": {
+      "positive_means_tc_sosp_is_better": true,
+      "overall": {
+        "necessity_delta": {
+          "n": 100,
+          "positive": 95,
+          "zero": 0,
+          "negative": 5,
+          "median": 0.05864906311035156,
+          "wilcoxon_two_sided_statistic": 101.0,
+          "wilcoxon_two_sided_p_raw": 7.782675474469018e-17,
+          "matched_rank_biserial": 0.96,
+          "descriptive": {
+            "n": 100,
+            "mean": 0.2739799947454594,
+            "bootstrap_95_ci": [
+              0.20472915028722488,
+              0.34485566128237405
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.14000569762978415,
+              0.37318325688087917
+            ]
+          },
+          "wilcoxon_two_sided_p_holm_9_endpoints": 6.226140379575214e-16
+        },
+        "absolute_sufficiency_gap_reduction": {
+          "n": 100,
+          "positive": 97,
+          "zero": 0,
+          "negative": 3,
+          "median": 0.12947863340377808,
+          "wilcoxon_two_sided_statistic": 35.0,
+          "wilcoxon_two_sided_p_raw": 1.1147719595548441e-17,
+          "matched_rank_biserial": 0.9861386138613861,
+          "descriptive": {
+            "n": 100,
+            "mean": 0.35701680727303026,
+            "bootstrap_95_ci": [
+              0.2868683393681422,
+              0.42810387467313554
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.11009958634233993,
+              0.5325873425544347
+            ]
+          },
+          "wilcoxon_two_sided_p_holm_9_endpoints": 1.0032947635993597e-16
+        },
+        "swap_jaccard_delta": {
+          "n": 100,
+          "positive": 0,
+          "zero": 100,
+          "negative": 0,
+          "median": 0.0,
+          "wilcoxon_two_sided_statistic": 0.0,
+          "wilcoxon_two_sided_p_raw": 1.0,
+          "matched_rank_biserial": 0.0,
+          "descriptive": {
+            "n": 100,
+            "mean": 0.0,
+            "bootstrap_95_ci": [
+              0.0,
+              0.0
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "wilcoxon_two_sided_p_holm_9_endpoints": 1.0
+        }
+      },
+      "by_true_label": {
+        "0": {
+          "necessity_delta": {
+            "n": 50,
+            "mean": 0.12064061999320984,
+            "bootstrap_95_ci": [
+              0.06611173331737517,
+              0.18488742291927338
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.06358186280656908,
+              0.1744783175066113
+            ]
+          },
+          "absolute_sufficiency_gap_reduction": {
+            "n": 50,
+            "mean": 0.07306012511253357,
+            "bootstrap_95_ci": [
+              0.05088277286291123,
+              0.09739735424518585
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.04933646713164557,
+              0.09998068957728275
+            ]
+          },
+          "swap_jaccard_delta": {
+            "n": 50,
+            "mean": 0.0,
+            "bootstrap_95_ci": [
+              0.0,
+              0.0
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "1": {
+          "necessity_delta": {
+            "n": 50,
+            "mean": 0.427319369497709,
+            "bootstrap_95_ci": [
+              0.32013268910360054,
+              0.531961330385413
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.2838643667831396,
+              0.621753845945932
+            ]
+          },
+          "absolute_sufficiency_gap_reduction": {
+            "n": 50,
+            "mean": 0.6409734894335269,
+            "bootstrap_95_ci": [
+              0.5518245692625643,
+              0.722022989353165
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.4218750925314042,
+              0.7338083509677722
+            ]
+          },
+          "swap_jaccard_delta": {
+            "n": 50,
+            "mean": 0.0,
+            "bootstrap_95_ci": [
+              0.0,
+              0.0
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.0,
+              0.0
+            ]
+          }
+        }
+      }
+    },
+    "symmetric_subgraphx_mcts_shapley_adapted": {
+      "positive_means_tc_sosp_is_better": true,
+      "overall": {
+        "necessity_delta": {
+          "n": 100,
+          "positive": 78,
+          "zero": 0,
+          "negative": 22,
+          "median": 0.02047678828239441,
+          "wilcoxon_two_sided_statistic": 1030.0,
+          "wilcoxon_two_sided_p_raw": 2.7430652036712907e-07,
+          "matched_rank_biserial": 0.592079207920792,
+          "descriptive": {
+            "n": 100,
+            "mean": 0.07644703490426764,
+            "bootstrap_95_ci": [
+              0.03557229086069856,
+              0.12155087202432333
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.03469826398216215,
+              0.11364565506284835
+            ]
+          },
+          "wilcoxon_two_sided_p_holm_9_endpoints": 1.6458391222027744e-06
+        },
+        "absolute_sufficiency_gap_reduction": {
+          "n": 100,
+          "positive": 68,
+          "zero": 0,
+          "negative": 32,
+          "median": 0.001113802194595337,
+          "wilcoxon_two_sided_statistic": 1050.0,
+          "wilcoxon_two_sided_p_raw": 3.946318137010482e-07,
+          "matched_rank_biserial": 0.5841584158415841,
+          "descriptive": {
+            "n": 100,
+            "mean": 0.02368172347545624,
+            "bootstrap_95_ci": [
+              0.00627457319200039,
+              0.046216944105923155
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.003450983237117937,
+              0.0577182814419895
+            ]
+          },
+          "wilcoxon_two_sided_p_holm_9_endpoints": 1.973159068505241e-06
+        },
+        "swap_jaccard_delta": {
+          "n": 100,
+          "positive": 1,
+          "zero": 99,
+          "negative": 0,
+          "median": 0.0,
+          "wilcoxon_two_sided_statistic": 0.0,
+          "wilcoxon_two_sided_p_raw": 0.31731050786291415,
+          "matched_rank_biserial": 1.0,
+          "descriptive": {
+            "n": 100,
+            "mean": 0.007163120567375887,
+            "bootstrap_95_ci": [
+              0.0,
+              0.02148936170212766
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.0,
+              0.02984633569739953
+            ]
+          },
+          "wilcoxon_two_sided_p_holm_9_endpoints": 0.9519315235887424
+        }
+      },
+      "by_true_label": {
+        "0": {
+          "necessity_delta": {
+            "n": 50,
+            "mean": 0.06384392261505127,
+            "bootstrap_95_ci": [
+              0.01969057986140251,
+              0.11784060510993001
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.0153434266924745,
+              0.13402387778964384
+            ]
+          },
+          "absolute_sufficiency_gap_reduction": {
+            "n": 50,
+            "mean": 0.004310023784637451,
+            "bootstrap_95_ci": [
+              0.0008722209036350251,
+              0.009135931372642517
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.0010892571798629231,
+              0.0071887643871672855
+            ]
+          },
+          "swap_jaccard_delta": {
+            "n": 50,
+            "mean": 0.014326241134751774,
+            "bootstrap_95_ci": [
+              0.0,
+              0.04297872340425532
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.0,
+              0.05807935595169638
+            ]
+          }
+        },
+        "1": {
+          "necessity_delta": {
+            "n": 50,
+            "mean": 0.089050147193484,
+            "bootstrap_95_ci": [
+              0.021700751507421956,
+              0.15930793631880077
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.04030021335426215,
+              0.11863137962489684
+            ]
+          },
+          "absolute_sufficiency_gap_reduction": {
+            "n": 50,
+            "mean": 0.04305342316627502,
+            "bootstrap_95_ci": [
+              0.00881944739818573,
+              0.08690557047724722
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.0045389112304238715,
+              0.12489676102995872
+            ]
+          },
+          "swap_jaccard_delta": {
+            "n": 50,
+            "mean": 0.0,
+            "bootstrap_95_ci": [
+              0.0,
+              0.0
+            ],
+            "problem_pair_cluster_bootstrap_95_ci": [
+              0.0,
+              0.0
+            ]
+          }
+        }
+      }
+    }
+  },
+  "candidate_selected_family_by_label": {
+    "0": {
+      "gradient": 12,
+      "paired_relation": 5,
+      "semantic_025": 5,
+      "semantic_050": 8,
+      "semantic_075": 8,
+      "semantic_cfg": 8,
+      "semantic_product": 4
+    },
+    "1": {
+      "gradient": 5,
+      "paired_relation": 27,
+      "semantic_025": 3,
+      "semantic_050": 4,
+      "semantic_075": 2,
+      "semantic_cfg": 5,
+      "semantic_product": 4
+    }
+  },
+  "evidence": {
+    "symmetric_semantic_optimal_pair": {
+      "path": "./artifacts/pilots/C9_natural_validation_strong_baselines_seed42/symmetric_semantic_optimal_pair_records.jsonl",
+      "sha256": "a307e6a2c1d10ae517c1a186a90139089336b0f26e24a7b44309f913233d5990"
+    },
+    "symmetric_grad_x_input": {
+      "path": "./artifacts/pilots/C9_natural_validation_strong_baselines_seed42/symmetric_grad_x_input_records.jsonl",
+      "sha256": "5def909c64699c6bf3bb58090428515439cea482029f33beea95880f9de94e1a"
+    },
+    "symmetric_gnnexplainer_node_mask_adapted": {
+      "path": "./artifacts/pilots/C9_natural_validation_strong_baselines_seed42/symmetric_gnnexplainer_node_mask_adapted_records.jsonl",
+      "sha256": "b9e70824c9aa5ceb01e84eb5309bdc75b5505e564400b0f8d2da6b6837bb981f"
+    },
+    "symmetric_subgraphx_mcts_shapley_adapted": {
+      "path": "./artifacts/pilots/C9_natural_validation_strong_baselines_seed42/symmetric_subgraphx_mcts_shapley_adapted_records.jsonl",
+      "sha256": "7f932cc49050ad32a006b36d00eb04bddaa3907eb4b4e54d1cc464c8b109b362"
+    }
+  },
+  "inference": "problem-pair cluster bootstrap for means; two-sided paired Wilcoxon tests with Holm correction across 3 baselines x 3 endpoints",
+  "test_metrics": null
+}

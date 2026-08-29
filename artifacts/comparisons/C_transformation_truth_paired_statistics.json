@@ -1,0 +1,627 @@
+{
+  "studies": [
+    {
+      "summary": "./artifacts/explanation_truth/C8_transformation_truth_strong_baselines_seed42/summary.json",
+      "summary_sha256": "c4c5b3d727be3b713f71b08af82af1b5e0ec17908e412b1178c4ab842c468451",
+      "dataset": "C8_transformation_truth_strong_baselines_seed42",
+      "samples_or_pairs": 30,
+      "family_size": 18,
+      "tests": {
+        "symmetric_semantic_optimal_pair_minus_symmetric_grad_x_input/alpha_correspondence_delta": {
+          "n": 30,
+          "positive": 11,
+          "zero": 10,
+          "negative": 9,
+          "median": 0.0,
+          "wilcoxon_two_sided_statistic": 185.5,
+          "wilcoxon_two_sided_p_raw": 0.6821264677268123,
+          "matched_rank_biserial": 0.09047619047619047,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 1.0
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_grad_x_input/dead_correspondence_delta": {
+          "n": 30,
+          "positive": 8,
+          "zero": 18,
+          "negative": 4,
+          "median": 0.0,
+          "wilcoxon_two_sided_statistic": 92.5,
+          "wilcoxon_two_sided_p_raw": 0.20344731563634422,
+          "matched_rank_biserial": 0.47435897435897434,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.6103419469090327
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_grad_x_input/dead_irrelevant_selection_reduction": {
+          "n": 30,
+          "positive": 2,
+          "zero": 27,
+          "negative": 1,
+          "median": 0.0,
+          "wilcoxon_two_sided_statistic": 28.5,
+          "wilcoxon_two_sided_p_raw": 0.5504530127544928,
+          "matched_rank_biserial": 0.5,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 1.0
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_grad_x_input/dead_irrelevant_attribution_reduction": {
+          "n": 30,
+          "positive": 10,
+          "zero": 0,
+          "negative": 20,
+          "median": -0.010506710058094459,
+          "wilcoxon_two_sided_statistic": 154.0,
+          "wilcoxon_two_sided_p_raw": 0.10943205840885639,
+          "matched_rank_biserial": -0.33763440860215055,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.5276314057409763
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_grad_x_input/mean_necessity_delta": {
+          "n": 30,
+          "positive": 26,
+          "zero": 0,
+          "negative": 4,
+          "median": 0.017665237188339233,
+          "wilcoxon_two_sided_statistic": 25.0,
+          "wilcoxon_two_sided_p_raw": 1.6838312149047852e-06,
+          "matched_rank_biserial": 0.8924731182795699,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 2.8625130653381348e-05
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_grad_x_input/mean_absolute_sufficiency_gap_reduction": {
+          "n": 30,
+          "positive": 25,
+          "zero": 0,
+          "negative": 5,
+          "median": 0.01299169659614563,
+          "wilcoxon_two_sided_statistic": 74.0,
+          "wilcoxon_two_sided_p_raw": 0.0006665531545877457,
+          "matched_rank_biserial": 0.6817204301075269,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.005998978391289711
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_gnnexplainer_node_mask_adapted/alpha_correspondence_delta": {
+          "n": 30,
+          "positive": 25,
+          "zero": 4,
+          "negative": 1,
+          "median": 0.380952380952381,
+          "wilcoxon_two_sided_statistic": 5.5,
+          "wilcoxon_two_sided_p_raw": 4.789647072247359e-06,
+          "matched_rank_biserial": 0.9914529914529915,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 6.705505901146303e-05
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_gnnexplainer_node_mask_adapted/dead_correspondence_delta": {
+          "n": 30,
+          "positive": 21,
+          "zero": 9,
+          "negative": 0,
+          "median": 0.2142857142857143,
+          "wilcoxon_two_sided_statistic": 0.0,
+          "wilcoxon_two_sided_p_raw": 1.1534874599440496e-05,
+          "matched_rank_biserial": 1.0,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.00012688362059384546
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_gnnexplainer_node_mask_adapted/dead_irrelevant_selection_reduction": {
+          "n": 30,
+          "positive": 21,
+          "zero": 9,
+          "negative": 0,
+          "median": 0.3333333333333333,
+          "wilcoxon_two_sided_statistic": 0.0,
+          "wilcoxon_two_sided_p_raw": 5.923317990312188e-06,
+          "matched_rank_biserial": 1.0,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 7.700313387405845e-05
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_gnnexplainer_node_mask_adapted/dead_irrelevant_attribution_reduction": {
+          "n": 30,
+          "positive": 25,
+          "zero": 0,
+          "negative": 5,
+          "median": 0.029165641441672045,
+          "wilcoxon_two_sided_statistic": 18.0,
+          "wilcoxon_two_sided_p_raw": 4.7124922275543213e-07,
+          "matched_rank_biserial": 0.9225806451612903,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 8.482486009597778e-06
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_gnnexplainer_node_mask_adapted/mean_necessity_delta": {
+          "n": 30,
+          "positive": 18,
+          "zero": 0,
+          "negative": 12,
+          "median": 0.01920682191848755,
+          "wilcoxon_two_sided_statistic": 149.0,
+          "wilcoxon_two_sided_p_raw": 0.08793856762349606,
+          "matched_rank_biserial": 0.35913978494623655,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.5276314057409763
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_gnnexplainer_node_mask_adapted/mean_absolute_sufficiency_gap_reduction": {
+          "n": 30,
+          "positive": 25,
+          "zero": 0,
+          "negative": 5,
+          "median": 0.05480720102787018,
+          "wilcoxon_two_sided_statistic": 51.0,
+          "wilcoxon_two_sided_p_raw": 6.286613643169403e-05,
+          "matched_rank_biserial": 0.7806451612903226,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.0006286613643169403
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_subgraphx_mcts_shapley_adapted/alpha_correspondence_delta": {
+          "n": 30,
+          "positive": 29,
+          "zero": 1,
+          "negative": 0,
+          "median": 0.3282828282828283,
+          "wilcoxon_two_sided_statistic": 0.0,
+          "wilcoxon_two_sided_p_raw": 1.8116893653409467e-06,
+          "matched_rank_biserial": 1.0,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 2.8987029845455147e-05
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_subgraphx_mcts_shapley_adapted/dead_correspondence_delta": {
+          "n": 30,
+          "positive": 27,
+          "zero": 3,
+          "negative": 0,
+          "median": 0.40250305250305246,
+          "wilcoxon_two_sided_statistic": 0.0,
+          "wilcoxon_two_sided_p_raw": 2.3118485386159464e-06,
+          "matched_rank_biserial": 1.0,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 3.46777280792392e-05
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_subgraphx_mcts_shapley_adapted/dead_irrelevant_selection_reduction": {
+          "n": 30,
+          "positive": 5,
+          "zero": 24,
+          "negative": 1,
+          "median": 0.0,
+          "wilcoxon_two_sided_statistic": 27.5,
+          "wilcoxon_two_sided_p_raw": 0.10247043485974937,
+          "matched_rank_biserial": 0.6666666666666666,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.5276314057409763
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_subgraphx_mcts_shapley_adapted/dead_irrelevant_attribution_reduction": {
+          "n": 30,
+          "positive": 6,
+          "zero": 0,
+          "negative": 24,
+          "median": -0.029895382979121365,
+          "wilcoxon_two_sided_statistic": 139.0,
+          "wilcoxon_two_sided_p_raw": 0.054921628907322884,
+          "matched_rank_biserial": -0.4021505376344086,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.3844514023512602
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_subgraphx_mcts_shapley_adapted/mean_necessity_delta": {
+          "n": 30,
+          "positive": 8,
+          "zero": 0,
+          "negative": 22,
+          "median": -0.02617223560810089,
+          "wilcoxon_two_sided_statistic": 82.0,
+          "wilcoxon_two_sided_p_raw": 0.001340603455901146,
+          "matched_rank_biserial": -0.6473118279569893,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.010724827647209167
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_subgraphx_mcts_shapley_adapted/mean_absolute_sufficiency_gap_reduction": {
+          "n": 30,
+          "positive": 25,
+          "zero": 0,
+          "negative": 5,
+          "median": 0.06622907519340515,
+          "wilcoxon_two_sided_statistic": 36.0,
+          "wilcoxon_two_sided_p_raw": 9.220093488693237e-06,
+          "matched_rank_biserial": 0.8451612903225807,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.00011064112186431885
+        }
+      }
+    },
+    {
+      "summary": "./artifacts/explanation_truth/C10_codenet_transformation_truth_strong_baselines_seed42/summary.json",
+      "summary_sha256": "2c095c80c3f5b7b58d3213aa461cb955dddfd152aa516ca653ebdf223d2375bb",
+      "dataset": "C10_codenet_transformation_truth_strong_baselines_seed42",
+      "samples_or_pairs": 30,
+      "family_size": 18,
+      "tests": {
+        "symmetric_semantic_optimal_pair_minus_symmetric_grad_x_input/alpha_correspondence_delta": {
+          "n": 30,
+          "positive": 7,
+          "zero": 19,
+          "negative": 4,
+          "median": 0.0,
+          "wilcoxon_two_sided_statistic": 98.0,
+          "wilcoxon_two_sided_p_raw": 0.343565320665279,
+          "matched_rank_biserial": 0.3333333333333333,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.687130641330558
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_grad_x_input/dead_correspondence_delta": {
+          "n": 30,
+          "positive": 10,
+          "zero": 16,
+          "negative": 4,
+          "median": 0.0,
+          "wilcoxon_two_sided_statistic": 94.5,
+          "wilcoxon_two_sided_p_raw": 0.11645780491169344,
+          "matched_rank_biserial": 0.41904761904761906,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.46583121964677376
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_grad_x_input/dead_irrelevant_selection_reduction": {
+          "n": 30,
+          "positive": 4,
+          "zero": 26,
+          "negative": 0,
+          "median": 0.0,
+          "wilcoxon_two_sided_statistic": 0.0,
+          "wilcoxon_two_sided_p_raw": 0.04559999319007805,
+          "matched_rank_biserial": 1.0,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.242938332259655
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_grad_x_input/dead_irrelevant_attribution_reduction": {
+          "n": 30,
+          "positive": 9,
+          "zero": 0,
+          "negative": 21,
+          "median": -0.023420080533138626,
+          "wilcoxon_two_sided_statistic": 133.0,
+          "wilcoxon_two_sided_p_raw": 0.04048972204327583,
+          "matched_rank_biserial": -0.42795698924731185,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.242938332259655
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_grad_x_input/mean_necessity_delta": {
+          "n": 30,
+          "positive": 25,
+          "zero": 4,
+          "negative": 1,
+          "median": 0.04139736294746399,
+          "wilcoxon_two_sided_statistic": 8.0,
+          "wilcoxon_two_sided_p_raw": 6.127830893245012e-06,
+          "matched_rank_biserial": 0.9772079772079773,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.0001041731251851652
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_grad_x_input/mean_absolute_sufficiency_gap_reduction": {
+          "n": 30,
+          "positive": 20,
+          "zero": 4,
+          "negative": 6,
+          "median": 0.0054616183042526245,
+          "wilcoxon_two_sided_statistic": 102.0,
+          "wilcoxon_two_sided_p_raw": 0.009725718561534471,
+          "matched_rank_biserial": 0.5555555555555556,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.09725718561534472
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_gnnexplainer_node_mask_adapted/alpha_correspondence_delta": {
+          "n": 30,
+          "positive": 22,
+          "zero": 6,
+          "negative": 2,
+          "median": 0.5,
+          "wilcoxon_two_sided_statistic": 15.0,
+          "wilcoxon_two_sided_p_raw": 1.8092187767617866e-05,
+          "matched_rank_biserial": 0.98,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.00028947500428188586
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_gnnexplainer_node_mask_adapted/dead_correspondence_delta": {
+          "n": 30,
+          "positive": 13,
+          "zero": 14,
+          "negative": 3,
+          "median": 0.0,
+          "wilcoxon_two_sided_statistic": 71.0,
+          "wilcoxon_two_sided_p_raw": 0.01760723870924757,
+          "matched_rank_biserial": 0.5735294117647058,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.14085790967398057
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_gnnexplainer_node_mask_adapted/dead_irrelevant_selection_reduction": {
+          "n": 30,
+          "positive": 9,
+          "zero": 21,
+          "negative": 0,
+          "median": 0.0,
+          "wilcoxon_two_sided_statistic": 0.0,
+          "wilcoxon_two_sided_p_raw": 0.002739306649038251,
+          "matched_rank_biserial": 1.0,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.03013237313942076
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_gnnexplainer_node_mask_adapted/dead_irrelevant_attribution_reduction": {
+          "n": 30,
+          "positive": 15,
+          "zero": 0,
+          "negative": 15,
+          "median": -0.002933648462189749,
+          "wilcoxon_two_sided_statistic": 223.0,
+          "wilcoxon_two_sided_p_raw": 0.8552717231214046,
+          "matched_rank_biserial": 0.04086021505376344,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.8552717231214046
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_gnnexplainer_node_mask_adapted/mean_necessity_delta": {
+          "n": 30,
+          "positive": 19,
+          "zero": 0,
+          "negative": 11,
+          "median": 0.026970796287059784,
+          "wilcoxon_two_sided_statistic": 161.0,
+          "wilcoxon_two_sided_p_raw": 0.1459994912147522,
+          "matched_rank_biserial": 0.30752688172043013,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.46583121964677376
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_gnnexplainer_node_mask_adapted/mean_absolute_sufficiency_gap_reduction": {
+          "n": 30,
+          "positive": 23,
+          "zero": 0,
+          "negative": 7,
+          "median": 0.10440944135189056,
+          "wilcoxon_two_sided_statistic": 51.0,
+          "wilcoxon_two_sided_p_raw": 6.286613643169403e-05,
+          "matched_rank_biserial": 0.7806451612903226,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.0008172597736120224
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_subgraphx_mcts_shapley_adapted/alpha_correspondence_delta": {
+          "n": 30,
+          "positive": 23,
+          "zero": 6,
+          "negative": 1,
+          "median": 0.4083333333333333,
+          "wilcoxon_two_sided_statistic": 24.0,
+          "wilcoxon_two_sided_p_raw": 4.20563903032084e-05,
+          "matched_rank_biserial": 0.88,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.0005887894642449176
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_subgraphx_mcts_shapley_adapted/dead_correspondence_delta": {
+          "n": 30,
+          "positive": 25,
+          "zero": 4,
+          "negative": 1,
+          "median": 0.35,
+          "wilcoxon_two_sided_statistic": 6.5,
+          "wilcoxon_two_sided_p_raw": 5.184365923788999e-06,
+          "matched_rank_biserial": 0.9857549857549858,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 9.331858662820199e-05
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_subgraphx_mcts_shapley_adapted/dead_irrelevant_selection_reduction": {
+          "n": 30,
+          "positive": 6,
+          "zero": 24,
+          "negative": 0,
+          "median": 0.0,
+          "wilcoxon_two_sided_statistic": 0.0,
+          "wilcoxon_two_sided_p_raw": 0.014305878435429648,
+          "matched_rank_biserial": 1.0,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.12875290591886684
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_subgraphx_mcts_shapley_adapted/dead_irrelevant_attribution_reduction": {
+          "n": 30,
+          "positive": 6,
+          "zero": 0,
+          "negative": 24,
+          "median": -0.10391274579693754,
+          "wilcoxon_two_sided_statistic": 86.0,
+          "wilcoxon_two_sided_p_raw": 0.0018640067428350449,
+          "matched_rank_biserial": -0.6301075268817204,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.02236808091402054
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_subgraphx_mcts_shapley_adapted/mean_necessity_delta": {
+          "n": 30,
+          "positive": 9,
+          "zero": 0,
+          "negative": 21,
+          "median": -0.022277146577835083,
+          "wilcoxon_two_sided_statistic": 125.0,
+          "wilcoxon_two_sided_p_raw": 0.026228994131088257,
+          "matched_rank_biserial": -0.46236559139784944,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.1836029589176178
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_subgraphx_mcts_shapley_adapted/mean_absolute_sufficiency_gap_reduction": {
+          "n": 30,
+          "positive": 25,
+          "zero": 0,
+          "negative": 5,
+          "median": 0.04247720539569855,
+          "wilcoxon_two_sided_statistic": 46.0,
+          "wilcoxon_two_sided_p_raw": 3.453157842159271e-05,
+          "matched_rank_biserial": 0.8021505376344086,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.0005179736763238907
+        }
+      }
+    },
+    {
+      "summary": "./artifacts/explanation_truth/C15_codenet_negative_pair_transformation_truth_seed42/summary.json",
+      "summary_sha256": "fa0e1b5211eb7f4b6a3b7dfd44ed6a4b84224f68c756afe05e556c82e572637b",
+      "dataset": "C15_codenet_negative_pair_transformation_truth_seed42",
+      "samples_or_pairs": 15,
+      "family_size": 18,
+      "tests": {
+        "symmetric_semantic_optimal_pair_minus_symmetric_grad_x_input/base_to_alpha_correspondence_delta": {
+          "n": 15,
+          "positive": 4,
+          "zero": 5,
+          "negative": 6,
+          "median": 0.0,
+          "wilcoxon_two_sided_statistic": 38.0,
+          "wilcoxon_two_sided_p_raw": 0.3995418812431343,
+          "matched_rank_biserial": -0.34545454545454546,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 1.0
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_grad_x_input/alpha_to_dead_correspondence_delta": {
+          "n": 15,
+          "positive": 4,
+          "zero": 4,
+          "negative": 7,
+          "median": 0.0,
+          "wilcoxon_two_sided_statistic": 31.0,
+          "wilcoxon_two_sided_p_raw": 0.16761651926869447,
+          "matched_rank_biserial": -0.5454545454545454,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 1.0
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_grad_x_input/dead_irrelevant_selection_reduction": {
+          "n": 15,
+          "positive": 3,
+          "zero": 11,
+          "negative": 1,
+          "median": 0.0,
+          "wilcoxon_two_sided_statistic": 13.0,
+          "wilcoxon_two_sided_p_raw": 0.30071104714831287,
+          "matched_rank_biserial": 0.6,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 1.0
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_grad_x_input/dead_irrelevant_attribution_reduction": {
+          "n": 15,
+          "positive": 4,
+          "zero": 0,
+          "negative": 11,
+          "median": -0.016416923293183547,
+          "wilcoxon_two_sided_statistic": 21.0,
+          "wilcoxon_two_sided_p_raw": 0.02557373046875,
+          "matched_rank_biserial": -0.65,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.2557373046875
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_grad_x_input/mean_necessity_delta": {
+          "n": 15,
+          "positive": 15,
+          "zero": 0,
+          "negative": 0,
+          "median": 0.14510856072107953,
+          "wilcoxon_two_sided_statistic": 0.0,
+          "wilcoxon_two_sided_p_raw": 6.103515625e-05,
+          "matched_rank_biserial": 1.0,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.0010986328125
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_grad_x_input/mean_absolute_sufficiency_gap_reduction": {
+          "n": 15,
+          "positive": 8,
+          "zero": 0,
+          "negative": 7,
+          "median": 0.0005424618721008301,
+          "wilcoxon_two_sided_statistic": 37.0,
+          "wilcoxon_two_sided_p_raw": 0.207763671875,
+          "matched_rank_biserial": 0.38333333333333336,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 1.0
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_gnnexplainer_node_mask_adapted/base_to_alpha_correspondence_delta": {
+          "n": 15,
+          "positive": 13,
+          "zero": 2,
+          "negative": 0,
+          "median": 0.20454545454545453,
+          "wilcoxon_two_sided_statistic": 0.0,
+          "wilcoxon_two_sided_p_raw": 0.0008580789390913577,
+          "matched_rank_biserial": 1.0,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.012871184086370365
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_gnnexplainer_node_mask_adapted/alpha_to_dead_correspondence_delta": {
+          "n": 15,
+          "positive": 6,
+          "zero": 4,
+          "negative": 5,
+          "median": 0.0,
+          "wilcoxon_two_sided_statistic": 35.5,
+          "wilcoxon_two_sided_p_raw": 0.2621164068980335,
+          "matched_rank_biserial": 0.5303030303030303,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 1.0
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_gnnexplainer_node_mask_adapted/dead_irrelevant_selection_reduction": {
+          "n": 15,
+          "positive": 7,
+          "zero": 6,
+          "negative": 2,
+          "median": 0.0,
+          "wilcoxon_two_sided_statistic": 18.0,
+          "wilcoxon_two_sided_p_raw": 0.061712054648458706,
+          "matched_rank_biserial": 0.7333333333333333,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.5554084918361284
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_gnnexplainer_node_mask_adapted/dead_irrelevant_attribution_reduction": {
+          "n": 15,
+          "positive": 10,
+          "zero": 0,
+          "negative": 5,
+          "median": 0.011880687894616632,
+          "wilcoxon_two_sided_statistic": 36.0,
+          "wilcoxon_two_sided_p_raw": 0.1876220703125,
+          "matched_rank_biserial": 0.4,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 1.0
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_gnnexplainer_node_mask_adapted/mean_necessity_delta": {
+          "n": 15,
+          "positive": 15,
+          "zero": 0,
+          "negative": 0,
+          "median": 0.2585238615671794,
+          "wilcoxon_two_sided_statistic": 0.0,
+          "wilcoxon_two_sided_p_raw": 6.103515625e-05,
+          "matched_rank_biserial": 1.0,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.0010986328125
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_gnnexplainer_node_mask_adapted/mean_absolute_sufficiency_gap_reduction": {
+          "n": 15,
+          "positive": 15,
+          "zero": 0,
+          "negative": 0,
+          "median": 0.12445513407389322,
+          "wilcoxon_two_sided_statistic": 0.0,
+          "wilcoxon_two_sided_p_raw": 6.103515625e-05,
+          "matched_rank_biserial": 1.0,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.0010986328125
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_subgraphx_mcts_shapley_adapted/base_to_alpha_correspondence_delta": {
+          "n": 15,
+          "positive": 11,
+          "zero": 0,
+          "negative": 4,
+          "median": 0.25,
+          "wilcoxon_two_sided_statistic": 15.5,
+          "wilcoxon_two_sided_p_raw": 0.01025390625,
+          "matched_rank_biserial": 0.7416666666666667,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.123046875
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_subgraphx_mcts_shapley_adapted/alpha_to_dead_correspondence_delta": {
+          "n": 15,
+          "positive": 11,
+          "zero": 2,
+          "negative": 2,
+          "median": 0.1416666666666666,
+          "wilcoxon_two_sided_statistic": 15.0,
+          "wilcoxon_two_sided_p_raw": 0.013300125342186645,
+          "matched_rank_biserial": 0.7582417582417582,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.14630137876405308
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_subgraphx_mcts_shapley_adapted/dead_irrelevant_selection_reduction": {
+          "n": 15,
+          "positive": 4,
+          "zero": 10,
+          "negative": 1,
+          "median": 0.0,
+          "wilcoxon_two_sided_statistic": 12.5,
+          "wilcoxon_two_sided_p_raw": 0.17006696145390487,
+          "matched_rank_biserial": 0.6666666666666666,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 1.0
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_subgraphx_mcts_shapley_adapted/dead_irrelevant_attribution_reduction": {
+          "n": 15,
+          "positive": 2,
+          "zero": 0,
+          "negative": 13,
+          "median": -0.08519506227840527,
+          "wilcoxon_two_sided_statistic": 15.0,
+          "wilcoxon_two_sided_p_raw": 0.00836181640625,
+          "matched_rank_biserial": -0.75,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.10870361328125
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_subgraphx_mcts_shapley_adapted/mean_necessity_delta": {
+          "n": 15,
+          "positive": 12,
+          "zero": 0,
+          "negative": 3,
+          "median": 0.10730363925298059,
+          "wilcoxon_two_sided_statistic": 14.0,
+          "wilcoxon_two_sided_p_raw": 0.0067138671875,
+          "matched_rank_biserial": 0.7666666666666667,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 0.093994140625
+        },
+        "symmetric_semantic_optimal_pair_minus_symmetric_subgraphx_mcts_shapley_adapted/mean_absolute_sufficiency_gap_reduction": {
+          "n": 15,
+          "positive": 10,
+          "zero": 0,
+          "negative": 5,
+          "median": 0.0007971525192260742,
+          "wilcoxon_two_sided_statistic": 34.0,
+          "wilcoxon_two_sided_p_raw": 0.15142822265625,
+          "matched_rank_biserial": 0.43333333333333335,
+          "wilcoxon_two_sided_p_holm_all_endpoints": 1.0
+        }
+      }
+    }
+  ],
+  "inference": "two-sided paired Wilcoxon signed-rank with Pratt zero handling; Holm correction across every baseline/endpoint test within a dataset",
+  "test_metrics": null
+}

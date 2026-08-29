@@ -1,0 +1,1634 @@
+{
+  "benchmark": "Project CodeNet T3 validation-only transformation explanation truth",
+  "samples": 30,
+  "variants_per_sample": [
+    "original",
+    "alpha",
+    "alpha_dead"
+  ],
+  "semantic_oracle": "consistent identifier alpha-renaming plus an unreachable-at-runtime zero-valued guarded empty print",
+  "verification": "all original and transformed programs compile in isolation",
+  "validation_manifest": "./manifests/codenet_java250_temporal_3task/T3_validation.txt",
+  "validation_manifest_sha256": "4d4423fb86857f8be61bd142ecc475f5f0a86ecd0f8c7a70ec67be261144b41d",
+  "test_used": false,
+  "records": [
+    {
+      "sample_id": "g000_01710738b6",
+      "validation_source": "p03146/s789031288.java",
+      "validation_source_sha256": "9356d072c12d2fed0d972182ca384bdf9cd76b7215c26ab7916910014005d39c",
+      "files": {
+        "original": "g000_01710738b6__original.java",
+        "alpha": "g000_01710738b6__alpha.java",
+        "alpha_dead": "g000_01710738b6__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "9356d072c12d2fed0d972182ca384bdf9cd76b7215c26ab7916910014005d39c",
+        "alpha": "54b7e0cbe9a60ab8a18ef9fdca075adcb485265dd690bf1585ca97c496c70897",
+        "alpha_dead": "9504f708b12a116da603b6722b04a2d05779f92af9caf3e745ee6ffd5afd48eb"
+      },
+      "alpha_mapping": {
+        "s": "xaiAlpha000",
+        "args": "xaiAlpha001",
+        "count": "xaiAlpha002",
+        "a": "xaiAlpha003",
+        "sc": "xaiAlpha004"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g001_04404afa39",
+      "validation_source": "p03136/s766912518.java",
+      "validation_source_sha256": "6f1f779b1a17f076e436dd620fe0bc17ff4e8923767020ffbab458594457405a",
+      "files": {
+        "original": "g001_04404afa39__original.java",
+        "alpha": "g001_04404afa39__alpha.java",
+        "alpha_dead": "g001_04404afa39__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "6f1f779b1a17f076e436dd620fe0bc17ff4e8923767020ffbab458594457405a",
+        "alpha": "0d0b77c1af9933644dfc5c26784a69875513f78e225847c8a2d7ac096827be7c",
+        "alpha_dead": "6d86fa977d3a0b2f57f4f565f7cc536d8657a608e41587cedb8796c4a34d8236"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "sum": "xaiAlpha001",
+        "L": "xaiAlpha002",
+        "N": "xaiAlpha003",
+        "i": "xaiAlpha004",
+        "sc": "xaiAlpha005"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g002_0a57e1905d",
+      "validation_source": "p03814/s958277274.java",
+      "validation_source_sha256": "37aa8ad4689e85e5d85d8812d8e6f942c6083c27c68bffbabef6e6a9b30d4c5a",
+      "files": {
+        "original": "g002_0a57e1905d__original.java",
+        "alpha": "g002_0a57e1905d__alpha.java",
+        "alpha_dead": "g002_0a57e1905d__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "37aa8ad4689e85e5d85d8812d8e6f942c6083c27c68bffbabef6e6a9b30d4c5a",
+        "alpha": "2fd0c00658c9ec06cbf8560172247783c255efb2c4af0735b548f21cba53b2bf",
+        "alpha_dead": "0a6f0c4c6a9dcbcadaab7d9bcb75953c8e8b393788cb054a7bb44ea0d6e4359f"
+      },
+      "alpha_mapping": {
+        "s": "xaiAlpha000",
+        "args": "xaiAlpha001",
+        "scanner": "xaiAlpha002"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g003_0e61a59f4f",
+      "validation_source": "p03775/s407181076.java",
+      "validation_source_sha256": "fb33584995de272abad031e77695722d3dc1fddf766cefc899ac094702a956ca",
+      "files": {
+        "original": "g003_0e61a59f4f__original.java",
+        "alpha": "g003_0e61a59f4f__alpha.java",
+        "alpha_dead": "g003_0e61a59f4f__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "fb33584995de272abad031e77695722d3dc1fddf766cefc899ac094702a956ca",
+        "alpha": "afb902c40a9d06c9db897498dbf8a7369960fa2a1666baa2a12822bc47a75bdd",
+        "alpha_dead": "8b286e08d1ecd447f1ee1bc43e3f7c3fe0c456a56d6fd468795a89fd32e7a078"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "n": "xaiAlpha001",
+        "X": "xaiAlpha002",
+        "scanner": "xaiAlpha003",
+        "valLenN": "xaiAlpha004",
+        "N": "xaiAlpha005",
+        "i": "xaiAlpha006",
+        "valLenX": "xaiAlpha007"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g004_11a77173db",
+      "validation_source": "p03835/s011127237.java",
+      "validation_source_sha256": "60cfa884f9963a8510c417542d47c782542134039f4049ef2abb4f206c8784d8",
+      "files": {
+        "original": "g004_11a77173db__original.java",
+        "alpha": "g004_11a77173db__alpha.java",
+        "alpha_dead": "g004_11a77173db__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "60cfa884f9963a8510c417542d47c782542134039f4049ef2abb4f206c8784d8",
+        "alpha": "140c746e96ef7192a3b2f96ea6b2c3aa2c5c4702bc2724759623bed3dc01b6ef",
+        "alpha_dead": "056537637086de6c30573d8eb0747f52f4bc65b7454e174590dbb2c156613acb"
+      },
+      "alpha_mapping": {
+        "s": "xaiAlpha000",
+        "args": "xaiAlpha001",
+        "count": "xaiAlpha002",
+        "k": "xaiAlpha003",
+        "i": "xaiAlpha004",
+        "sc": "xaiAlpha005"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g005_134556f55d",
+      "validation_source": "p03371/s621821334.java",
+      "validation_source_sha256": "f34b085bd63c01d05ac5c0f5b25b14ab610dd5db09373897f9dfd82d8cfb8c25",
+      "files": {
+        "original": "g005_134556f55d__original.java",
+        "alpha": "g005_134556f55d__alpha.java",
+        "alpha_dead": "g005_134556f55d__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "f34b085bd63c01d05ac5c0f5b25b14ab610dd5db09373897f9dfd82d8cfb8c25",
+        "alpha": "bb905673eff5ed9701945fdcef70293c233c62ac9fec6f619d38591bbbf68b57",
+        "alpha_dead": "bf9a51757e4fb741dfe7c0a804ffc1e7c6df86e3f5003967db110a5506cf1a48"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "x": "xaiAlpha001",
+        "ans": "xaiAlpha002",
+        "a": "xaiAlpha003",
+        "i": "xaiAlpha004",
+        "sc": "xaiAlpha005"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g006_14c370cf53",
+      "validation_source": "p03106/s174487847.java",
+      "validation_source_sha256": "dfa80b70b68b146b8a8ea241a3641799100c087f08e027afc941c4a7464607ae",
+      "files": {
+        "original": "g006_14c370cf53__original.java",
+        "alpha": "g006_14c370cf53__alpha.java",
+        "alpha_dead": "g006_14c370cf53__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "dfa80b70b68b146b8a8ea241a3641799100c087f08e027afc941c4a7464607ae",
+        "alpha": "45ab87705d175b5e8153f72051f8c127d1ae4346a2b2c772ec452321f09ba183",
+        "alpha_dead": "ce1913e5e0c67222023037f7b058dbb3559e6df34a1c6c64754379e51b45a8ac"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "A": "xaiAlpha001",
+        "count": "xaiAlpha002",
+        "K": "xaiAlpha003",
+        "i": "xaiAlpha004",
+        "B": "xaiAlpha005",
+        "sc": "xaiAlpha006"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g007_1609541820",
+      "validation_source": "p03136/s867851709.java",
+      "validation_source_sha256": "341a5a6ead1f9339b96497bbf9c023482d5c6f71f6b4ad446bde6a7f22f810a2",
+      "files": {
+        "original": "g007_1609541820__original.java",
+        "alpha": "g007_1609541820__alpha.java",
+        "alpha_dead": "g007_1609541820__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "341a5a6ead1f9339b96497bbf9c023482d5c6f71f6b4ad446bde6a7f22f810a2",
+        "alpha": "8104e32bcfd2fd22261a5806317171804da0fe136282cd78a48f48c83a965e84",
+        "alpha_dead": "b3caa59f6667c02580df30280e73bd2f2519848ec57bbc81ee9eb1214c30ad84"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "sum": "xaiAlpha001",
+        "n": "xaiAlpha002",
+        "arr": "xaiAlpha003",
+        "mx": "xaiAlpha004",
+        "i": "xaiAlpha005",
+        "sc": "xaiAlpha006"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g008_17badf1517",
+      "validation_source": "p03146/s570731363.java",
+      "validation_source_sha256": "dd9b1d8886476a63746b2155591471243f625dfedf5afa7db9ecb3552da41dc6",
+      "files": {
+        "original": "g008_17badf1517__original.java",
+        "alpha": "g008_17badf1517__alpha.java",
+        "alpha_dead": "g008_17badf1517__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "dd9b1d8886476a63746b2155591471243f625dfedf5afa7db9ecb3552da41dc6",
+        "alpha": "35d3cfcb26779f2ceca6ef7f92b4dbfb2cd5d7390ff162982b3e53e950aceae3",
+        "alpha_dead": "987e9bff6ebe8cd91d1f59ee1d640cb4162de765e357146c2a7d03501142beaa"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "n": "xaiAlpha001",
+        "MAXN": "xaiAlpha002",
+        "present": "xaiAlpha003",
+        "ans": "xaiAlpha004",
+        "sc": "xaiAlpha005"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g009_1f68de3a2b",
+      "validation_source": "p03854/s688311570.java",
+      "validation_source_sha256": "53fe31a8504f1622eb42f13a735c82b7357f1904fe48cc8d4508e37e0677313f",
+      "files": {
+        "original": "g009_1f68de3a2b__original.java",
+        "alpha": "g009_1f68de3a2b__alpha.java",
+        "alpha_dead": "g009_1f68de3a2b__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "53fe31a8504f1622eb42f13a735c82b7357f1904fe48cc8d4508e37e0677313f",
+        "alpha": "19221cc4e3f5d20b7243a166feefd851e22d9da86d9fc4082b2676cd69e6c22b",
+        "alpha_dead": "50c77c7160c231618718630654de7d4074fc02bdb7f791c286497031bee24ac6"
+      },
+      "alpha_mapping": {
+        "s": "xaiAlpha000",
+        "args": "xaiAlpha001",
+        "j": "xaiAlpha002",
+        "isSuccess": "xaiAlpha003",
+        "k": "xaiAlpha004",
+        "isSame": "xaiAlpha005",
+        "ans": "xaiAlpha006",
+        "tmp": "xaiAlpha007",
+        "candidate": "xaiAlpha008",
+        "i": "xaiAlpha009",
+        "sc": "xaiAlpha010"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g010_217ecb367b",
+      "validation_source": "p03835/s726570924.java",
+      "validation_source_sha256": "366c81dec8eeff98dfb74b39cd862e0d04c4169b1d8ba9b821efff8f6a7e31aa",
+      "files": {
+        "original": "g010_217ecb367b__original.java",
+        "alpha": "g010_217ecb367b__alpha.java",
+        "alpha_dead": "g010_217ecb367b__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "366c81dec8eeff98dfb74b39cd862e0d04c4169b1d8ba9b821efff8f6a7e31aa",
+        "alpha": "26532ddd609e25f7ab3ee4a1827339b9eb8907225570f31d0c73816cbfd0b338",
+        "alpha_dead": "de7a0f79f6ef4ccf953a80df6939888731b8560550471a751f5149684ead01f2"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "x": "xaiAlpha001",
+        "z": "xaiAlpha002",
+        "scanner": "xaiAlpha003",
+        "count": "xaiAlpha004",
+        "k": "xaiAlpha005",
+        "y": "xaiAlpha006"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g011_224173782e",
+      "validation_source": "p03854/s114349922.java",
+      "validation_source_sha256": "ffaff1a541a98261d05fe4d10bd96bd48f9057447c900c0405b41340393947dc",
+      "files": {
+        "original": "g011_224173782e__original.java",
+        "alpha": "g011_224173782e__alpha.java",
+        "alpha_dead": "g011_224173782e__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "ffaff1a541a98261d05fe4d10bd96bd48f9057447c900c0405b41340393947dc",
+        "alpha": "63e54ee6796a710a60cb1f34a5cfc1caf91976c4ff871e95dd0e29e291c466c4",
+        "alpha_dead": "ed89ba6666b55a689d96fa57699561f2c4e076f28d70874e16bae29c4c5c30ad"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "bad": "xaiAlpha001",
+        "curSTART": "xaiAlpha002",
+        "N": "xaiAlpha003",
+        "S": "xaiAlpha004",
+        "test": "xaiAlpha005",
+        "input": "xaiAlpha006"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g012_227397c350",
+      "validation_source": "p03775/s810187397.java",
+      "validation_source_sha256": "ea73daa47b0db84443271bdad40e020c775998b7f2c482f2d24efa30ed7fd44e",
+      "files": {
+        "original": "g012_227397c350__original.java",
+        "alpha": "g012_227397c350__alpha.java",
+        "alpha_dead": "g012_227397c350__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "ea73daa47b0db84443271bdad40e020c775998b7f2c482f2d24efa30ed7fd44e",
+        "alpha": "c465df13ec9a2cbc6ecdd6952e389377ba47264dec12f311ccd9620f440eb0e4",
+        "alpha_dead": "4f7f73e2aa16dcdbcc8439a58a10ab548ed95958c81293acd83cd5b8c6705322"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "answer": "xaiAlpha001",
+        "n": "xaiAlpha002",
+        "len2": "xaiAlpha003",
+        "len1": "xaiAlpha004",
+        "i": "xaiAlpha005",
+        "sc": "xaiAlpha006"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g013_25589dddc0",
+      "validation_source": "p04030/s939653423.java",
+      "validation_source_sha256": "93750f526c63be4ab3a4f0d81c806b75a6db3c05ef711b52c1c16edac210e945",
+      "files": {
+        "original": "g013_25589dddc0__original.java",
+        "alpha": "g013_25589dddc0__alpha.java",
+        "alpha_dead": "g013_25589dddc0__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "93750f526c63be4ab3a4f0d81c806b75a6db3c05ef711b52c1c16edac210e945",
+        "alpha": "2b8e67874b6a341963c62126e6b2a6cb52d960d429ed82f1a12729e0648f4a8a",
+        "alpha_dead": "83a574c4e77816cd94afaa615d006a33da7b51be90a5a73da6847a6811aa215d"
+      },
+      "alpha_mapping": {
+        "s": "xaiAlpha000",
+        "args": "xaiAlpha001",
+        "c": "xaiAlpha002",
+        "stack": "xaiAlpha003",
+        "i": "xaiAlpha004",
+        "sc": "xaiAlpha005",
+        "result": "xaiAlpha006"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g014_28f1f0d5c0",
+      "validation_source": "p03998/s395279439.java",
+      "validation_source_sha256": "b1d5df73fbe34583fc45f2da99285cd9f1fcbcf06737778bbabf2dbdf72465b6",
+      "files": {
+        "original": "g014_28f1f0d5c0__original.java",
+        "alpha": "g014_28f1f0d5c0__alpha.java",
+        "alpha_dead": "g014_28f1f0d5c0__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "b1d5df73fbe34583fc45f2da99285cd9f1fcbcf06737778bbabf2dbdf72465b6",
+        "alpha": "cd2da05b67c87d1e43c4b8473127f764a7044cb0e2da22109db2795cd9a245b8",
+        "alpha_dead": "a250181d5e8649a379a6ee4387e74cbc6a0a0f0de1e1cf72f11ddd921f2aa231"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "ceil": "xaiAlpha001",
+        "num": "xaiAlpha002",
+        "x": "xaiAlpha003",
+        "c": "xaiAlpha004",
+        "b": "xaiAlpha005",
+        "e": "xaiAlpha006",
+        "ModInv": "xaiAlpha007",
+        "w": "xaiAlpha008",
+        "A": "xaiAlpha009",
+        "st": "xaiAlpha010",
+        "GCD": "xaiAlpha011",
+        "C": "xaiAlpha012",
+        "nextLong": "xaiAlpha013",
+        "br": "xaiAlpha014",
+        "den": "xaiAlpha015",
+        "ans": "xaiAlpha016",
+        "I": "xaiAlpha017",
+        "cur": "xaiAlpha018",
+        "O": "xaiAlpha019",
+        "next": "xaiAlpha020",
+        "a": "xaiAlpha021",
+        "base": "xaiAlpha022",
+        "FastExp": "xaiAlpha023",
+        "nextInt": "xaiAlpha024",
+        "exp": "xaiAlpha025",
+        "pop": "xaiAlpha026",
+        "i": "xaiAlpha027",
+        "B": "xaiAlpha028",
+        "mod": "xaiAlpha029",
+        "cnt": "xaiAlpha030"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g015_2bd56ecbc0",
+      "validation_source": "p03457/s503333334.java",
+      "validation_source_sha256": "e9279a5f536752eaec08a526c30adab83c07e04916ce020be1cfc18645f1afc8",
+      "files": {
+        "original": "g015_2bd56ecbc0__original.java",
+        "alpha": "g015_2bd56ecbc0__alpha.java",
+        "alpha_dead": "g015_2bd56ecbc0__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "e9279a5f536752eaec08a526c30adab83c07e04916ce020be1cfc18645f1afc8",
+        "alpha": "d0a0a912bc1d932b1c63da8c941dd7689a0d75bddea6a4479da0b815641f47cc",
+        "alpha_dead": "553d58e3180298c324f12f2ea94be62126624b70a90bf1f5e4b40bdd881365e9"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "x": "xaiAlpha001",
+        "yt": "xaiAlpha002",
+        "N": "xaiAlpha003",
+        "cost": "xaiAlpha004",
+        "y": "xaiAlpha005",
+        "xt": "xaiAlpha006",
+        "i": "xaiAlpha007",
+        "sc": "xaiAlpha008",
+        "t": "xaiAlpha009",
+        "now": "xaiAlpha010"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g016_2be07d5d28",
+      "validation_source": "p03371/s654039626.java",
+      "validation_source_sha256": "d4cb52962be362741a400672d07b8e206c5c56afde7e362704536a894cf4bd7c",
+      "files": {
+        "original": "g016_2be07d5d28__original.java",
+        "alpha": "g016_2be07d5d28__alpha.java",
+        "alpha_dead": "g016_2be07d5d28__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "d4cb52962be362741a400672d07b8e206c5c56afde7e362704536a894cf4bd7c",
+        "alpha": "3bd5db10b2627da8328c197216e8e6c1372390b1202a16e272616c24e055db80",
+        "alpha_dead": "4d0aa10486f683fd091a18d99c85e0a21a5b32d3ed41889c08cac1a6d5381e61"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "Y": "xaiAlpha001",
+        "X": "xaiAlpha002",
+        "A": "xaiAlpha003",
+        "C": "xaiAlpha004",
+        "count": "xaiAlpha005",
+        "B": "xaiAlpha006",
+        "sc": "xaiAlpha007"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g017_2cc8f5dcd6",
+      "validation_source": "p03106/s742395686.java",
+      "validation_source_sha256": "26787b3e11cac8929d971e97e5102e75a42205fa85ae23160b756b70128bdc59",
+      "files": {
+        "original": "g017_2cc8f5dcd6__original.java",
+        "alpha": "g017_2cc8f5dcd6__alpha.java",
+        "alpha_dead": "g017_2cc8f5dcd6__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "26787b3e11cac8929d971e97e5102e75a42205fa85ae23160b756b70128bdc59",
+        "alpha": "eeed2e3017df61e5cdc221d80421cb8e143e27318fedc5973532e65190b548e8",
+        "alpha_dead": "21ad5e336feee9cc9bced9aa8a04e965f92deadf11ea3331bfa3c6af033ecba7"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "A": "xaiAlpha001",
+        "K": "xaiAlpha002",
+        "i": "xaiAlpha003",
+        "B": "xaiAlpha004",
+        "sc": "xaiAlpha005"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g018_324502dd17",
+      "validation_source": "p03814/s351665685.java",
+      "validation_source_sha256": "d7125f1bf7008e6d0ac6309b884ab05d3a58bb951a6fa6e58420bce541d8c125",
+      "files": {
+        "original": "g018_324502dd17__original.java",
+        "alpha": "g018_324502dd17__alpha.java",
+        "alpha_dead": "g018_324502dd17__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "d7125f1bf7008e6d0ac6309b884ab05d3a58bb951a6fa6e58420bce541d8c125",
+        "alpha": "63e057ce6da33ac167e59253d27d36981b600582df5083ab2790a43722debbe3",
+        "alpha_dead": "c15d47bebd14802ca6a60c7bda1e0d305cb12129cae526558d9e751e944e31d9"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "indexB": "xaiAlpha001",
+        "indexA": "xaiAlpha002",
+        "str": "xaiAlpha003",
+        "sc": "xaiAlpha004"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g019_33cde7cb86",
+      "validation_source": "p03854/s489068396.java",
+      "validation_source_sha256": "922d2c71f2e8381f1ae0d1420cdddf3ab6e4e5e8ab9b7d019606af2b51489533",
+      "files": {
+        "original": "g019_33cde7cb86__original.java",
+        "alpha": "g019_33cde7cb86__alpha.java",
+        "alpha_dead": "g019_33cde7cb86__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "922d2c71f2e8381f1ae0d1420cdddf3ab6e4e5e8ab9b7d019606af2b51489533",
+        "alpha": "aa2928f7eb5b27082027eda1d612b3007b101ba74564fd554007199c702f847e",
+        "alpha_dead": "7c28ff964a8ae27e7ab8a8d3e8f914f27ece2e1b79582c2d6e9c8aa07834d47e"
+      },
+      "alpha_mapping": {
+        "s": "xaiAlpha000",
+        "args": "xaiAlpha001",
+        "judge": "xaiAlpha002",
+        "replacedS": "xaiAlpha003",
+        "sc": "xaiAlpha004",
+        "result": "xaiAlpha005"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g020_3827fbe6a6",
+      "validation_source": "p04030/s896616990.java",
+      "validation_source_sha256": "33cf89def8c9191362f5a59970d408e5ce93284a89a1d05d3ccbc19ea1f890bb",
+      "files": {
+        "original": "g020_3827fbe6a6__original.java",
+        "alpha": "g020_3827fbe6a6__alpha.java",
+        "alpha_dead": "g020_3827fbe6a6__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "33cf89def8c9191362f5a59970d408e5ce93284a89a1d05d3ccbc19ea1f890bb",
+        "alpha": "b738934692ccfccaefc137fc812feb01316c247af931621d87192e444135c090",
+        "alpha_dead": "aac264453e244c4596d7b45e52bf0df41557d8ad5474c59f7ba670ddbfa11f5b"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "b": "xaiAlpha001",
+        "ans": "xaiAlpha002",
+        "a": "xaiAlpha003",
+        "i": "xaiAlpha004",
+        "sc": "xaiAlpha005"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g021_3cfdce5846",
+      "validation_source": "p03106/s359783495.java",
+      "validation_source_sha256": "6b141fed56da3c8af0532e1db1f5b10c645cc9cc9f022b0c36d203f3662f2bbe",
+      "files": {
+        "original": "g021_3cfdce5846__original.java",
+        "alpha": "g021_3cfdce5846__alpha.java",
+        "alpha_dead": "g021_3cfdce5846__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "6b141fed56da3c8af0532e1db1f5b10c645cc9cc9f022b0c36d203f3662f2bbe",
+        "alpha": "62db6e5b68a1c6fd8dec7432688d7cd41307c4f11a98e76778ebfb7231cd13b6",
+        "alpha_dead": "03baf06b97e3a844024c23243ac5e0d0c7c144292a2d4051ab616673a133164f"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "A": "xaiAlpha001",
+        "scan": "xaiAlpha002",
+        "K": "xaiAlpha003",
+        "i": "xaiAlpha004",
+        "B": "xaiAlpha005"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g022_3d5220fde9",
+      "validation_source": "p03106/s017019512.java",
+      "validation_source_sha256": "303516166ffde31f65ed096aeb57ccde9f3c4156552aab520e1d4c59905dbcc1",
+      "files": {
+        "original": "g022_3d5220fde9__original.java",
+        "alpha": "g022_3d5220fde9__alpha.java",
+        "alpha_dead": "g022_3d5220fde9__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "303516166ffde31f65ed096aeb57ccde9f3c4156552aab520e1d4c59905dbcc1",
+        "alpha": "d358a8a948652e4cadf5df2f7a1f6f1c05f44ebbe0136f9375fa43484e74b294",
+        "alpha_dead": "ebd85a2d40d2791ee7377dd559d65b7c05f1eb9f67ae26451e911159647fc555"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "n": "xaiAlpha001",
+        "A": "xaiAlpha002",
+        "K": "xaiAlpha003",
+        "a": "xaiAlpha004",
+        "i": "xaiAlpha005",
+        "B": "xaiAlpha006",
+        "sc": "xaiAlpha007"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g023_3dc1c86fc0",
+      "validation_source": "p03998/s152912732.java",
+      "validation_source_sha256": "d69f7ace4345e228e10c4f3b708d348125a8302d1b2d8f58ed42ba56757750bd",
+      "files": {
+        "original": "g023_3dc1c86fc0__original.java",
+        "alpha": "g023_3dc1c86fc0__alpha.java",
+        "alpha_dead": "g023_3dc1c86fc0__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "d69f7ace4345e228e10c4f3b708d348125a8302d1b2d8f58ed42ba56757750bd",
+        "alpha": "61b274316f84a99265560338084a916cfafc718b2088eebfac858291103cf4a0",
+        "alpha_dead": "e6110ed184f8c8e6e987a4f8c59291a9178065fb70b9f9bd61f22f4ffe40feb3"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "check": "xaiAlpha001",
+        "c": "xaiAlpha002",
+        "b": "xaiAlpha003",
+        "e": "xaiAlpha004",
+        "alist": "xaiAlpha005",
+        "blist": "xaiAlpha006",
+        "clist": "xaiAlpha007",
+        "a": "xaiAlpha008",
+        "i": "xaiAlpha009",
+        "sc": "xaiAlpha010"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g024_3e17f4c4b5",
+      "validation_source": "p03998/s606466972.java",
+      "validation_source_sha256": "e8d5fb2ebd3b9d7aa2936cc6ed45f5fcefa851c3430ab10ff9dd17fa222424c8",
+      "files": {
+        "original": "g024_3e17f4c4b5__original.java",
+        "alpha": "g024_3e17f4c4b5__alpha.java",
+        "alpha_dead": "g024_3e17f4c4b5__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "e8d5fb2ebd3b9d7aa2936cc6ed45f5fcefa851c3430ab10ff9dd17fa222424c8",
+        "alpha": "66d28f7a5d2b9fa5f1b7f88a0d2990ed6ecfd0ca6320e63ce712a29f7300e40f",
+        "alpha_dead": "813e4d5cdf9145c6a5929306c1210091487ce3ef45a5f0d9fc419eaa10203f3a"
+      },
+      "alpha_mapping": {
+        "s": "xaiAlpha000",
+        "args": "xaiAlpha001",
+        "arr": "xaiAlpha002",
+        "c": "xaiAlpha003",
+        "b": "xaiAlpha004",
+        "a": "xaiAlpha005",
+        "sc": "xaiAlpha006"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g025_415bd2dfba",
+      "validation_source": "p03835/s941438188.java",
+      "validation_source_sha256": "ff24b44910301b98d3b2d28c756de3248ad1f7da0b41e6a372b740db1bd2e289",
+      "files": {
+        "original": "g025_415bd2dfba__original.java",
+        "alpha": "g025_415bd2dfba__alpha.java",
+        "alpha_dead": "g025_415bd2dfba__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "ff24b44910301b98d3b2d28c756de3248ad1f7da0b41e6a372b740db1bd2e289",
+        "alpha": "25e9badcb2d9dec0ef6206df4a33fa97be876fd12e978156703f792cf1ca2966",
+        "alpha_dead": "3a6dd02ce0e4a901d6687789b8e8e5ed4a5e4235a9e9e0b76921ae7c3c2158e3"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "j": "xaiAlpha001",
+        "scanner": "xaiAlpha002",
+        "count": "xaiAlpha003",
+        "K": "xaiAlpha004",
+        "S": "xaiAlpha005",
+        "sub": "xaiAlpha006",
+        "i": "xaiAlpha007"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g026_43b88d37c8",
+      "validation_source": "p03854/s430201999.java",
+      "validation_source_sha256": "a9daaa5f8622c0ad39a3376ac0f2a4281c4828b66c07c48e15331634b6e48f9f",
+      "files": {
+        "original": "g026_43b88d37c8__original.java",
+        "alpha": "g026_43b88d37c8__alpha.java",
+        "alpha_dead": "g026_43b88d37c8__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "a9daaa5f8622c0ad39a3376ac0f2a4281c4828b66c07c48e15331634b6e48f9f",
+        "alpha": "a7c66d9bbcadb82ca5a688cb9c79ccfa3d14aebe69426de9d722a5a8f9b2cf37",
+        "alpha_dead": "b4fe78195c14dbbd8c884a9a9b24be0dd7d0097eade92e4d64bd13585fe2fe9b"
+      },
+      "alpha_mapping": {
+        "s": "xaiAlpha000",
+        "args": "xaiAlpha001",
+        "position": "xaiAlpha002",
+        "sc": "xaiAlpha003"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g027_4610275559",
+      "validation_source": "p03775/s435071814.java",
+      "validation_source_sha256": "d1815cebff7230f9b1f39001d190013a93c6cd21a08328e88618cefcb77da040",
+      "files": {
+        "original": "g027_4610275559__original.java",
+        "alpha": "g027_4610275559__alpha.java",
+        "alpha_dead": "g027_4610275559__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "d1815cebff7230f9b1f39001d190013a93c6cd21a08328e88618cefcb77da040",
+        "alpha": "430f00f7764e482b485624a0c2c9277596c9b5f9e9a9a0bf44160e9b46b5e2b3",
+        "alpha_dead": "3fb03eb1fb0db317b120cfb9edba8121ecdf9ab97fb1f44cd3893cd9a4670ced"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "n": "xaiAlpha001",
+        "b": "xaiAlpha002",
+        "to": "xaiAlpha003",
+        "ans": "xaiAlpha004",
+        "a": "xaiAlpha005",
+        "sc": "xaiAlpha006"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g028_475f7ce732",
+      "validation_source": "p03835/s015869796.java",
+      "validation_source_sha256": "5702207ddb9200131489d51c459964f1cb6954ad666bf4ac053b74d864badd49",
+      "files": {
+        "original": "g028_475f7ce732__original.java",
+        "alpha": "g028_475f7ce732__alpha.java",
+        "alpha_dead": "g028_475f7ce732__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "5702207ddb9200131489d51c459964f1cb6954ad666bf4ac053b74d864badd49",
+        "alpha": "c20f0e9373e2448d1aaae69387c72b4f0224e6327542c41366e339abc5bb6387",
+        "alpha_dead": "1f628219a8a9396c28b0c20bdfc81e69540bc5a93e46e19c9799951ac0fd4d49"
+      },
+      "alpha_mapping": {
+        "s": "xaiAlpha000",
+        "args": "xaiAlpha001",
+        "x": "xaiAlpha002",
+        "count": "xaiAlpha003",
+        "k": "xaiAlpha004",
+        "y": "xaiAlpha005",
+        "scn": "xaiAlpha006"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    },
+    {
+      "sample_id": "g029_47f2c673b7",
+      "validation_source": "p03371/s616391046.java",
+      "validation_source_sha256": "795e4335e9d4af9be0b7e8743dc76184e7c99d41937e0f82c6b80fd42e58041d",
+      "files": {
+        "original": "g029_47f2c673b7__original.java",
+        "alpha": "g029_47f2c673b7__alpha.java",
+        "alpha_dead": "g029_47f2c673b7__alpha_dead.java"
+      },
+      "file_sha256": {
+        "original": "795e4335e9d4af9be0b7e8743dc76184e7c99d41937e0f82c6b80fd42e58041d",
+        "alpha": "1e558cd16538e479d93e607a9db31a94a6fffea8be25478bab6c984a90b28dfc",
+        "alpha_dead": "907037ee3b68ed447ba7b8ae84ff984000f392341d30a61d14e62532c8c8d513"
+      },
+      "alpha_mapping": {
+        "args": "xaiAlpha000",
+        "x": "xaiAlpha001",
+        "c": "xaiAlpha002",
+        "normal": "xaiAlpha003",
+        "b": "xaiAlpha004",
+        "price": "xaiAlpha005",
+        "half": "xaiAlpha006",
+        "y": "xaiAlpha007",
+        "a": "xaiAlpha008",
+        "sc": "xaiAlpha009",
+        "comb": "xaiAlpha010",
+        "result": "xaiAlpha011"
+      },
+      "dead_identifier": "__xai_dead_000",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha_dead": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        }
+      },
+      "truth": {
+        "original_to_alpha": "semantic_equivalence_and_node_correspondence",
+        "alpha_to_alpha_dead": "semantic_equivalence_with_known_irrelevant_nodes"
+      }
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "source": "p03106/s817471270.java",
+      "reason": "compile_failure",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_q8rgydad/Main.java:9: error: cannot find symbol\n        PrintWriter xaiAlpha012 = new PrintWriter(System.xaiAlpha012);\n                                                        ^\n  symbol:   variable xaiAlpha012\n  location: class System\n/tmp/codeclone_truth_compile_q8rgydad/Main.java:34: error: cannot find symbol\n    private final InputStream xaiAlpha009 = System.xaiAlpha009;\n                                                  ^\n  symbol:   variable xaiAlpha009\n  location: class System\n2 errors\n"
+        },
+        "alpha_dead": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_t8__rgi3/Main.java:12: error: cannot find symbol\n        PrintWriter xaiAlpha012 = new PrintWriter(System.xaiAlpha012);\n                                                        ^\n  symbol:   variable xaiAlpha012\n  location: class System\n/tmp/codeclone_truth_compile_t8__rgi3/Main.java:37: error: cannot find symbol\n    private final InputStream xaiAlpha009 = System.xaiAlpha009;\n                                                  ^\n  symbol:   variable xaiAlpha009\n  location: class System\n2 errors\n"
+        }
+      }
+    },
+    {
+      "source": "p03136/s593633479.java",
+      "reason": "compile_failure",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_igz_ikvx/Main.java:13: error: cannot find symbol\n        xaiAlpha003 = Math.xaiAlpha003(xaiAlpha003,xaiAlpha004);//aの中の最大値\n                          ^\n  symbol:   method xaiAlpha003(int,int)\n  location: class Math\n1 error\n"
+        },
+        "alpha_dead": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_lyyy3ltg/Main.java:16: error: cannot find symbol\n        xaiAlpha003 = Math.xaiAlpha003(xaiAlpha003,xaiAlpha004);//aの中の最大値\n                          ^\n  symbol:   method xaiAlpha003(int,int)\n  location: class Math\n1 error\n"
+        }
+      }
+    },
+    {
+      "source": "p03106/s488110891.java",
+      "reason": "compile_failure",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_2l1s3uct/Main.java:6: error: cannot find symbol\n\t\tInputReader xaiAlpha011 = new InputReader(System.xaiAlpha011);\n\t\t                                                ^\n  symbol:   variable xaiAlpha011\n  location: class System\n/tmp/codeclone_truth_compile_2l1s3uct/Main.java:40: error: cannot find symbol\n\t\t\t\txaiAlpha012 = xaiAlpha018.xaiAlpha005(xaiAlpha008);\n\t\t\t\t                         ^\n  symbol:   method xaiAlpha005(byte[])\n  location: variable xaiAlpha018 of type InputStream\n2 errors\n"
+        },
+        "alpha_dead": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_f_uuc18f/Main.java:9: error: cannot find symbol\n\t\tInputReader xaiAlpha011 = new InputReader(System.xaiAlpha011);\n\t\t                                                ^\n  symbol:   variable xaiAlpha011\n  location: class System\n/tmp/codeclone_truth_compile_f_uuc18f/Main.java:43: error: cannot find symbol\n\t\t\t\txaiAlpha012 = xaiAlpha018.xaiAlpha005(xaiAlpha008);\n\t\t\t\t                         ^\n  symbol:   method xaiAlpha005(byte[])\n  location: variable xaiAlpha018 of type InputStream\n2 errors\n"
+        }
+      }
+    },
+    {
+      "source": "p03998/s269088346.java",
+      "reason": "compile_failure",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_44mlt9f_/Main.java:16: error: cannot find symbol\n        Scanner xaiAlpha003 = new Scanner(System.xaiAlpha003);\n                                                ^\n  symbol:   variable xaiAlpha003\n  location: class System\n1 error\n"
+        },
+        "alpha_dead": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_e4aq8qdl/Main.java:19: error: cannot find symbol\n        Scanner xaiAlpha003 = new Scanner(System.xaiAlpha003);\n                                                ^\n  symbol:   variable xaiAlpha003\n  location: class System\n1 error\n"
+        }
+      }
+    },
+    {
+      "source": "p03106/s757950319.java",
+      "reason": "compile_failure",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_azpqyu7m/Main.java:6: error: cannot find symbol\n        InputStream xaiAlpha006 = System.xaiAlpha005;\n                                        ^\n  symbol:   variable xaiAlpha005\n  location: class System\n/tmp/codeclone_truth_compile_azpqyu7m/Main.java:7: error: cannot find symbol\n        OutputStream xaiAlpha015 = System.xaiAlpha009;\n                                         ^\n  symbol:   variable xaiAlpha009\n  location: class System\n2 errors\n"
+        },
+        "alpha_dead": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_mqxla87k/Main.java:9: error: cannot find symbol\n        InputStream xaiAlpha006 = System.xaiAlpha005;\n                                        ^\n  symbol:   variable xaiAlpha005\n  location: class System\n/tmp/codeclone_truth_compile_mqxla87k/Main.java:10: error: cannot find symbol\n        OutputStream xaiAlpha015 = System.xaiAlpha009;\n                                         ^\n  symbol:   variable xaiAlpha009\n  location: class System\n2 errors\n"
+        }
+      }
+    },
+    {
+      "source": "p03775/s480417393.java",
+      "reason": "compile_failure",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_s6ozog5j/Main.java:14: error: cannot find symbol\n        xaiAlpha003 = Math.xaiAlpha003(xaiAlpha005,xaiAlpha002);\n                          ^\n  symbol:   method xaiAlpha003(int,int)\n  location: class Math\n1 error\n"
+        },
+        "alpha_dead": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_1q6gbnl4/Main.java:17: error: cannot find symbol\n        xaiAlpha003 = Math.xaiAlpha003(xaiAlpha005,xaiAlpha002);\n                          ^\n  symbol:   method xaiAlpha003(int,int)\n  location: class Math\n1 error\n"
+        }
+      }
+    },
+    {
+      "source": "p03775/s360795349.java",
+      "reason": "compile_failure",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_22su2dev/Main.java:14: error: cannot find symbol\n\t\tInputReader xaiAlpha012 = new InputReader(System.xaiAlpha012);\n\t\t                                                ^\n  symbol:   variable xaiAlpha012\n  location: class System\n/tmp/codeclone_truth_compile_22su2dev/Main.java:46: error: cannot find symbol\n\t\t\t\txaiAlpha013 = xaiAlpha021.xaiAlpha006(xaiAlpha009);\n\t\t\t\t                         ^\n  symbol:   method xaiAlpha006(byte[])\n  location: variable xaiAlpha021 of type InputStream\n2 errors\n"
+        },
+        "alpha_dead": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_711u96rz/Main.java:17: error: cannot find symbol\n\t\tInputReader xaiAlpha012 = new InputReader(System.xaiAlpha012);\n\t\t                                                ^\n  symbol:   variable xaiAlpha012\n  location: class System\n/tmp/codeclone_truth_compile_711u96rz/Main.java:49: error: cannot find symbol\n\t\t\t\txaiAlpha013 = xaiAlpha021.xaiAlpha006(xaiAlpha009);\n\t\t\t\t                         ^\n  symbol:   method xaiAlpha006(byte[])\n  location: variable xaiAlpha021 of type InputStream\n2 errors\n"
+        }
+      }
+    },
+    {
+      "source": "p03470/s108232374.java",
+      "reason": "compile_failure",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_93sowgfn/Main.java:12: error: cannot find symbol\n        PrintWriter xaiAlpha003 = new PrintWriter(new OutputStreamWriter(System.xaiAlpha003));\n                                                                               ^\n  symbol:   variable xaiAlpha003\n  location: class System\n1 error\n"
+        },
+        "alpha_dead": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_7dfgzt8b/Main.java:15: error: cannot find symbol\n        PrintWriter xaiAlpha003 = new PrintWriter(new OutputStreamWriter(System.xaiAlpha003));\n                                                                               ^\n  symbol:   variable xaiAlpha003\n  location: class System\n1 error\n"
+        }
+      }
+    },
+    {
+      "source": "p03371/s664095221.java",
+      "reason": "compile_failure",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_spff31pp/Main.java:6: error: cannot find symbol\n        PrintWriter xaiAlpha006 = new PrintWriter(System.xaiAlpha006);\n                                                        ^\n  symbol:   variable xaiAlpha006\n  location: class System\n/tmp/codeclone_truth_compile_spff31pp/Main.java:14: error: cannot find symbol\n        int xaiAlpha002 = Math.xaiAlpha002(xaiAlpha003, xaiAlpha008);\n                              ^\n  symbol:   method xaiAlpha002(int,int)\n  location: class Math\n/tmp/codeclone_truth_compile_spff31pp/Main.java:15: error: cannot find symbol\n        int xaiAlpha007 = Math.xaiAlpha007(xaiAlpha003, xaiAlpha008);\n                              ^\n  symbol:   method xaiAlpha007(int,int)\n  location: class Math\n/tmp/codeclone_truth_compile_spff31pp/Main.java:26: error: cannot find symbol\n            xaiAlpha009 = Math.xaiAlpha002(xaiAlpha009, xaiAlpha001[xaiAlpha010]);\n                              ^\n  symbol:   method xaiAlpha002(long,long)\n  location: class Math\n4 errors\n"
+        },
+        "alpha_dead": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_5ma0u6xd/Main.java:9: error: cannot find symbol\n        PrintWriter xaiAlpha006 = new PrintWriter(System.xaiAlpha006);\n                                                        ^\n  symbol:   variable xaiAlpha006\n  location: class System\n/tmp/codeclone_truth_compile_5ma0u6xd/Main.java:17: error: cannot find symbol\n        int xaiAlpha002 = Math.xaiAlpha002(xaiAlpha003, xaiAlpha008);\n                              ^\n  symbol:   method xaiAlpha002(int,int)\n  location: class Math\n/tmp/codeclone_truth_compile_5ma0u6xd/Main.java:18: error: cannot find symbol\n        int xaiAlpha007 = Math.xaiAlpha007(xaiAlpha003, xaiAlpha008);\n                              ^\n  symbol:   method xaiAlpha007(int,int)\n  location: class Math\n/tmp/codeclone_truth_compile_5ma0u6xd/Main.java:29: error: cannot find symbol\n            xaiAlpha009 = Math.xaiAlpha002(xaiAlpha009, xaiAlpha001[xaiAlpha010]);\n                              ^\n  symbol:   method xaiAlpha002(long,long)\n  location: class Math\n4 errors\n"
+        }
+      }
+    },
+    {
+      "source": "p04030/s681541776.java",
+      "reason": "compile_failure",
+      "compilation": {
+        "original": {
+          "success": true,
+          "returncode": 0,
+          "stderr_tail": ""
+        },
+        "alpha": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_8yso655u/Main.java:6: error: cannot find symbol\n    static PrintWriter xaiAlpha009 = new PrintWriter(System.xaiAlpha009);\n                                                           ^\n  symbol:   variable xaiAlpha009\n  location: class System\n1 error\n"
+        },
+        "alpha_dead": {
+          "success": false,
+          "returncode": 1,
+          "stderr_tail": "/tmp/codeclone_truth_compile_cfikbvi3/Main.java:6: error: cannot find symbol\n    static PrintWriter xaiAlpha009 = new PrintWriter(System.xaiAlpha009);\n                                                           ^\n  symbol:   variable xaiAlpha009\n  location: class System\n1 error\n"
+        }
+      }
+    }
+  ]
+}

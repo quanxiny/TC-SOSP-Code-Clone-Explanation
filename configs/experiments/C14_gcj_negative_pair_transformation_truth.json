@@ -1,0 +1,30 @@
+{
+  "extends": "C8_transformation_truth_strong_baselines.json",
+  "experiment_id": "C14_gcj_negative_pair_transformation_truth",
+  "status": "stopped_rebuilt_graph_prediction_domain_shift",
+  "split": "validation_negative_pair_derived_transformations",
+  "device": "cuda:0",
+  "paths": {
+    "source_dir": "external_data/explanation_truth/gcj_frozen_negative_pair_transformations/sources",
+    "vector_dir": "external_data/explanation_truth/gcj_frozen_negative_pair_transformations/cfg16_normalized"
+  },
+  "truth": {
+    "manifest": "external_data/explanation_truth/gcj_frozen_negative_pair_transformations/negative_pair_truth_manifest.json",
+    "axes": [
+      "bilateral_alpha_rename_sidewise_correspondence",
+      "bilateral_dead_code_sidewise_correspondence",
+      "bilateral_known_irrelevant_node_rejection",
+      "nonclone_prediction_invariance"
+    ],
+    "validation_derived_only": true,
+    "semantic_label": 0,
+    "source_program_reuse": false,
+    "base_prediction_correct_by_construction": true,
+    "pairs": 20,
+    "rebuilt_graph_eligibility_screen": "external_data/explanation_truth/gcj_frozen_negative_pair_transformations/rebuilt_prediction_screen.json",
+    "rebuilt_base_nonclone_pairs": 4,
+    "all_variants_nonclone_pairs": 2,
+    "inference_sample_is_sufficient": false
+  },
+  "output_dir": "artifacts/explanation_truth/C14_gcj_frozen_negative_pair_transformation_truth_seed42"
+}

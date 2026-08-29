@@ -1,0 +1,20 @@
+{
+  "extends": "C1_semantic_optimal_subgraph_pair.json",
+  "experiment_id": "C9_natural_validation_strong_baselines",
+  "status": "ready_after_C8",
+  "device": "cuda:1",
+  "explanation": {
+    "sample_pairs": 100,
+    "top_node_fraction": 0.2,
+    "gnnexplainer_entropy_coefficient": 0.1,
+    "subgraphx_mcts_iterations": 48,
+    "subgraphx_shapley_samples": 4
+  },
+  "baselines": [
+    "symmetric_grad_x_input",
+    "symmetric_gnnexplainer_node_mask_adapted",
+    "symmetric_subgraphx_mcts_shapley_adapted",
+    "symmetric_semantic_optimal_pair"
+  ],
+  "output_dir": "artifacts/pilots/C9_natural_validation_strong_baselines_seed42"
+}

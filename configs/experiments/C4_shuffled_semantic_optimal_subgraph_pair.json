@@ -1,0 +1,14 @@
+{
+  "extends": "C1_semantic_optimal_subgraph_pair.json",
+  "experiment_id": "C4_shuffled_semantic_optimal_subgraph_pair",
+  "explanation": {
+    "top_node_fraction": 0.2,
+    "attention_prior_negative_controls": [],
+    "semantic_relation_negative_control": "deterministically_shuffle_rows_and_columns_preserving_similarity_distribution"
+  },
+  "baselines": [
+    "symmetric_grad_x_input",
+    "symmetric_shuffled_semantic_optimal_pair"
+  ],
+  "output_dir": "artifacts/pilots/C4_shuffled_semantic_optimal_subgraph_pair_seed42"
+}

@@ -1,0 +1,20 @@
+{
+  "extends": "../protocols/paper_clean.json",
+  "experiment_id": "A_pilot_base",
+  "stage": "contrastive",
+  "status": "template",
+  "sampling": {
+    "method": "lowest_sha256_per_normalized_label",
+    "train_fraction": 0.1,
+    "manifest": "manifests/pilot_A_seed42_10pct.txt",
+    "manifest_sha256": "db0e4299454c212c163b9126628c991a69161f1d67b7f221dc0f31481af99903",
+    "source_sha256": "2a63f41ad38612a8f97437e241e87fbd6993f8d2966fce6206472b796432d652",
+    "selected_pairs": 35204,
+    "selected_positive_pairs": 17602,
+    "selected_negative_pairs": 17602,
+    "selected_unique_fragments": 1333,
+    "preserve_labels": true
+  },
+  "output_dir": "artifacts/templates/A_pilot_base"
+}
+

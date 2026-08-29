@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "experiment_id": "base",
+  "stage": "baseline",
+  "status": "planned",
+  "dataset": "GCJ",
+  "graph_type": "CFG",
+  "split": "paper_clean",
+  "seed": 42,
+  "device": "cuda:0",
+  "loss": {
+    "name": "focal",
+    "alpha": 1.0,
+    "gamma": 2.0
+  },
+  "output_dir": "artifacts/base",
+  "resume": true,
+  "model": {
+    "encoder": "codegraph_pniat_gat_edgepool",
+    "hidden": 16,
+    "gat_heads": 16,
+    "dropout": 0.1,
+    "bilstm_hidden": 128,
+    "bilstm_layers": 2
+  },
+  "training": {
+    "epochs": 10,
+    "batch_size": 64,
+    "graph_batch_size": 128,
+    "optimizer": "adam",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0005,
+    "selection_metric": "macro_f1",
+    "evaluate_every": 1,
+    "amp": false,
+    "tf32": true
+  },
+  "sampling": {
+    "method": "full_dataset",
+    "train_fraction": 1.0,
+    "manifest": null,
+    "preserve_labels": true
+  },
+  "evaluation": {
+    "validation_policy": "every_epoch",
+    "test_policy": "after_selection_only",
+    "save_predictions": true,
+    "metrics": [
+      "macro_f1",
+      "mcc",
+      "pr_auc",
+      "roc_auc",
+      "macro_precision",
+      "macro_recall",
+      "map_at_r",
+      "mrr",
+      "recall_at_k",
+      "precision_at_k",
+      "swap_probability_error",
+      "encoder_graphs_per_second",
+      "cached_pairs_per_second",
+      "peak_gpu_memory_mb"
+    ]
+  },
+  "provenance": {
+    "baseline_commit": "23a20b7e5f27a217a966401c6c969150bfa023dc",
+    "preprocessor_commit": "684b9b8128174b704d323e13341385e75f29da7d"
+  }
+}

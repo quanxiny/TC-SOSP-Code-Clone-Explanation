@@ -1,0 +1,328 @@
+{
+  "scope": "validation-only pre-explanation eligibility screen",
+  "truth_manifest": "./external_data/explanation_truth/codenet_transformations/negative_pair_truth_manifest.json",
+  "truth_manifest_sha256": "1abc02cca7bda15b0962d0a072d5404469c4009fc2684849769a63b46ec39a27",
+  "checkpoint": "./artifacts/external_continual/E6_codenet_temporal_fragment_replay_16mb_seed42/after_T3.pt",
+  "pairs": 15,
+  "rebuilt_base_correct_nonclone": 15,
+  "all_variants_nonclone": 15,
+  "prediction_invariant": 15,
+  "rows": [
+    {
+      "pair_id": "n000_g000_01710738b6_g019_33cde7cb86",
+      "original_validation_pair_index": null,
+      "variants": {
+        "base_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9706723093986511
+        },
+        "alpha_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9810936450958252
+        },
+        "dead_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9643457531929016
+        }
+      },
+      "rebuilt_base_correct_nonclone": true,
+      "all_variants_nonclone": true,
+      "prediction_invariant": true
+    },
+    {
+      "pair_id": "n001_g001_04404afa39_g020_3827fbe6a6",
+      "original_validation_pair_index": null,
+      "variants": {
+        "base_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9953945875167847
+        },
+        "alpha_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9831436276435852
+        },
+        "dead_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9798877835273743
+        }
+      },
+      "rebuilt_base_correct_nonclone": true,
+      "all_variants_nonclone": true,
+      "prediction_invariant": true
+    },
+    {
+      "pair_id": "n002_g002_0a57e1905d_g021_3cfdce5846",
+      "original_validation_pair_index": null,
+      "variants": {
+        "base_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9819441437721252
+        },
+        "alpha_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9828709959983826
+        },
+        "dead_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9804288148880005
+        }
+      },
+      "rebuilt_base_correct_nonclone": true,
+      "all_variants_nonclone": true,
+      "prediction_invariant": true
+    },
+    {
+      "pair_id": "n003_g003_0e61a59f4f_g022_3d5220fde9",
+      "original_validation_pair_index": null,
+      "variants": {
+        "base_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9849101305007935
+        },
+        "alpha_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.8556333184242249
+        },
+        "dead_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.632827639579773
+        }
+      },
+      "rebuilt_base_correct_nonclone": true,
+      "all_variants_nonclone": true,
+      "prediction_invariant": true
+    },
+    {
+      "pair_id": "n004_g004_11a77173db_g023_3dc1c86fc0",
+      "original_validation_pair_index": null,
+      "variants": {
+        "base_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9894285798072815
+        },
+        "alpha_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9813725352287292
+        },
+        "dead_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9733830690383911
+        }
+      },
+      "rebuilt_base_correct_nonclone": true,
+      "all_variants_nonclone": true,
+      "prediction_invariant": true
+    },
+    {
+      "pair_id": "n005_g005_134556f55d_g024_3e17f4c4b5",
+      "original_validation_pair_index": null,
+      "variants": {
+        "base_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9892944693565369
+        },
+        "alpha_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9790549278259277
+        },
+        "dead_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9824077486991882
+        }
+      },
+      "rebuilt_base_correct_nonclone": true,
+      "all_variants_nonclone": true,
+      "prediction_invariant": true
+    },
+    {
+      "pair_id": "n006_g006_14c370cf53_g025_415bd2dfba",
+      "original_validation_pair_index": null,
+      "variants": {
+        "base_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9897662997245789
+        },
+        "alpha_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9724921584129333
+        },
+        "dead_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9553893804550171
+        }
+      },
+      "rebuilt_base_correct_nonclone": true,
+      "all_variants_nonclone": true,
+      "prediction_invariant": true
+    },
+    {
+      "pair_id": "n007_g007_1609541820_g026_43b88d37c8",
+      "original_validation_pair_index": null,
+      "variants": {
+        "base_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9868586659431458
+        },
+        "alpha_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9948589205741882
+        },
+        "dead_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9937044382095337
+        }
+      },
+      "rebuilt_base_correct_nonclone": true,
+      "all_variants_nonclone": true,
+      "prediction_invariant": true
+    },
+    {
+      "pair_id": "n008_g008_17badf1517_g027_4610275559",
+      "original_validation_pair_index": null,
+      "variants": {
+        "base_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9462247490882874
+        },
+        "alpha_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9543659090995789
+        },
+        "dead_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9116222262382507
+        }
+      },
+      "rebuilt_base_correct_nonclone": true,
+      "all_variants_nonclone": true,
+      "prediction_invariant": true
+    },
+    {
+      "pair_id": "n009_g009_1f68de3a2b_g028_475f7ce732",
+      "original_validation_pair_index": null,
+      "variants": {
+        "base_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9685859680175781
+        },
+        "alpha_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9771127700805664
+        },
+        "dead_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9694925546646118
+        }
+      },
+      "rebuilt_base_correct_nonclone": true,
+      "all_variants_nonclone": true,
+      "prediction_invariant": true
+    },
+    {
+      "pair_id": "n010_g010_217ecb367b_g029_47f2c673b7",
+      "original_validation_pair_index": null,
+      "variants": {
+        "base_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9482821822166443
+        },
+        "alpha_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9776391386985779
+        },
+        "dead_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9374132752418518
+        }
+      },
+      "rebuilt_base_correct_nonclone": true,
+      "all_variants_nonclone": true,
+      "prediction_invariant": true
+    },
+    {
+      "pair_id": "n011_g011_224173782e_g015_2bd56ecbc0",
+      "original_validation_pair_index": null,
+      "variants": {
+        "base_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9951022863388062
+        },
+        "alpha_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9892847537994385
+        },
+        "dead_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9858554601669312
+        }
+      },
+      "rebuilt_base_correct_nonclone": true,
+      "all_variants_nonclone": true,
+      "prediction_invariant": true
+    },
+    {
+      "pair_id": "n012_g012_227397c350_g016_2be07d5d28",
+      "original_validation_pair_index": null,
+      "variants": {
+        "base_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9603856205940247
+        },
+        "alpha_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.88886958360672
+        },
+        "dead_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9478198289871216
+        }
+      },
+      "rebuilt_base_correct_nonclone": true,
+      "all_variants_nonclone": true,
+      "prediction_invariant": true
+    },
+    {
+      "pair_id": "n013_g013_25589dddc0_g017_2cc8f5dcd6",
+      "original_validation_pair_index": null,
+      "variants": {
+        "base_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.993261992931366
+        },
+        "alpha_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9892732501029968
+        },
+        "dead_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.9809136390686035
+        }
+      },
+      "rebuilt_base_correct_nonclone": true,
+      "all_variants_nonclone": true,
+      "prediction_invariant": true
+    },
+    {
+      "pair_id": "n014_g014_28f1f0d5c0_g018_324502dd17",
+      "original_validation_pair_index": null,
+      "variants": {
+        "base_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.898743212223053
+        },
+        "alpha_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.8118190169334412
+        },
+        "dead_files": {
+          "prediction": 0,
+          "nonclone_probability": 0.8226737976074219
+        }
+      },
+      "rebuilt_base_correct_nonclone": true,
+      "all_variants_nonclone": true,
+      "prediction_invariant": true
+    }
+  ],
+  "test_used": false
+}

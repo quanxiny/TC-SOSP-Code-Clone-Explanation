@@ -1,0 +1,14 @@
+{
+  "extends": "C1_semantic_optimal_subgraph_pair.json",
+  "experiment_id": "C12_semantic_optimal_objective_lambda05",
+  "status": "ready_objective_ablation",
+  "device": "cuda:0",
+  "explanation": {
+    "optimal_sufficiency_weight": 0.5
+  },
+  "baselines": [
+    "symmetric_grad_x_input",
+    "symmetric_semantic_optimal_pair"
+  ],
+  "output_dir": "artifacts/pilots/C12_semantic_optimal_objective_lambda05_seed42"
+}

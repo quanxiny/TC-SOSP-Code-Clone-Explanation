@@ -1,0 +1,25 @@
+{
+  "extends": "C10_codenet_transformation_truth_strong_baselines.json",
+  "experiment_id": "C15_codenet_negative_pair_transformation_truth",
+  "status": "ready_after_all_15_pairs_passed_prediction_screen",
+  "split": "T3_validation_negative_pair_derived_transformations",
+  "device": "cuda:0",
+  "truth": {
+    "manifest": "external_data/explanation_truth/codenet_transformations/negative_pair_truth_manifest.json",
+    "axes": [
+      "bilateral_alpha_rename_sidewise_correspondence",
+      "bilateral_dead_code_sidewise_correspondence",
+      "bilateral_known_irrelevant_node_rejection",
+      "nonclone_prediction_invariance"
+    ],
+    "validation_derived_only": true,
+    "independent_from_GCJ_explanation_truth": true,
+    "semantic_label": 0,
+    "source_program_reuse": false,
+    "pairs": 15,
+    "prediction_screen": "external_data/explanation_truth/codenet_transformations/negative_pair_prediction_screen.json",
+    "all_variants_nonclone_pairs": 15,
+    "inference_sample_is_sufficient": true
+  },
+  "output_dir": "artifacts/explanation_truth/C15_codenet_negative_pair_transformation_truth_seed42"
+}

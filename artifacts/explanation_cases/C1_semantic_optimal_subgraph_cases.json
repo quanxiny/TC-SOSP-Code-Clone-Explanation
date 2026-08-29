@@ -1,0 +1,692 @@
+{
+  "protocol": {
+    "purpose": "illustrative qualitative audit, not an additional effect estimate",
+    "split": "validation_only",
+    "cases": 4,
+    "test_metrics": null,
+    "selection_is_cherry_pick_safe": false,
+    "note": "maximum-gain cases are deliberately best cases; median-gain cases are included to show representative behavior. Neither substitutes for the 100-pair quantitative result."
+  },
+  "record_inputs": {
+    "gradient_sha256": "60490a2862e435523825bf6aaa663e72f927b1b600da478a582c02aac4ec4488",
+    "semantic_sha256": "a9c86d4398bef9de63902629ddee84c44165f5e7869dec06617cc74b10d8927c"
+  },
+  "cases": [
+    {
+      "selection_role": "label_0_median_necessity_gain",
+      "selection_rule": "correctly predicted, non-gradient candidate; deterministic median or maximum necessity improvement within the true label subgroup",
+      "pair_index": 3,
+      "label": 0,
+      "relation_interpretation": "contrastive unmatched statements",
+      "left_graph": "googlejam4_src/8/googlejam8.p873.code31.java",
+      "right_graph": "googlejam4_src/6/googlejam6.p215.LinkedList.java",
+      "left_code_json": "../TinyPDG-DataPreprocessingVersion/artifacts/gcj_cfg_extract/outPut_cfg/codeJson/googlejam8.p873.code31.java.json",
+      "right_code_json": "../TinyPDG-DataPreprocessingVersion/artifacts/gcj_cfg_extract/outPut_cfg/codeJson/googlejam6.p215.LinkedList.java.json",
+      "selected_candidate": "semantic_cfg",
+      "base_target_probability": 0.9842341542243958,
+      "necessity_drop": 0.04128652811050415,
+      "necessity_delta_over_symmetric_gradient": 0.022173821926116943,
+      "absolute_sufficiency_gap": 0.001959383487701416,
+      "absolute_sufficiency_improvement_over_symmetric_gradient": -8.45789909362793e-05,
+      "semantic_pair_quality": 0.6290714144706726,
+      "induced_cfg_coverage": 0.09370459988713264,
+      "left_selected_statements": [
+        {
+          "node": 14,
+          "statement": "a [ i ] [ 1 ] = i + 65 ;"
+        },
+        {
+          "node": 28,
+          "statement": "a [ j ] [ 1 ] = a [ j + 1 ] [ 1 ] ;"
+        },
+        {
+          "node": 30,
+          "statement": "a [ 0 ] [ 0 ] > a [ 1 ] [ 0 ] && a [ 1 ] [ 0 ] != 0"
+        },
+        {
+          "node": 31,
+          "statement": "out = out + ( char ) ( a [ 0 ] [ 1 ] ) + ( char ) ( a [ 0 ] [ 1 ] ) + \\\" \\\" ;"
+        },
+        {
+          "node": 35,
+          "statement": "a [ 0 ] [ 0 ] == a [ 1 ] [ 0 ] && a [ 0 ] [ 0 ] == 1 && sum == 2"
+        },
+        {
+          "node": 36,
+          "statement": "out = out + ( char ) ( a [ 0 ] [ 1 ] ) + ( char ) ( a [ 1 ] [ 1 ] ) + \\\" \\\" ;"
+        },
+        {
+          "node": 38,
+          "statement": "a [ 1 ] [ 0 ] -- ;"
+        },
+        {
+          "node": 40,
+          "statement": "a [ 0 ] [ 0 ] == a [ 1 ] [ 0 ] && a [ 0 ] [ 0 ] == 1"
+        },
+        {
+          "node": 41,
+          "statement": "out = out + ( char ) ( a [ 0 ] [ 1 ] ) + \\\" \\\" ;"
+        },
+        {
+          "node": 44,
+          "statement": "out = out + ( char ) ( a [ 0 ] [ 1 ] ) + \\\"\\\" + ( char ) ( a [ 1 ] [ 1 ] ) + \\\" \\\" ;"
+        },
+        {
+          "node": 46,
+          "statement": "a [ 1 ] [ 0 ] -- ;"
+        }
+      ],
+      "right_selected_statements": [
+        {
+          "node": 3,
+          "statement": "int counter = 1 ;"
+        },
+        {
+          "node": 9,
+          "statement": "i < 2 * n - 1"
+        },
+        {
+          "node": 16,
+          "statement": "arr = new ArrayList < > () ;"
+        },
+        {
+          "node": 18,
+          "statement": "i < 2501"
+        },
+        {
+          "node": 20,
+          "statement": "inte [ i ] % 2 == 1"
+        },
+        {
+          "node": 22,
+          "statement": "Collections . sort ( arr ) ;"
+        }
+      ],
+      "paired_relations": [
+        {
+          "left_node": 44,
+          "right_node": 3,
+          "semantic_similarity": 0.25827038288116455,
+          "relation_evidence": 0.7417296171188354,
+          "relation": "contrast",
+          "left_statement": "out = out + ( char ) ( a [ 0 ] [ 1 ] ) + \\\"\\\" + ( char ) ( a [ 1 ] [ 1 ] ) + \\\" \\\" ;",
+          "right_statement": "int counter = 1 ;"
+        },
+        {
+          "left_node": 41,
+          "right_node": 18,
+          "semantic_similarity": 0.2603863477706909,
+          "relation_evidence": 0.7396136522293091,
+          "relation": "contrast",
+          "left_statement": "out = out + ( char ) ( a [ 0 ] [ 1 ] ) + \\\" \\\" ;",
+          "right_statement": "i < 2501"
+        },
+        {
+          "left_node": 31,
+          "right_node": 22,
+          "semantic_similarity": 0.34876343607902527,
+          "relation_evidence": 0.6512365639209747,
+          "relation": "contrast",
+          "left_statement": "out = out + ( char ) ( a [ 0 ] [ 1 ] ) + ( char ) ( a [ 0 ] [ 1 ] ) + \\\" \\\" ;",
+          "right_statement": "Collections . sort ( arr ) ;"
+        },
+        {
+          "left_node": 14,
+          "right_node": 9,
+          "semantic_similarity": 0.392498254776001,
+          "relation_evidence": 0.607501745223999,
+          "relation": "contrast",
+          "left_statement": "a [ i ] [ 1 ] = i + 65 ;",
+          "right_statement": "i < 2 * n - 1"
+        },
+        {
+          "left_node": 36,
+          "right_node": 16,
+          "semantic_similarity": 0.5334080457687378,
+          "relation_evidence": 0.4665919542312622,
+          "relation": "contrast",
+          "left_statement": "out = out + ( char ) ( a [ 0 ] [ 1 ] ) + ( char ) ( a [ 1 ] [ 1 ] ) + \\\" \\\" ;",
+          "right_statement": "arr = new ArrayList < > () ;"
+        },
+        {
+          "left_node": 30,
+          "right_node": 20,
+          "semantic_similarity": 0.7466959953308105,
+          "relation_evidence": 0.25330400466918945,
+          "relation": "contrast",
+          "left_statement": "a [ 0 ] [ 0 ] > a [ 1 ] [ 0 ] && a [ 1 ] [ 0 ] != 0",
+          "right_statement": "inte [ i ] % 2 == 1"
+        }
+      ]
+    },
+    {
+      "selection_role": "label_0_maximum_necessity_gain",
+      "selection_rule": "correctly predicted, non-gradient candidate; deterministic median or maximum necessity improvement within the true label subgroup",
+      "pair_index": 64,
+      "label": 0,
+      "relation_interpretation": "contrastive unmatched statements",
+      "left_graph": "googlejam4_src/1/googlejam1.p371.MushroomMonster.java",
+      "right_graph": "googlejam4_src/8/googlejam8.p296.R1C_1.java",
+      "left_code_json": "../TinyPDG-DataPreprocessingVersion/artifacts/gcj_cfg_extract/outPut_cfg/codeJson/googlejam1.p371.MushroomMonster.java.json",
+      "right_code_json": "../TinyPDG-DataPreprocessingVersion/artifacts/gcj_cfg_extract/outPut_cfg/codeJson/googlejam8.p296.R1C_1.java.json",
+      "selected_candidate": "semantic_050",
+      "base_target_probability": 0.9773040413856506,
+      "necessity_drop": 0.8742605447769165,
+      "necessity_delta_over_symmetric_gradient": 0.8635643124580383,
+      "absolute_sufficiency_gap": 0.003034532070159912,
+      "absolute_sufficiency_improvement_over_symmetric_gradient": -0.0005837678909301758,
+      "semantic_pair_quality": 0.6946218013763428,
+      "induced_cfg_coverage": 0.018054652027785778,
+      "left_selected_statements": [
+        {
+          "node": 0,
+          "statement": "String root_path = \\\"C : / Vijay / Workspaces / GoogleCodeJam / \\\" ;"
+        },
+        {
+          "node": 1,
+          "statement": "String fileName = root_path + \\\"inputFiles / 2015 / MushroomMonster / A - large\\\" ;"
+        },
+        {
+          "node": 22,
+          "statement": "int result3 = 0 ;"
+        },
+        {
+          "node": 33,
+          "statement": "a1 = b ;"
+        },
+        {
+          "node": 34,
+          "statement": "System . out . println ( \\\"Rate -- > \\\" + rate ) ;"
+        },
+        {
+          "node": 36,
+          "statement": "i < mush . length - 1"
+        },
+        {
+          "node": 39,
+          "statement": "int tem = a1 - rate ;"
+        },
+        {
+          "node": 41,
+          "statement": "result3 += rate ;"
+        },
+        {
+          "node": 42,
+          "statement": "result3 += rate + tem ;"
+        },
+        {
+          "node": 48,
+          "statement": "Logger . getLogger ( . getName () ) . log ( Level . SEVERE , null , ex ) ;"
+        }
+      ],
+      "right_selected_statements": [
+        {
+          "node": 9,
+          "statement": "int total = 0 ;"
+        },
+        {
+          "node": 18,
+          "statement": "total != 0"
+        },
+        {
+          "node": 19,
+          "statement": "total != 3"
+        },
+        {
+          "node": 21,
+          "statement": "i < 2"
+        },
+        {
+          "node": 29,
+          "statement": "total -- ;"
+        },
+        {
+          "node": 31,
+          "statement": "result += ( char ) ( 'A' + maxIdx ) ;"
+        },
+        {
+          "node": 38,
+          "statement": "total -- ;"
+        },
+        {
+          "node": 40,
+          "statement": "result += ( char ) ( 'A' + maxIdx ) ;"
+        },
+        {
+          "node": 43,
+          "statement": "System . out . println ( \\\"Case #\\\" + caseCount + \\\" : \\\" + result ) ;"
+        }
+      ],
+      "paired_relations": [
+        {
+          "left_node": 48,
+          "right_node": 21,
+          "semantic_similarity": 0.24704673886299133,
+          "relation_evidence": 0.7529532611370087,
+          "relation": "contrast",
+          "left_statement": "Logger . getLogger ( . getName () ) . log ( Level . SEVERE , null , ex ) ;",
+          "right_statement": "i < 2"
+        },
+        {
+          "left_node": 36,
+          "right_node": 9,
+          "semantic_similarity": 0.26549339294433594,
+          "relation_evidence": 0.7345066070556641,
+          "relation": "contrast",
+          "left_statement": "i < mush . length - 1",
+          "right_statement": "int total = 0 ;"
+        },
+        {
+          "left_node": 1,
+          "right_node": 29,
+          "semantic_similarity": 0.2704355716705322,
+          "relation_evidence": 0.7295644283294678,
+          "relation": "contrast",
+          "left_statement": "String fileName = root_path + \\\"inputFiles / 2015 / MushroomMonster / A - large\\\" ;",
+          "right_statement": "total -- ;"
+        },
+        {
+          "left_node": 34,
+          "right_node": 19,
+          "semantic_similarity": 0.31991657614707947,
+          "relation_evidence": 0.6800834238529205,
+          "relation": "contrast",
+          "left_statement": "System . out . println ( \\\"Rate -- > \\\" + rate ) ;",
+          "right_statement": "total != 3"
+        },
+        {
+          "left_node": 22,
+          "right_node": 43,
+          "semantic_similarity": 0.3215806782245636,
+          "relation_evidence": 0.6784193217754364,
+          "relation": "contrast",
+          "left_statement": "int result3 = 0 ;",
+          "right_statement": "System . out . println ( \\\"Case #\\\" + caseCount + \\\" : \\\" + result ) ;"
+        },
+        {
+          "left_node": 0,
+          "right_node": 38,
+          "semantic_similarity": 0.35454994440078735,
+          "relation_evidence": 0.6454500555992126,
+          "relation": "contrast",
+          "left_statement": "String root_path = \\\"C : / Vijay / Workspaces / GoogleCodeJam / \\\" ;",
+          "right_statement": "total -- ;"
+        },
+        {
+          "left_node": 42,
+          "right_node": 31,
+          "semantic_similarity": 0.3837693929672241,
+          "relation_evidence": 0.6162306070327759,
+          "relation": "contrast",
+          "left_statement": "result3 += rate + tem ;",
+          "right_statement": "result += ( char ) ( 'A' + maxIdx ) ;"
+        },
+        {
+          "left_node": 41,
+          "right_node": 40,
+          "semantic_similarity": 0.3911759853363037,
+          "relation_evidence": 0.6088240146636963,
+          "relation": "contrast",
+          "left_statement": "result3 += rate ;",
+          "right_statement": "result += ( char ) ( 'A' + maxIdx ) ;"
+        },
+        {
+          "left_node": 33,
+          "right_node": 18,
+          "semantic_similarity": 0.5370012521743774,
+          "relation_evidence": 0.46299874782562256,
+          "relation": "contrast",
+          "left_statement": "a1 = b ;",
+          "right_statement": "total != 0"
+        }
+      ]
+    },
+    {
+      "selection_role": "label_1_median_necessity_gain",
+      "selection_rule": "correctly predicted, non-gradient candidate; deterministic median or maximum necessity improvement within the true label subgroup",
+      "pair_index": 68,
+      "label": 1,
+      "relation_interpretation": "common semantic statements",
+      "left_graph": "googlejam4_src/8/googlejam8.p580.A.java",
+      "right_graph": "googlejam4_src/8/googlejam8.p012.Main.java",
+      "left_code_json": "../TinyPDG-DataPreprocessingVersion/artifacts/gcj_cfg_extract/outPut_cfg/codeJson/googlejam8.p580.A.java.json",
+      "right_code_json": "../TinyPDG-DataPreprocessingVersion/artifacts/gcj_cfg_extract/outPut_cfg/codeJson/googlejam8.p012.Main.java.json",
+      "selected_candidate": "paired_relation",
+      "base_target_probability": 0.9666043519973755,
+      "necessity_drop": 0.8410392701625824,
+      "necessity_delta_over_symmetric_gradient": 0.11292916536331177,
+      "absolute_sufficiency_gap": 0.0006029009819030762,
+      "absolute_sufficiency_improvement_over_symmetric_gradient": 0.0003737211227416992,
+      "semantic_pair_quality": 0.9156450629234314,
+      "induced_cfg_coverage": 0.040909092873334885,
+      "left_selected_statements": [
+        {
+          "node": 0,
+          "statement": "BufferedReader bf = new BufferedReader ( new FileReader ( \\\"A - small - attempt2 . in\\\" ) ) ;"
+        },
+        {
+          "node": 2,
+          "statement": "PrintWriter out = new PrintWriter ( new FileWriter ( \\\"smallA . txt\\\" ) ) ;"
+        },
+        {
+          "node": 7,
+          "statement": "int p = new int [] [] ;"
+        },
+        {
+          "node": 9,
+          "statement": "out . printf ( \\\"Case # % d : \\\" , c ) ;"
+        },
+        {
+          "node": 18,
+          "statement": "int sum = 0 ;"
+        },
+        {
+          "node": 38,
+          "statement": "out . print ( \\\" \\\" + ( ( char ) ( 'A' + maxi ) ) ) ;"
+        },
+        {
+          "node": 41,
+          "statement": "max2 > max && max2 > 0 && max2 - 1 <= ( sum - 2 ) / 2 . 0 && sum != 3"
+        },
+        {
+          "node": 42,
+          "statement": "out . print ( ( ( char ) ( 'A' + max2i ) ) ) ;"
+        },
+        {
+          "node": 43,
+          "statement": "p [ max2i ] -- ;"
+        },
+        {
+          "node": 44,
+          "statement": "max - 1 <= ( sum - 2 ) / 2 . 0 && max > 0 && sum != 3"
+        },
+        {
+          "node": 45,
+          "statement": "out . print ( ( ( char ) ( 'A' + maxi ) ) ) ;"
+        }
+      ],
+      "right_selected_statements": [
+        {
+          "node": 3,
+          "statement": "x <= t"
+        },
+        {
+          "node": 6,
+          "statement": "int [] p = new int [] [] ;"
+        },
+        {
+          "node": 11,
+          "statement": "System . out . print ( \\\"Case #\\\" + x + \\\" : \\\" ) ;"
+        },
+        {
+          "node": 27,
+          "statement": "int index1 = - 1 ;"
+        },
+        {
+          "node": 29,
+          "statement": "i3 < p . length"
+        },
+        {
+          "node": 32,
+          "statement": "max = p [ i3 ] ;"
+        },
+        {
+          "node": 33,
+          "statement": "index1 = i3 ;"
+        },
+        {
+          "node": 36,
+          "statement": "System . out . print ( \\\" \\\" + ( char ) ( 'A' + index ) ) ;"
+        },
+        {
+          "node": 44,
+          "statement": "int i1 = - 1 , i2 = - 1 ;"
+        },
+        {
+          "node": 49,
+          "statement": "i1 == - 1"
+        },
+        {
+          "node": 52,
+          "statement": "System . out . println ( \\\" \\\" + ( char ) ( 'A' + i1 ) + ( char ) ( 'A' + i2 ) ) ;"
+        }
+      ],
+      "paired_relations": [
+        {
+          "left_node": 38,
+          "right_node": 52,
+          "semantic_similarity": 0.9952846765518188,
+          "relation_evidence": 0.9952846765518188,
+          "relation": "common",
+          "left_statement": "out . print ( \\\" \\\" + ( ( char ) ( 'A' + maxi ) ) ) ;",
+          "right_statement": "System . out . println ( \\\" \\\" + ( char ) ( 'A' + i1 ) + ( char ) ( 'A' + i2 ) ) ;"
+        },
+        {
+          "left_node": 45,
+          "right_node": 36,
+          "semantic_similarity": 0.9941513538360596,
+          "relation_evidence": 0.9941513538360596,
+          "relation": "common",
+          "left_statement": "out . print ( ( ( char ) ( 'A' + maxi ) ) ) ;",
+          "right_statement": "System . out . print ( \\\" \\\" + ( char ) ( 'A' + index ) ) ;"
+        },
+        {
+          "left_node": 7,
+          "right_node": 6,
+          "semantic_similarity": 0.9751103520393372,
+          "relation_evidence": 0.9751103520393372,
+          "relation": "common",
+          "left_statement": "int p = new int [] [] ;",
+          "right_statement": "int [] p = new int [] [] ;"
+        },
+        {
+          "left_node": 0,
+          "right_node": 44,
+          "semantic_similarity": 0.9476494193077087,
+          "relation_evidence": 0.9476494193077087,
+          "relation": "common",
+          "left_statement": "BufferedReader bf = new BufferedReader ( new FileReader ( \\\"A - small - attempt2 . in\\\" ) ) ;",
+          "right_statement": "int i1 = - 1 , i2 = - 1 ;"
+        },
+        {
+          "left_node": 9,
+          "right_node": 11,
+          "semantic_similarity": 0.9427173137664795,
+          "relation_evidence": 0.9427173137664795,
+          "relation": "common",
+          "left_statement": "out . printf ( \\\"Case # % d : \\\" , c ) ;",
+          "right_statement": "System . out . print ( \\\"Case #\\\" + x + \\\" : \\\" ) ;"
+        },
+        {
+          "left_node": 41,
+          "right_node": 27,
+          "semantic_similarity": 0.9392142295837402,
+          "relation_evidence": 0.9392142295837402,
+          "relation": "common",
+          "left_statement": "max2 > max && max2 > 0 && max2 - 1 <= ( sum - 2 ) / 2 . 0 && sum != 3",
+          "right_statement": "int index1 = - 1 ;"
+        },
+        {
+          "left_node": 18,
+          "right_node": 33,
+          "semantic_similarity": 0.8914032578468323,
+          "relation_evidence": 0.8914032578468323,
+          "relation": "common",
+          "left_statement": "int sum = 0 ;",
+          "right_statement": "index1 = i3 ;"
+        },
+        {
+          "left_node": 43,
+          "right_node": 32,
+          "semantic_similarity": 0.8846748471260071,
+          "relation_evidence": 0.8846748471260071,
+          "relation": "common",
+          "left_statement": "p [ max2i ] -- ;",
+          "right_statement": "max = p [ i3 ] ;"
+        },
+        {
+          "left_node": 2,
+          "right_node": 49,
+          "semantic_similarity": 0.7997969388961792,
+          "relation_evidence": 0.7997969388961792,
+          "relation": "common",
+          "left_statement": "PrintWriter out = new PrintWriter ( new FileWriter ( \\\"smallA . txt\\\" ) ) ;",
+          "right_statement": "i1 == - 1"
+        },
+        {
+          "left_node": 44,
+          "right_node": 29,
+          "semantic_similarity": 0.5085259079933167,
+          "relation_evidence": 0.5085259079933167,
+          "relation": "common",
+          "left_statement": "max - 1 <= ( sum - 2 ) / 2 . 0 && max > 0 && sum != 3",
+          "right_statement": "i3 < p . length"
+        },
+        {
+          "left_node": 42,
+          "right_node": 3,
+          "semantic_similarity": 0.22902297973632812,
+          "relation_evidence": 0.22902297973632812,
+          "relation": "common",
+          "left_statement": "out . print ( ( ( char ) ( 'A' + max2i ) ) ) ;",
+          "right_statement": "x <= t"
+        }
+      ]
+    },
+    {
+      "selection_role": "label_1_maximum_necessity_gain",
+      "selection_rule": "correctly predicted, non-gradient candidate; deterministic median or maximum necessity improvement within the true label subgroup",
+      "pair_index": 48,
+      "label": 1,
+      "relation_interpretation": "common semantic statements",
+      "left_graph": "googlejam4_src/1/googlejam1.p768.A1.java",
+      "right_graph": "googlejam4_src/1/googlejam1.p815.MushroomMonster.java",
+      "left_code_json": "../TinyPDG-DataPreprocessingVersion/artifacts/gcj_cfg_extract/outPut_cfg/codeJson/googlejam1.p768.A1.java.json",
+      "right_code_json": "../TinyPDG-DataPreprocessingVersion/artifacts/gcj_cfg_extract/outPut_cfg/codeJson/googlejam1.p815.MushroomMonster.java.json",
+      "selected_candidate": "paired_relation",
+      "base_target_probability": 0.9733937382698059,
+      "necessity_drop": 0.8273265063762665,
+      "necessity_delta_over_symmetric_gradient": 0.8391063511371613,
+      "absolute_sufficiency_gap": 0.00918513536453247,
+      "absolute_sufficiency_improvement_over_symmetric_gradient": 0.1064794659614563,
+      "semantic_pair_quality": 0.9200509190559387,
+      "induced_cfg_coverage": 0.034090910106897354,
+      "left_selected_statements": [
+        {
+          "node": 16,
+          "statement": "diff [ n - 1 ] = mushrooms [ n - 1 ] - mushrooms [ n ] ;"
+        },
+        {
+          "node": 17,
+          "statement": "total1 += Math . max ( diff [ n - 1 ] , 0 ) ;"
+        },
+        {
+          "node": 18,
+          "statement": "diff [ n - 1 ] > max"
+        },
+        {
+          "node": 19,
+          "statement": "max = diff [ n - 1 ] ;"
+        },
+        {
+          "node": 30,
+          "statement": "total2 = total2 + mushrooms [ i - 1 ] ;"
+        },
+        {
+          "node": 31,
+          "statement": "mushrooms [ i - 1 ] - mushrooms [ i ] > 10 * c"
+        },
+        {
+          "node": 34,
+          "statement": "total2 = total2 + mushrooms [ i - 1 ] ;"
+        },
+        {
+          "node": 36,
+          "statement": "System . out . println ( \\\"Case #\\\" + t + \\\" : \\\" + total1 + \\\" \\\" + ( total2 ) ) ;"
+        }
+      ],
+      "right_selected_statements": [
+        {
+          "node": 8,
+          "statement": "String [] data = br . readLine () . split ( \\\" \\\" ) ;"
+        },
+        {
+          "node": 13,
+          "statement": "int dataAnt = Integer . parseInt ( data [ j - 1 ] ) ;"
+        },
+        {
+          "node": 17,
+          "statement": "Y += dif ;"
+        },
+        {
+          "node": 23,
+          "statement": "int dataAnt = Integer . parseInt ( data [ j - 1 ] ) ;"
+        },
+        {
+          "node": 25,
+          "statement": "Z += ( dataAnt - dataAct ) < minDif? Math . min ( dataAnt , minDif ) : minDif ;"
+        },
+        {
+          "node": 26,
+          "statement": "System . out . println ( \\\"Case #\\\" + ( i + 1 ) + \\\" : \\\" + Y + \\\" \\\" + Z ) ;"
+        }
+      ],
+      "paired_relations": [
+        {
+          "left_node": 18,
+          "right_node": 13,
+          "semantic_similarity": 0.96302330493927,
+          "relation_evidence": 0.96302330493927,
+          "relation": "common",
+          "left_statement": "diff [ n - 1 ] > max",
+          "right_statement": "int dataAnt = Integer . parseInt ( data [ j - 1 ] ) ;"
+        },
+        {
+          "left_node": 16,
+          "right_node": 23,
+          "semantic_similarity": 0.9598144888877869,
+          "relation_evidence": 0.9598144888877869,
+          "relation": "common",
+          "left_statement": "diff [ n - 1 ] = mushrooms [ n - 1 ] - mushrooms [ n ] ;",
+          "right_statement": "int dataAnt = Integer . parseInt ( data [ j - 1 ] ) ;"
+        },
+        {
+          "left_node": 36,
+          "right_node": 26,
+          "semantic_similarity": 0.941307544708252,
+          "relation_evidence": 0.941307544708252,
+          "relation": "common",
+          "left_statement": "System . out . println ( \\\"Case #\\\" + t + \\\" : \\\" + total1 + \\\" \\\" + ( total2 ) ) ;",
+          "right_statement": "System . out . println ( \\\"Case #\\\" + ( i + 1 ) + \\\" : \\\" + Y + \\\" \\\" + Z ) ;"
+        },
+        {
+          "left_node": 17,
+          "right_node": 25,
+          "semantic_similarity": 0.9070403575897217,
+          "relation_evidence": 0.9070403575897217,
+          "relation": "common",
+          "left_statement": "total1 += Math . max ( diff [ n - 1 ] , 0 ) ;",
+          "right_statement": "Z += ( dataAnt - dataAct ) < minDif? Math . min ( dataAnt , minDif ) : minDif ;"
+        },
+        {
+          "left_node": 30,
+          "right_node": 17,
+          "semantic_similarity": 0.8461230993270874,
+          "relation_evidence": 0.8461230993270874,
+          "relation": "common",
+          "left_statement": "total2 = total2 + mushrooms [ i - 1 ] ;",
+          "right_statement": "Y += dif ;"
+        },
+        {
+          "left_node": 34,
+          "right_node": 8,
+          "semantic_similarity": 0.46618756651878357,
+          "relation_evidence": 0.46618756651878357,
+          "relation": "common",
+          "left_statement": "total2 = total2 + mushrooms [ i - 1 ] ;",
+          "right_statement": "String [] data = br . readLine () . split ( \\\" \\\" ) ;"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "extends": "C1_semantic_optimal_subgraph_pair.json",
+  "experiment_id": "C13_semantic_optimal_objective_lambda2",
+  "status": "ready_objective_ablation",
+  "device": "cuda:0",
+  "explanation": {
+    "optimal_sufficiency_weight": 2.0
+  },
+  "baselines": [
+    "symmetric_grad_x_input",
+    "symmetric_semantic_optimal_pair"
+  ],
+  "output_dir": "artifacts/pilots/C13_semantic_optimal_objective_lambda2_seed42"
+}

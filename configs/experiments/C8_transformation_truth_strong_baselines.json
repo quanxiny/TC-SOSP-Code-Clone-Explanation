@@ -1,0 +1,32 @@
+{
+  "extends": "C1_semantic_optimal_subgraph_pair.json",
+  "experiment_id": "C8_transformation_truth_strong_baselines",
+  "status": "ready",
+  "device": "cuda:0",
+  "paths": {
+    "source_dir": "external_data/explanation_truth/gcj_transformations/sources",
+    "vector_dir": "external_data/explanation_truth/gcj_transformations/cfg16_normalized"
+  },
+  "truth": {
+    "manifest": "external_data/explanation_truth/gcj_transformations/explanation_truth_manifest.json",
+    "axes": [
+      "alpha_rename_node_correspondence",
+      "known_irrelevant_dead_node_rejection"
+    ],
+    "validation_derived_only": true
+  },
+  "explanation": {
+    "sample_pairs": 60,
+    "top_node_fraction": 0.2,
+    "gnnexplainer_entropy_coefficient": 0.1,
+    "subgraphx_mcts_iterations": 48,
+    "subgraphx_shapley_samples": 4
+  },
+  "baselines": [
+    "symmetric_grad_x_input",
+    "symmetric_gnnexplainer_node_mask_adapted",
+    "symmetric_subgraphx_mcts_shapley_adapted",
+    "symmetric_semantic_optimal_pair"
+  ],
+  "output_dir": "artifacts/explanation_truth/C8_transformation_truth_strong_baselines_seed42"
+}

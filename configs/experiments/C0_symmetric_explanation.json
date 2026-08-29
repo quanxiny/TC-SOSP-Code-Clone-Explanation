@@ -1,0 +1,40 @@
+{
+  "extends": "../protocols/paper_clean.json",
+  "experiment_id": "C0_symmetric_explanation",
+  "stage": "explanation",
+  "status": "ready",
+  "predictor": {
+    "checkpoint": "../CodeGraph4CCDetector/artifacts/formal_paper_protocol_seed1337/epoch_013.pt",
+    "checkpoint_role": "paper_clean_validation_selected_epoch",
+    "frozen": true,
+    "ordered_baselines": true,
+    "symmetric_candidate": "minimum_clone_probability_over_both_orders"
+  },
+  "explanation": {
+    "output": ["left_core", "right_core", "undirected_core_mapping", "left_diff", "right_diff"],
+    "optimize": ["keep", "remove", "swap_consistency"],
+    "alignment_ground_truth": "transformation_provenance_only",
+    "attention_is_explanation": false,
+    "sample_pairs": 100,
+    "selection": "lowest_sha256_per_normalized_label",
+    "top_node_fraction": 0.2,
+    "integrated_gradients_steps": 8,
+    "mask_optimization_steps": 20,
+    "mask_learning_rate": 0.1,
+    "mask_sparsity_lambda": 0.01,
+    "bootstrap_resamples": 2000,
+    "mask_semantics": "zero_node_features_keep_graph_topology_fixed"
+  },
+  "baselines": [
+    "random",
+    "integrated_gradients",
+    "grad_x_input",
+    "symmetric_grad_x_input",
+    "ordered_keep_remove_mask",
+    "symmetric_keep_remove_mask"
+  ],
+  "loss": {
+    "name": "symmetric_aligned_keep_remove"
+  },
+  "output_dir": "artifacts/pilots/C0_symmetric_explanation_seed42"
+}

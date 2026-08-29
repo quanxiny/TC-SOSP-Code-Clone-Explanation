@@ -1,0 +1,39 @@
+{
+  "extends": "../base.json",
+  "experiment_id": "protocol_codenet_temporal_clean",
+  "stage": "continual",
+  "status": "active_external_validation",
+  "dataset": "Project_CodeNet_Java250",
+  "split": "chronological_user_group_clean",
+  "paths": {
+    "source_dir": "external_data/Project_CodeNet/selected_temporal_12problem",
+    "vector_dir": "external_data/Project_CodeNet/cfg16_normalized",
+    "train_split": null,
+    "validation_split": null,
+    "test_split": null
+  },
+  "stream": {
+    "type": "submission_time_domain_incremental",
+    "task_manifest": "manifests/codenet_java250_temporal_3task/manifest_report.json",
+    "pilot_order": ["T1", "T2", "T3"],
+    "ordering_claim": "strict_chronological_unix_submission_timestamp",
+    "forbid_random_batch_stream": true,
+    "test_sealed": true
+  },
+  "data_contract": {
+    "allow_fragment_overlap": false,
+    "group_field": "official_codenet_anonymized_user_id",
+    "group_field_status": "verified_from_official_problem_metadata_csv",
+    "semantic_label": "same_verified_problem_id",
+    "timestamp_field": "official_unix_submission_date",
+    "accepted_submissions_only": true,
+    "near_duplicate_policy": "official_Java250_benchmark_filter_plus_one_submission_per_problem_task_user",
+    "test_is_sealed": true
+  },
+  "evaluation": {
+    "validation_policy": "complete_seen_and_future_task_matrix_after_each_task",
+    "test_policy": "after_selection_only",
+    "save_predictions": true
+  },
+  "output_dir": "artifacts/external_continual/protocol_codenet_temporal_clean"
+}
